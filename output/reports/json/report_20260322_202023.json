@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-03-22 20:20:23",
+  "network": {
+    "cities": 100,
+    "roads": 20,
+    "density": 0.00404040404040404,
+    "avg_degree": 0.4
+  },
+  "regions": {
+    "Oromia": 24,
+    "Tigray": 11,
+    "SNNPR": 14,
+    "Afar": 5,
+    "Harari": 2,
+    "Somali": 8,
+    "Amhara": 17,
+    "Gambella": 4,
+    "Dire Dawa": 3,
+    "Addis Ababa": 7,
+    "Benshangul": 5
+  },
+  "road_stats": {
+    "avg_distance": 228.54250000000002,
+    "min_distance": 1.85,
+    "max_distance": 476.3,
+    "total_distance": 4570.85,
+    "by_type": {
+      "regional": 5,
+      "national": 6,
+      "highway": 9
+    }
+  },
+  "complexity": {
+    "array": {
+      "operations": 10000,
+      "memory": 1.26953125
+    },
+    "pq": {
+      "operations": 797,
+      "memory": 18.203125
+    },
+    "speedup": 12.542916485999218
+  },
+  "source_city": {
+    "id": 16,
+    "name": "Addis Ababa",
+    "region": "Addis Ababa"
+  },
+  "source_stats": {
+    "reachable": 2,
+    "unreachable": 97,
+    "farthest": {
+      "name": "Debre Sina",
+      "distance": 189.61
+    },
+    "closest": {
+      "name": "Kirkos",
+      "distance": 1.86
+    }
+  },
+  "longest_paths": [
+    {
+      "name": "Debre Sina",
+      "region": "Amhara",
+      "distance": 189.61
+    },
+    {
+      "name": "Kirkos",
+      "region": "Addis Ababa",
+      "distance": 1.86
+    }
+  ],
+  "metadata": {
+    "generated": "2026-03-22T20:20:23.828426",
+    "version": "1.0",
+    "system": "Ethiopian GPS Navigation System"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-03-22 20:29:29",
+  "network": {
+    "cities": 100,
+    "roads": 300,
+    "density": 0.06060606060606061,
+    "avg_degree": 6.0
+  },
+  "regions": {
+    "Oromia": 25,
+    "Afar": 6,
+    "Amhara": 18,
+    "Gambella": 4,
+    "Addis Ababa": 8,
+    "SNNPR": 14,
+    "Tigray": 9,
+    "Harari": 2,
+    "Somali": 8,
+    "Dire Dawa": 3,
+    "Benshangul": 3
+  },
+  "road_stats": {
+    "avg_distance": 261.56286666666665,
+    "min_distance": 1.31,
+    "max_distance": 470.26,
+    "total_distance": 78468.86,
+    "by_type": {
+      "highway": 211,
+      "national": 60,
+      "regional": 29
+    }
+  },
+  "complexity": {
+    "array": {
+      "operations": 10000,
+      "memory": 1.26953125
+    },
+    "pq": {
+      "operations": 2657,
+      "memory": 26.953125
+    },
+    "speedup": 3.7628749457997652
+  },
+  "source_city": {
+    "id": 99,
+    "name": "Addis Ababa",
+    "region": "Addis Ababa"
+  },
+  "source_stats": {
+    "reachable": 95,
+    "unreachable": 4,
+    "farthest": {
+      "name": "Kebri Dahar",
+      "distance": 1459.8
+    },
+    "closest": {
+      "name": "Yeka",
+      "distance": 11.07
+    }
+  },
+  "longest_paths": [
+    {
+      "name": "Kebri Dahar",
+      "region": "Somali",
+      "distance": 1459.8
+    },
+    {
+      "name": "Warder",
+      "region": "Somali",
+      "distance": 1326.72
+    },
+    {
+      "name": "Kelafo",
+      "region": "Somali",
+      "distance": 1096.75
+    },
+    {
+      "name": "Gode",
+      "region": "Somali",
+      "distance": 1016.7199999999999
+    },
+    {
+      "name": "Moyale",
+      "region": "Oromia",
+      "distance": 897.17
+    },
+    {
+      "name": "Adwa",
+      "region": "Tigray",
+      "distance": 794.0
+    },
+    {
+      "name": "Axum",
+      "region": "Tigray",
+      "distance": 751.36
+    },
+    {
+      "name": "Shire",
+      "region": "Tigray",
+      "distance": 744.4200000000001
+    },
+    {
+      "name": "Degehabur",
+      "region": "Somali",
+      "distance": 726.3399999999999
+    },
+    {
+      "name": "Guba",
+      "region": "Benshangul",
+      "distance": 717.8
+    }
+  ],
+  "metadata": {
+    "generated": "2026-03-22T20:29:29.170556",
+    "version": "1.0",
+    "system": "Ethiopian GPS Navigation System"
+  }
+}

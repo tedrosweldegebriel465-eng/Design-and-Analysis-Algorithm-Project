@@ -1,0 +1,101 @@
+road_id,city1_id,city2_id,distance_km,road_type,condition,lanes,road_name
+1,1,2,85,highway,good,4,Adama Road
+2,1,55,25,highway,good,4,Jimma Road
+3,1,54,30,regional,good,2,Sululta Road
+4,1,5,783,highway,fair,2,Mekelle Highway
+5,2,3,380,highway,good,2,Bahir Dar Road
+6,3,4,180,highway,good,2,Gondar Road
+7,4,5,380,highway,fair,2,Mekelle-Gondar
+8,5,20,240,regional,good,2,Axum Road
+9,20,21,150,regional,poor,2,Lalibela Road
+10,3,21,320,regional,fair,2,Lalibela-Bahir Dar
+11,1,14,275,highway,good,2,Hawassa Road
+12,14,13,130,regional,good,2,Arba Minch Road
+13,14,22,60,regional,good,2,Dilla Road
+14,1,7,350,highway,good,2,Jimma Highway
+15,7,33,120,regional,poor,2,Metu Road
+16,1,8,525,highway,fair,2,Harar Road
+17,8,6,50,regional,good,2,Dire Dawa Road
+18,6,9,95,regional,fair,2,Jijiga Road
+19,1,11,400,highway,fair,2,Dessie Road
+20,11,12,100,regional,good,2,Kombolcha Road
+21,11,25,120,regional,good,2,Debre Birhan Road
+22,25,1,130,highway,good,2,Addis-Debre Birhan
+23,14,41,70,regional,good,2,Butajira Road
+24,1,39,125,highway,good,2,Ambo Road
+25,39,40,60,regional,good,2,Woliso Road
+26,2,37,140,regional,good,2,Asella Road
+27,37,14,220,regional,fair,2,Asella-Hawassa
+28,1,12,50,highway,good,4,Debre Zeit Road
+29,12,38,20,regional,good,2,Batu Road
+30,5,28,120,regional,good,2,Adigrat Road
+31,28,29,80,regional,good,2,Shire Road
+32,29,83,30,regional,good,2,Endaselassie Road
+33,4,92,75,regional,good,2,Debarke Road
+34,3,86,45,regional,good,2,Debre Tabor Road
+35,86,4,95,regional,good,2,Gondar-Debre Tabor
+36,1,50,110,regional,good,2,Fiche Road
+37,50,51,30,regional,fair,2,Gebre Guracha Road
+38,1,57,85,regional,good,2,Ginchi Road
+39,1,56,40,regional,good,2,Holeta Road
+40,5,72,180,regional,fair,2,Alamata Road
+41,72,73,45,regional,good,2,Korem Road
+42,73,74,85,regional,poor,2,Abiy Addi Road
+43,2,59,320,regional,fair,2,Adet Road
+44,59,60,35,regional,good,2,Merawi Road
+45,3,61,100,regional,good,2,Finote Selam Road
+46,61,62,40,regional,good,2,Bure Road
+47,62,63,55,regional,good,2,Dangila Road
+48,63,64,35,regional,good,2,Injibara Road
+49,64,65,45,regional,good,2,Chagni Road
+50,65,66,60,regional,poor,2,Pawi Road
+51,1,17,770,highway,poor,2,Gambella Highway
+52,17,95,65,regional,poor,1,Metti Road
+53,17,96,35,regional,poor,1,Itang Road
+54,17,98,85,regional,poor,1,Gog Road
+55,1,18,685,highway,poor,2,Assosa Highway
+56,18,67,45,regional,poor,1,Metekel Road
+57,1,19,575,highway,fair,2,Semera Highway
+58,19,68,115,regional,good,2,Kemise Road
+59,68,11,25,regional,good,2,Dessie-Kemise
+60,5,30,110,regional,good,2,Maychew Road
+61,30,31,45,regional,good,2,Adwa Road
+62,31,20,40,regional,good,2,Axum-Adwa
+63,32,29,25,regional,good,2,Shire-Endaselassie
+64,1,45,570,highway,poor,2,Mizan Road
+65,45,46,40,regional,poor,2,Tepi Road
+66,1,47,960,highway,poor,2,Gode Highway
+67,47,48,120,regional,poor,2,Kebri Dahar Road
+68,48,49,85,regional,poor,2,Degehabur Road
+69,1,26,375,highway,good,2,Kombolcha Road
+70,26,27,40,regional,good,2,Weldiya Road
+71,27,70,55,regional,good,2,Mersa Road
+72,70,71,45,regional,good,2,Kobo Road
+73,71,72,35,regional,good,2,Alamata-Kobo
+74,4,91,30,regional,good,2,Azezo Road
+75,91,90,40,regional,poor,2,Gorgora Road
+76,3,88,40,regional,good,2,Wereta Road
+77,88,89,20,regional,good,2,Hamusit Road
+78,89,87,25,regional,good,2,Adis Zemen Road
+79,1,15,315,highway,good,2,Sodo Road
+80,15,43,55,regional,good,2,Durame Road
+81,43,44,110,regional,poor,2,Bonga Road
+82,44,45,85,regional,poor,2,Mizan-Bonga
+83,1,42,165,regional,good,2,Worabe Road
+84,42,41,35,regional,good,2,Butajira-Worabe
+85,14,42,110,regional,good,2,Hawassa-Worabe
+86,2,34,160,regional,fair,2,Agaro Road
+87,34,35,40,regional,poor,2,Bedele Road
+88,35,36,65,regional,poor,2,Gimbi Road
+89,36,16,85,regional,fair,2,Nekemte Road
+90,16,7,120,regional,poor,2,Jimma-Nekemte
+91,2,33,255,regional,poor,2,Metu-Adama
+92,8,9,135,regional,fair,2,Harar-Jijiga
+93,6,8,50,regional,good,2,Dire Dawa-Harar
+94,5,77,55,regional,good,2,Atsbi Road
+95,77,78,30,regional,good,2,Wukro Road
+96,78,79,20,regional,good,2,Edaga Hamus Road
+97,20,80,45,regional,fair,2,Rama Road
+98,29,81,160,regional,poor,2,Humera Road
+99,81,82,45,regional,poor,2,Sheraro Road
+100,5,84,110,regional,good,2,Maychew-Mekelle

@@ -1,0 +1,101 @@
+ID,Name,Region,Latitude,Longitude,Population,Elevation,Is Capital
+1,Yabelo,Oromia,4.88,38.08,18000,1600,No
+2,Semera,Afar,11.79,41.01,30000,450,No
+3,Wereilu,Amhara,10.65,39.43,12000,2400,No
+4,Bedele,Oromia,8.45,36.35,25000,2000,No
+5,Gewane,Afar,10.17,40.65,10000,750,No
+6,Logia,Afar,11.7,41.05,12000,420,No
+7,Asella,Oromia,7.95,39.13,68000,2430,No
+8,Itang,Gambella,8.15,34.27,10000,400,No
+9,Ziway,Oromia,7.93,38.71,35000,1640,No
+10,Haramaya,Oromia,9.42,42.03,25000,1980,No
+11,Gulele,Addis Ababa,9.07,38.74,130000,2450,No
+12,Moyale,Oromia,3.53,39.05,20000,900,No
+13,Bonga,SNNPR,7.27,36.24,20000,1720,No
+14,Bahir Dar,Amhara,11.59,37.39,221991,1800,No
+15,Adwa,Tigray,14.17,38.9,35000,1900,No
+16,Shambu,Oromia,9.57,37.1,22000,2200,No
+17,Kolfe Keranio,Addis Ababa,9.04,38.7,200000,2280,No
+18,Holeta,Oromia,9.05,38.5,25000,2400,No
+19,Gog,Gambella,8.2,34.7,6000,500,No
+20,Sendafa,Oromia,9.22,39.03,18000,2600,No
+21,Nekemte,Oromia,9.09,36.55,76000,2100,No
+22,Dubti,Afar,11.73,41.08,15000,400,No
+23,Ambo,Oromia,8.98,37.85,58000,2100,No
+24,Jugol,Harari,9.31,42.13,30000,1900,No
+25,Tog Wajaale,Somali,9.67,43.43,15000,900,No
+26,Wukro,Tigray,13.78,39.6,30000,1900,No
+27,Mille,Afar,11.43,40.77,10000,600,No
+28,Debre Markos,Amhara,10.34,37.73,80000,2450,No
+29,Bole,Addis Ababa,9.01,38.8,180000,2300,No
+30,Alamata,Tigray,12.42,39.56,20000,1600,No
+31,Mota,Amhara,11.08,37.87,20000,2400,No
+32,Metu,Oromia,8.3,35.58,28000,1700,No
+33,Fiche,Oromia,9.8,38.73,28000,2750,No
+34,Butajira,SNNPR,8.12,38.37,25000,2000,No
+35,Hawzen,Tigray,13.97,39.46,10000,2100,No
+36,Kebri Dahar,Somali,6.74,44.28,20000,500,No
+37,Harar,Harari,9.31,42.12,122000,1885,No
+38,Wolaita Sodo,SNNPR,6.85,37.75,80000,1600,No
+39,Kelafo,Somali,5.63,44.12,12000,300,No
+40,Hayk,Amhara,11.32,39.68,15000,2030,No
+41,Gebre Guracha,Oromia,9.58,40.52,20000,1900,No
+42,Warder,Somali,6.97,45.33,12000,500,No
+43,Jigjiga,Somali,9.35,42.8,125876,1609,No
+44,Hosaena,SNNPR,7.55,37.86,55000,2300,No
+45,Adigrat,Tigray,14.28,39.46,60000,2457,No
+46,Chiro,Oromia,9.08,40.87,35000,1750,No
+47,Degehabur,Somali,8.22,43.56,18000,700,No
+48,Lideta,Addis Ababa,9.01,38.73,140000,2320,No
+49,Jimma,Oromia,7.67,36.83,206000,1780,No
+50,Jinka,SNNPR,5.78,36.56,20000,1490,No
+51,Dire Dawa,Dire Dawa,9.59,41.86,341834,1180,No
+52,Debre Sina,Amhara,9.86,39.77,18000,2800,No
+53,Kombolcha,Amhara,11.08,39.74,60000,1850,No
+54,Woldia,Amhara,11.83,39.6,45000,1900,No
+55,Addis Zemen,Amhara,12.12,37.79,18000,1900,No
+56,Yeka,Addis Ababa,9.06,38.82,170000,2400,No
+57,Injibara,Amhara,10.98,36.95,22000,2600,No
+58,Negele Borana,Oromia,5.33,39.58,22000,1500,No
+59,Maychew,Tigray,12.78,39.53,25000,2480,No
+60,Boditi,SNNPR,7.0,37.87,18000,2000,No
+61,Lalibela,Amhara,12.03,39.05,15000,2630,No
+62,Gimbi,Oromia,9.17,35.83,40000,1900,No
+63,Finote Selam,Amhara,10.69,37.27,28000,2000,No
+64,Konso,SNNPR,5.25,37.48,12000,1650,No
+65,Akaki Kaliti,Addis Ababa,8.88,38.79,250000,2100,No
+66,Yirga Chefe,SNNPR,6.15,38.2,18000,1800,No
+67,Gambella,Gambella,8.25,34.59,58432,526,No
+68,Shire,Tigray,14.1,38.28,35000,1900,No
+69,Kobo,Amhara,12.15,39.63,20000,1500,No
+70,Yirgalem,SNNPR,6.75,38.4,25000,1750,No
+71,Abobo,Gambella,7.87,34.53,8000,450,No
+72,Hawassa,SNNPR,7.06,38.48,258808,1708,No
+73,Dessie,Amhara,11.13,39.64,151000,2470,No
+74,Mizan Teferi,SNNPR,6.98,35.58,25000,1500,No
+75,Asaita,Afar,11.57,41.43,20000,380,No
+76,Sawla,SNNPR,6.32,36.87,15000,1400,No
+77,Buta Jira,Oromia,8.12,38.37,20000,2000,No
+78,Adama,Oromia,8.54,39.27,324000,1550,No
+79,Shashamane,Oromia,7.2,38.59,100000,1750,No
+80,Gode,Somali,5.95,43.57,35000,295,No
+81,Bishoftu,Oromia,8.75,38.98,100000,1920,No
+82,Korem,Tigray,12.5,39.52,15000,2400,No
+83,Durame,SNNPR,7.23,37.88,20000,2100,No
+84,Mojo,Oromia,8.59,39.12,30000,1700,No
+85,Dembi Dolo,Oromia,8.53,34.8,30000,1500,No
+86,Kirkos,Addis Ababa,9.02,38.75,160000,2350,No
+87,Debre Tabor,Amhara,11.85,38.01,40000,2700,No
+88,Sabian,Dire Dawa,9.6,41.85,35000,1190,No
+89,Debre Birhan,Amhara,9.68,39.53,65000,2780,No
+90,Metema,Amhara,12.96,36.2,15000,700,No
+91,Goba,Oromia,7.01,39.98,30000,2740,No
+92,Dolo Odo,Somali,4.17,42.07,10000,300,No
+93,Legehare,Dire Dawa,9.58,41.87,40000,1200,No
+94,Guba,Benshangul,11.6,35.35,8000,600,No
+95,Axum,Tigray,14.12,38.72,56500,2131,No
+96,Sekota,Amhara,12.63,39.03,12000,1900,No
+97,Arba Minch,SNNPR,6.04,37.55,74879,1285,No
+98,Assosa,Benshangul,10.07,34.53,35000,600,No
+99,Addis Ababa,Addis Ababa,9.03,38.74,3500000,2355,Yes
+100,Mandura,Benshangul,10.8,35.55,8000,800,No

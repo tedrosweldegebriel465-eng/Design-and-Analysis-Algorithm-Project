@@ -1,0 +1,65 @@
+================================================================================
+ETHIOPIAN ROAD NETWORK ANALYSIS REPORT
+================================================================================
+Generated: 2026-03-22 20:20:23
+
+📊 NETWORK SUMMARY
+----------------------------------------
+Total Cities: 100
+Total Roads: 20
+Network Density: 0.0040
+Average Connections per City: 0.40
+
+📍 CITIES BY REGION
+----------------------------------------
+  Oromia: 24 cities (24.0%)
+  Amhara: 17 cities (17.0%)
+  SNNPR: 14 cities (14.0%)
+  Tigray: 11 cities (11.0%)
+  Somali: 8 cities (8.0%)
+  Addis Ababa: 7 cities (7.0%)
+  Afar: 5 cities (5.0%)
+  Benshangul: 5 cities (5.0%)
+  Gambella: 4 cities (4.0%)
+  Dire Dawa: 3 cities (3.0%)
+  Harari: 2 cities (2.0%)
+
+🛣️  ROAD STATISTICS
+----------------------------------------
+  Average Road Length: 228.54 km
+  Shortest Road: 1.85 km
+  Longest Road: 476.30 km
+  Total Road Network Length: 4570.85 km
+
+  Road Types:
+    • regional: 5
+    • national: 6
+    • highway: 9
+
+📍 SOURCE CITY: Addis Ababa (Addis Ababa)
+----------------------------------------
+  Reachable Cities: 2
+  Unreachable Cities: 97
+  Farthest City: Debre Sina (189.61 km)
+  Closest City: Kirkos (1.86 km)
+
+  TOP 10 LONGEST PATHS:
+    • Debre Sina: 189.61 km
+    • Kirkos: 1.86 km
+
+⏱️  COMPLEXITY ANALYSIS
+----------------------------------------
+  Array Implementation: O(V²) = 10,000 operations
+  Priority Queue: O((V+E) log V) = 797 ops
+  Theoretical Speedup: 12.54x
+
+  EMPIRICAL PERFORMANCE (3 runs):
+    Array: 0.24 ms
+    Priority Queue: 0.14 ms
+    Empirical Speedup: 1.73x
+
+🔍 SAMPLE SHORTEST PATHS
+----------------------------------------
+================================================================================
+END OF REPORT
+================================================================================

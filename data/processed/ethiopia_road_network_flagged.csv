@@ -1,0 +1,35 @@
+source_id,source_name,target_id,target_name,distance_km,straight_line_km,road_type,reason
+2,Adama,3,Bahir Dar,380.00,398.22,highway,distance_shorter_than_straight_line
+2,Adama,59,Adet,320.00,361.37,regional,distance_shorter_than_straight_line
+2,Adama,33,Metu,255.00,406.76,regional,distance_shorter_than_straight_line
+2,Adama,34,Agaro,160.00,305.84,regional,distance_shorter_than_straight_line
+3,Bahir Dar,86,Debre Tabor,45.00,75.02,regional,distance_shorter_than_straight_line
+3,Bahir Dar,88,Wereta,40.00,49.80,regional,distance_shorter_than_straight_line
+7,Jimma,33,Metu,120.00,153.94,regional,distance_shorter_than_straight_line
+11,Dessie,12,Debre Zeit,100.00,274.05,regional,distance_shorter_than_straight_line
+11,Dessie,25,Debre Birhan,120.00,161.60,regional,distance_shorter_than_straight_line
+14,Hawassa,13,Arba Minch,130.00,152.29,regional,distance_shorter_than_straight_line
+14,Hawassa,22,Dilla,60.00,73.33,regional,distance_shorter_than_straight_line
+14,Hawassa,41,Butajira,70.00,119.49,regional,distance_shorter_than_straight_line
+16,Nekemte,7,Jimma,120.00,158.69,regional,distance_shorter_than_straight_line
+18,Assosa,67,Metekel,45.00,213.55,regional,distance_shorter_than_straight_line
+19,Semera,68,Kemise,115.00,172.85,regional,distance_shorter_than_straight_line
+20,Axum,21,Lalibela,150.00,234.81,regional,distance_shorter_than_straight_line
+28,Adigrat,29,Shire,80.00,129.67,regional,distance_shorter_than_straight_line
+29,Shire,81,Humera,160.00,180.07,regional,distance_shorter_than_straight_line
+30,Maychew,31,Adwa,45.00,169.35,regional,distance_shorter_than_straight_line
+33,Metu,7,Jimma,120.00,153.94,regional,distance_shorter_than_straight_line
+34,Agaro,35,Bedele,40.00,71.36,regional,distance_shorter_than_straight_line
+35,Bedele,36,Gimbi,65.00,98.36,regional,distance_shorter_than_straight_line
+41,Butajira,42,Worabe,35.00,53.96,regional,distance_shorter_than_straight_line
+42,Worabe,41,Butajira,35.00,53.96,regional,distance_shorter_than_straight_line
+43,Durame,44,Bonga,110.00,182.06,regional,distance_shorter_than_straight_line
+47,Gode,48,Kebri Dahar,120.00,126.24,regional,distance_shorter_than_straight_line
+48,Kebri Dahar,49,Degehabur,85.00,183.24,regional,distance_shorter_than_straight_line
+62,Bure,63,Dangila,55.00,66.53,regional,distance_shorter_than_straight_line
+68,Kemise,11,Dessie,25.00,52.58,regional,distance_shorter_than_straight_line
+70,Mersa,71,Kobo,45.00,53.42,regional,distance_shorter_than_straight_line
+73,Korem,74,Abiy Addi,85.00,136.68,regional,distance_shorter_than_straight_line
+81,Humera,82,Sheraro,45.00,124.61,regional,distance_shorter_than_straight_line
+86,Debre Tabor,4,Gondar,95.00,102.60,regional,distance_shorter_than_straight_line
+89,Hamusit,87,Adis Zemen,25.00,42.15,regional,distance_shorter_than_straight_line

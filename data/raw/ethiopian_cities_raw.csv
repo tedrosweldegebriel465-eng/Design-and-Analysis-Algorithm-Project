@@ -1,0 +1,101 @@
+city_id,city_name,region,latitude,longitude,population,elevation,is_capital
+1,Addis Ababa,Addis Ababa,9.03,38.74,3500000,2355,1
+2,Adama,Oromia,8.54,39.27,480000,1712,0
+3,Bahir Dar,Amhara,11.60,37.38,350000,1800,0
+4,Gondar,Amhara,12.60,37.47,350000,2133,0
+5,Mekelle,Tigray,13.50,39.47,340000,2084,0
+6,Dire Dawa,Dire Dawa,9.60,41.87,300000,1276,0
+7,Jimma,Oromia,7.68,36.83,250000,1780,0
+8,Harar,Harari,9.31,42.13,150000,1885,0
+9,Jijiga,Somali,9.35,42.80,160000,1648,0
+10,Shashamane,Oromia,7.20,38.60,150000,2008,0
+11,Dessie,Amhara,11.13,39.63,180000,2470,0
+12,Debre Zeit,Oromia,8.75,38.98,140000,1920,0
+13,Arba Minch,SNNPR,6.03,37.55,120000,1285,0
+14,Hawassa,SNNPR,7.05,38.47,350000,1708,0
+15,Sodo,SNNPR,6.90,37.75,110000,1600,0
+16,Nekemte,Oromia,9.08,36.55,110000,2088,0
+17,Gambella,Gambella,8.25,34.58,40000,526,0
+18,Assosa,Benshangul,10.07,34.52,25000,1570,0
+19,Semera,Afar,11.80,41.01,30000,433,0
+20,Axum,Tigray,14.12,38.73,60000,2131,0
+21,Lalibela,Amhara,12.03,39.04,50000,2500,0
+22,Dilla,SNNPR,6.41,38.31,100000,1570,0
+23,Hosaena,SNNPR,7.55,37.85,90000,2100,0
+24,Debre Markos,Amhara,10.33,37.72,90000,2446,0
+25,Debre Birhan,Amhara,9.68,39.53,85000,2840,0
+26,Kombolcha,Amhara,11.08,39.73,95000,1867,0
+27,Weldiya,Amhara,11.82,39.60,80000,1912,0
+28,Adigrat,Tigray,14.27,39.47,85000,2457,0
+29,Shire,Tigray,14.10,38.28,75000,1900,0
+30,Maychew,Tigray,12.78,39.54,50000,2479,0
+31,Adwa,Tigray,14.17,38.90,55000,1907,0
+32,Endaselassie,Tigray,14.07,38.28,45000,1925,0
+33,Metu,Oromia,8.30,35.58,40000,1620,0
+34,Agaro,Oromia,7.85,36.58,35000,1560,0
+35,Bedele,Oromia,8.45,36.35,30000,2012,0
+36,Gimbi,Oromia,9.17,35.83,35000,1850,0
+37,Asella,Oromia,7.95,39.12,100000,2430,0
+38,Batu,Oromia,7.95,38.72,80000,1650,0
+39,Ambo,Oromia,8.98,37.85,90000,2101,0
+40,Woliso,Oromia,8.53,37.97,60000,2063,0
+41,Butajira,SNNPR,8.12,38.37,55000,1991,0
+42,Worabe,SNNPR,7.87,37.95,40000,1710,0
+43,Durame,SNNPR,7.23,37.88,45000,2010,0
+44,Bonga,SNNPR,7.27,36.23,35000,1714,0
+45,Mizan Teferi,SNNPR,6.98,35.58,40000,1211,0
+46,Tepi,SNNPR,7.20,35.45,35000,1097,0
+47,Gode,Somali,5.95,43.45,45000,260,0
+48,Kebri Dahar,Somali,6.73,44.28,40000,550,0
+49,Degehabur,Somali,8.22,43.57,35000,1044,0
+50,Fiche,Oromia,9.80,38.73,40000,2738,0
+51,Gebre Guracha,Oromia,9.80,38.43,35000,2620,0
+52,Muketuri,Oromia,9.08,38.78,30000,2660,0
+53,Chancho,Oromia,9.30,38.75,25000,2500,0
+54,Sululta,Oromia,9.20,38.75,45000,2500,0
+55,Sebeta,Oromia,8.92,38.62,70000,2350,0
+56,Holeta,Oromia,9.05,38.50,40000,2390,0
+57,Ginchi,Oromia,9.02,38.15,45000,2200,0
+58,Guder,Oromia,8.97,37.77,35000,2000,0
+59,Adet,Amhara,11.27,37.48,40000,2150,0
+60,Merawi,Amhara,11.40,37.17,35000,1960,0
+61,Finote Selam,Amhara,10.70,37.27,45000,1880,0
+62,Bure,Amhara,10.70,37.07,35000,2025,0
+63,Dangila,Amhara,11.25,36.83,40000,2122,0
+64,Injibara,Amhara,10.95,36.93,30000,2560,0
+65,Chagni,Amhara,10.95,36.50,35000,1583,0
+66,Pawi,Benshangul,11.20,36.40,25000,1150,0
+67,Metekel,Benshangul,11.20,36.10,20000,1200,0
+68,Kemise,Amhara,10.72,39.87,35000,1424,0
+69,Bati,Amhara,11.18,39.98,30000,1502,0
+70,Mersa,Amhara,11.67,39.65,35000,1567,0
+71,Kobo,Amhara,12.15,39.63,40000,1468,0
+72,Alamata,Tigray,12.42,39.55,40000,1520,0
+73,Korem,Tigray,12.50,39.52,35000,2139,0
+74,Abiy Addi,Tigray,13.62,39.00,30000,1968,0
+75,Hawzen,Tigray,13.97,39.43,25000,2250,0
+76,Freweyni,Tigray,13.93,39.88,20000,2420,0
+77,Atsbi,Tigray,13.87,39.73,22000,2630,0
+78,Wukro,Tigray,13.80,39.60,35000,1972,0
+79,Edaga Hamus,Tigray,13.65,39.45,15000,2500,0
+80,Rama,Tigray,14.40,38.78,12000,1385,0
+81,Humera,Tigray,14.28,36.62,25000,585,0
+82,Sheraro,Tigray,14.40,37.77,20000,1100,0
+83,Indasilase,Tigray,14.10,38.28,45000,1925,0
+84,Maychew,Tigray,12.78,39.54,50000,2479,0
+85,Zalambessa,Tigray,14.35,39.55,10000,2300,0
+86,Debre Tabor,Amhara,11.85,38.02,60000,2600,0
+87,Adis Zemen,Amhara,12.12,37.78,35000,1950,0
+88,Wereta,Amhara,11.92,37.70,40000,1800,0
+89,Hamusit,Amhara,11.88,37.48,25000,1860,0
+90,Gorgora,Amhara,12.23,37.30,15000,1800,0
+91,Azezo,Amhara,12.55,37.42,35000,2000,0
+92,Debarke,Amhara,13.13,37.90,25000,2850,0
+93,Addi Arkay,Tigray,13.25,37.90,15000,2150,0
+94,May Kadra,Tigray,14.27,36.63,10000,600,0
+95,Metti,Gambella,8.15,34.58,15000,450,0
+96,Itang,Gambella,8.20,34.27,20000,425,0
+97,Abobo,Gambella,7.92,34.48,12000,430,0
+98,Gog,Gambella,7.70,34.10,10000,420,0
+99,Dima,Gambella,7.90,34.33,8000,415,0
+100,Bure,Gambella,8.27,34.12,9000,410,0

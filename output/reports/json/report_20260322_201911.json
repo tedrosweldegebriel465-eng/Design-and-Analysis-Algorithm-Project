@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-03-22 20:19:12",
+  "network": {
+    "cities": 100,
+    "roads": 20,
+    "density": 0.00404040404040404,
+    "avg_degree": 0.4
+  },
+  "regions": {
+    "Somali": 8,
+    "Dire Dawa": 3,
+    "Oromia": 26,
+    "Benshangul": 4,
+    "SNNPR": 14,
+    "Amhara": 18,
+    "Tigray": 9,
+    "Addis Ababa": 8,
+    "Afar": 6,
+    "Gambella": 3,
+    "Harari": 1
+  },
+  "road_stats": {
+    "avg_distance": 273.302,
+    "min_distance": 19.48,
+    "max_distance": 440.33,
+    "total_distance": 5466.04,
+    "by_type": {
+      "highway": 14,
+      "national": 5,
+      "regional": 1
+    }
+  },
+  "complexity": {
+    "array": {
+      "operations": 10000,
+      "memory": 1.26953125
+    },
+    "pq": {
+      "operations": 797,
+      "memory": 18.203125
+    },
+    "speedup": 12.542916485999218
+  },
+  "source_city": {
+    "id": 41,
+    "name": "Addis Ababa",
+    "region": "Addis Ababa"
+  },
+  "source_stats": {
+    "reachable": 3,
+    "unreachable": 96,
+    "farthest": {
+      "name": "Shashamane",
+      "distance": 243.7
+    },
+    "closest": {
+      "name": "Akaki Kaliti",
+      "distance": 19.48
+    }
+  },
+  "longest_paths": [
+    {
+      "name": "Shashamane",
+      "region": "Oromia",
+      "distance": 243.7
+    },
+    {
+      "name": "Hosaena",
+      "region": "SNNPR",
+      "distance": 240.41
+    },
+    {
+      "name": "Akaki Kaliti",
+      "region": "Addis Ababa",
+      "distance": 19.48
+    }
+  ],
+  "metadata": {
+    "generated": "2026-03-22T20:19:12.108532",
+    "version": "1.0",
+    "system": "Ethiopian GPS Navigation System"
+  }
+}

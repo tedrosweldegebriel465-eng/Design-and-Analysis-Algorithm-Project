@@ -1,0 +1,301 @@
+ID,From City,To City,Distance (km),Type,Condition,Speed Limit,Lanes,Toll
+1,Woldia,Debre Birhan,284.61,highway,good,100,4,No
+2,Jimma,Dembi Dolo,325.7,highway,fair,100,4,No
+3,Mojo,Wereilu,270.53,highway,good,100,4,No
+4,Arba Minch,Sawla,110.91,national,fair,80,2,No
+5,Nekemte,Hosaena,273.56,highway,fair,100,4,No
+6,Warder,Kebri Dahar,133.08,national,fair,80,2,No
+7,Addis Zemen,Guba,354.78,highway,poor,100,4,No
+8,Hawzen,Bahir Dar,443.81,highway,poor,100,4,No
+9,Adama,Gebre Guracha,240.53,highway,good,100,4,No
+10,Sawla,Gog,397.5,highway,poor,100,4,No
+11,Yeka,Woldia,368.8,highway,fair,100,4,No
+12,Gewane,Sabian,163.73,national,poor,80,2,No
+13,Ziway,Holeta,176.83,national,poor,80,2,No
+14,Hayk,Lideta,363.29,highway,fair,100,4,No
+15,Kirkos,Durame,270.01,highway,poor,100,4,No
+16,Sawla,Boditi,176.75,national,fair,80,2,No
+17,Yeka,Boditi,298.67,highway,good,100,4,No
+18,Bole,Gulele,10.36,regional,fair,80,2,No
+19,Bole,Bahir Dar,367.77,highway,good,100,4,No
+20,Wolaita Sodo,Sawla,134.71,national,good,80,2,No
+21,Hosaena,Yirga Chefe,199.98,national,fair,80,2,No
+22,Shambu,Wolaita Sodo,407.94,highway,poor,100,4,No
+23,Wolaita Sodo,Yeka,356.85,highway,good,100,4,No
+24,Guba,Mandura,112.81,national,good,80,2,No
+25,Gimbi,Hosaena,335.09,highway,fair,100,4,No
+26,Adama,Durame,256.56,highway,fair,100,4,No
+27,Dire Dawa,Kirkos,425.24,highway,good,100,4,No
+28,Korem,Finote Selam,395.32,highway,good,100,4,No
+29,Debre Sina,Sabian,264.81,highway,good,100,4,No
+30,Tog Wajaale,Harar,208.09,highway,good,100,4,No
+31,Gulele,Buta Jira,147.46,national,good,80,2,No
+32,Sabian,Bishoftu,455.72,highway,good,100,4,No
+33,Lideta,Debre Markos,227.65,highway,poor,100,4,No
+34,Tog Wajaale,Asaita,396.02,highway,fair,100,4,No
+35,Boditi,Kirkos,305.93,highway,good,100,4,No
+36,Mizan Teferi,Konso,378.31,highway,fair,100,4,No
+37,Shire,Sekota,217.8,highway,good,100,4,No
+38,Hayk,Addis Zemen,298.82,highway,poor,100,4,No
+39,Wukro,Adwa,107.0,national,good,80,2,No
+40,Hawzen,Kobo,261.54,highway,fair,100,4,No
+41,Gebre Guracha,Harar,242.42,highway,good,100,4,No
+42,Adama,Debre Markos,305.3,highway,good,100,4,No
+43,Harar,Gewane,247.57,highway,poor,100,4,No
+44,Kobo,Sekota,113.97,national,poor,80,2,No
+45,Sekota,Addis Zemen,186.79,national,poor,80,2,No
+46,Wolaita Sodo,Fiche,458.31,highway,fair,100,4,No
+47,Debre Tabor,Sendafa,355.26,highway,good,100,4,No
+48,Yirga Chefe,Durame,148.88,national,fair,80,2,No
+49,Hayk,Woldia,63.66,regional,good,80,2,No
+50,Mille,Korem,221.58,highway,good,100,4,No
+51,Asaita,Logia,53.88,regional,poor,80,2,No
+52,Injibara,Wereilu,357.5,highway,poor,100,4,No
+53,Bole,Debre Tabor,414.42,highway,fair,100,4,No
+54,Negele Borana,Durame,372.72,highway,fair,100,4,No
+55,Jimma,Gimbi,260.81,highway,good,100,4,No
+56,Gog,Bedele,224.52,highway,good,100,4,No
+57,Haramaya,Debre Sina,344.81,highway,fair,100,4,No
+58,Chiro,Ziway,331.97,highway,good,100,4,No
+59,Dessie,Asaita,266.19,highway,fair,100,4,No
+60,Mille,Sabian,300.11,highway,good,100,4,No
+61,Lalibela,Shambu,410.96,highway,good,100,4,No
+62,Mota,Mojo,381.95,highway,fair,100,4,No
+63,Holeta,Adama,130.98,national,good,80,2,No
+64,Kobo,Sendafa,396.74,highway,good,100,4,No
+65,Yirga Chefe,Negele Borana,206.03,highway,fair,100,4,No
+66,Hawassa,Bedele,335.8,highway,fair,100,4,No
+67,Nekemte,Bole,296.68,highway,fair,100,4,No
+68,Yeka,Dessie,280.49,highway,fair,100,4,No
+69,Haramaya,Jigjiga,111.17,national,poor,80,2,No
+70,Addis Ababa,Gebre Guracha,240.8,highway,good,100,4,No
+71,Gebre Guracha,Yeka,267.32,highway,good,100,4,No
+72,Hayk,Dubti,201.97,highway,fair,100,4,No
+73,Konso,Yirga Chefe,175.4,national,fair,80,2,No
+74,Ziway,Shambu,350.74,highway,fair,100,4,No
+75,Ziway,Lideta,147.01,national,fair,80,2,No
+76,Yirgalem,Lideta,331.61,highway,fair,100,4,No
+77,Boditi,Yirga Chefe,139.04,national,fair,80,2,No
+78,Debre Markos,Debre Birhan,237.29,highway,good,100,4,No
+79,Sendafa,Butajira,197.49,national,good,80,2,No
+80,Injibara,Shambu,181.93,national,good,80,2,No
+81,Metema,Bahir Dar,248.67,highway,good,100,4,No
+82,Hayk,Wereilu,106.46,national,poor,80,2,No
+83,Maychew,Adwa,186.77,national,poor,80,2,No
+84,Haramaya,Degehabur,293.54,highway,fair,100,4,No
+85,Bishoftu,Butajira,108.63,national,good,80,2,No
+86,Gulele,Butajira,148.61,national,good,80,2,No
+87,Yeka,Kolfe Keranio,17.1,regional,fair,80,2,No
+88,Bahir Dar,Mandura,256.01,highway,poor,100,4,No
+89,Jigjiga,Debre Sina,421.55,highway,good,100,4,No
+90,Woldia,Holeta,387.87,highway,fair,100,4,No
+91,Yeka,Lideta,14.58,regional,poor,80,2,No
+92,Gode,Degehabur,290.38,highway,good,100,4,No
+93,Gimbi,Gog,201.75,highway,fair,100,4,No
+94,Haramaya,Bishoftu,441.85,highway,poor,100,4,No
+95,Lideta,Shashamane,246.91,highway,fair,100,4,No
+96,Mandura,Gog,334.35,highway,fair,100,4,No
+97,Lalibela,Sekota,79.29,regional,fair,80,2,No
+98,Mille,Gewane,171.11,national,good,80,2,No
+99,Gewane,Haramaya,223.96,highway,fair,100,4,No
+100,Debre Sina,Buta Jira,330.83,highway,good,100,4,No
+101,Asella,Butajira,115.87,national,good,80,2,No
+102,Butajira,Shashamane,124.71,national,good,80,2,No
+103,Akaki Kaliti,Bishoftu,33.47,regional,fair,80,2,No
+104,Addis Ababa,Mota,292.94,highway,fair,100,4,No
+105,Alamata,Mota,279.64,highway,fair,100,4,No
+106,Jinka,Buta Jira,443.52,highway,good,100,4,No
+107,Jimma,Buta Jira,202.39,highway,good,100,4,No
+108,Mojo,Goba,229.41,highway,good,100,4,No
+109,Maychew,Semera,226.09,highway,fair,100,4,No
+110,Chiro,Asaita,381.26,highway,fair,100,4,No
+111,Addis Ababa,Gimbi,416.2,highway,fair,100,4,No
+112,Debre Tabor,Wukro,351.95,highway,fair,100,4,No
+113,Finote Selam,Sendafa,319.69,highway,poor,100,4,No
+114,Buta Jira,Mizan Teferi,400.62,highway,good,100,4,No
+115,Finote Selam,Wereilu,267.34,highway,poor,100,4,No
+116,Holeta,Durame,295.69,highway,fair,100,4,No
+117,Shire,Axum,60.91,regional,poor,80,2,No
+118,Yirgalem,Negele Borana,229.24,highway,fair,100,4,No
+119,Logia,Debre Birhan,383.29,highway,fair,100,4,No
+120,Yeka,Bole,6.92,regional,fair,80,2,No
+121,Goba,Shashamane,192.71,national,good,80,2,No
+122,Harar,Dessie,451.12,highway,fair,100,4,No
+123,Bishoftu,Mota,325.65,highway,fair,100,4,No
+124,Kombolcha,Shambu,414.53,highway,fair,100,4,No
+125,Bedele,Sendafa,395.58,highway,good,100,4,No
+126,Bonga,Yabelo,387.32,highway,good,100,4,No
+127,Buta Jira,Bole,131.24,national,good,80,2,No
+128,Kobo,Gebre Guracha,381.27,highway,good,100,4,No
+129,Alamata,Dessie,192.03,national,fair,80,2,No
+130,Ziway,Debre Markos,331.46,highway,poor,100,4,No
+131,Yirgalem,Buta Jira,185.3,national,good,80,2,No
+132,Bishoftu,Injibara,453.0,highway,good,100,4,No
+133,Gambella,Metu,123.23,national,good,80,2,No
+134,Jugol,Gebre Guracha,237.39,highway,good,100,4,No
+135,Finote Selam,Metu,377.45,highway,fair,100,4,No
+136,Debre Tabor,Debre Markos,230.98,highway,fair,100,4,No
+137,Legehare,Degehabur,319.73,highway,good,100,4,No
+138,Kolfe Keranio,Dessie,333.94,highway,good,100,4,No
+139,Kirkos,Chiro,291.52,highway,fair,100,4,No
+140,Hayk,Wukro,327.29,highway,fair,100,4,No
+141,Sendafa,Haramaya,381.33,highway,good,100,4,No
+142,Harar,Sendafa,446.87,highway,good,100,4,No
+143,Nekemte,Mandura,290.32,highway,fair,100,4,No
+144,Addis Ababa,Yeka,11.07,regional,good,80,2,No
+145,Debre Birhan,Debre Sina,38.89,regional,poor,80,2,No
+146,Yirga Chefe,Gulele,424.27,highway,good,100,4,No
+147,Gog,Dembi Dolo,48.93,regional,good,80,2,No
+148,Ambo,Nekemte,200.23,highway,poor,100,4,No
+149,Wolaita Sodo,Yirga Chefe,126.0,national,fair,80,2,No
+150,Yabelo,Negele Borana,236.84,highway,fair,100,4,No
+151,Mizan Teferi,Shashamane,385.41,highway,fair,100,4,No
+152,Bahir Dar,Sekota,279.12,highway,good,100,4,No
+153,Debre Tabor,Nekemte,470.26,highway,good,100,4,No
+154,Metu,Holeta,404.08,highway,fair,100,4,No
+155,Dessie,Dubti,234.19,highway,fair,100,4,No
+156,Sendafa,Injibara,361.02,highway,good,100,4,No
+157,Finote Selam,Adama,416.77,highway,fair,100,4,No
+158,Bedele,Butajira,282.75,highway,good,100,4,No
+159,Asella,Addis Ababa,159.72,national,poor,80,2,No
+160,Butajira,Debre Birhan,294.11,highway,good,100,4,No
+161,Arba Minch,Moyale,434.26,highway,good,100,4,No
+162,Finote Selam,Bahir Dar,130.18,national,poor,80,2,No
+163,Debre Tabor,Korem,236.59,highway,good,100,4,No
+164,Konso,Goba,421.75,highway,good,100,4,No
+165,Bonga,Gog,269.62,highway,good,100,4,No
+166,Bishoftu,Sendafa,71.46,regional,poor,80,2,No
+167,Wolaita Sodo,Durame,53.89,regional,good,80,2,No
+168,Yirgalem,Sawla,216.43,highway,fair,100,4,No
+169,Chiro,Adama,248.15,highway,poor,100,4,No
+170,Boditi,Durame,35.55,regional,good,80,2,No
+171,Wukro,Bahir Dar,437.99,highway,poor,100,4,No
+172,Korem,Injibara,415.72,highway,poor,100,4,No
+173,Wereilu,Debre Birhan,150.36,national,fair,80,2,No
+174,Akaki Kaliti,Arba Minch,421.04,highway,poor,100,4,No
+175,Addis Ababa,Mojo,71.65,regional,good,80,2,No
+176,Harar,Haramaya,21.61,regional,poor,80,2,No
+177,Sawla,Gimbi,463.93,highway,good,100,4,No
+178,Debre Tabor,Sekota,168.1,national,good,80,2,No
+179,Semera,Alamata,211.86,highway,good,100,4,No
+180,Bonga,Yirgalem,321.46,highway,fair,100,4,No
+181,Hayk,Kolfe Keranio,367.11,highway,poor,100,4,No
+182,Debre Sina,Bole,158.59,national,good,80,2,No
+183,Woldia,Mille,163.43,national,poor,80,2,No
+184,Logia,Legehare,299.07,highway,fair,100,4,No
+185,Fiche,Durame,358.53,highway,good,100,4,No
+186,Kelafo,Gode,80.03,national,poor,80,2,No
+187,Asaita,Dire Dawa,266.14,highway,poor,100,4,No
+188,Kirkos,Goba,316.03,highway,good,100,4,No
+189,Gebre Guracha,Korem,380.57,highway,poor,100,4,No
+190,Adwa,Shire,74.49,regional,good,80,2,No
+191,Kombolcha,Gebre Guracha,247.26,highway,fair,100,4,No
+192,Sendafa,Akaki Kaliti,57.14,regional,good,80,2,No
+193,Bole,Yirga Chefe,442.25,highway,fair,100,4,No
+194,Ambo,Mota,321.68,highway,poor,100,4,No
+195,Alamata,Wereilu,220.11,highway,poor,100,4,No
+196,Kombolcha,Hawzen,403.15,highway,fair,100,4,No
+197,Dessie,Holeta,299.1,highway,fair,100,4,No
+198,Butajira,Boditi,163.26,national,fair,80,2,No
+199,Metema,Shire,294.77,highway,fair,100,4,No
+200,Gambella,Dembi Dolo,52.4,regional,fair,80,2,No
+201,Butajira,Hosaena,101.22,national,good,80,2,No
+202,Harar,Wereilu,439.29,highway,good,100,4,No
+203,Dembi Dolo,Sawla,371.45,highway,poor,100,4,No
+204,Yeka,Gulele,9.95,regional,poor,80,2,No
+205,Gulele,Lideta,8.76,regional,fair,80,2,No
+206,Asaita,Wereilu,320.85,highway,good,100,4,No
+207,Legehare,Debre Birhan,310.26,highway,good,100,4,No
+208,Sawla,Ziway,345.67,highway,fair,100,4,No
+209,Debre Sina,Ziway,305.62,highway,good,100,4,No
+210,Asella,Lideta,164.67,national,good,80,2,No
+211,Mota,Lideta,273.9,highway,good,100,4,No
+212,Gewane,Debre Markos,425.43,highway,fair,100,4,No
+213,Shambu,Holeta,206.51,highway,good,100,4,No
+214,Gebre Guracha,Butajira,383.44,highway,poor,100,4,No
+215,Holeta,Bishoftu,71.22,regional,good,80,2,No
+216,Chiro,Debre Birhan,178.36,national,poor,80,2,No
+217,Boditi,Bedele,258.21,highway,fair,100,4,No
+218,Kombolcha,Korem,191.2,national,good,80,2,No
+219,Wereilu,Kolfe Keranio,225.08,highway,good,100,4,No
+220,Wereilu,Sekota,279.19,highway,fair,100,4,No
+221,Arba Minch,Yirgalem,168.68,national,good,80,2,No
+222,Akaki Kaliti,Nekemte,334.85,highway,good,100,4,No
+223,Injibara,Dessie,356.73,highway,poor,100,4,No
+224,Wukro,Axum,140.74,national,fair,80,2,No
+225,Dire Dawa,Akaki Kaliti,391.75,highway,fair,100,4,No
+226,Shambu,Itang,454.46,highway,fair,100,4,No
+227,Jugol,Gewane,211.46,highway,good,100,4,No
+228,Bonga,Mizan Teferi,107.39,national,good,80,2,No
+229,Yeka,Wereilu,253.71,highway,fair,100,4,No
+230,Bonga,Bishoftu,449.04,highway,fair,100,4,No
+231,Yabelo,Wolaita Sodo,257.51,highway,fair,100,4,No
+232,Semera,Dire Dawa,325.28,highway,fair,100,4,No
+233,Mojo,Sendafa,91.65,national,good,80,2,No
+234,Bahir Dar,Debre Sina,441.38,highway,fair,100,4,No
+235,Jimma,Kirkos,294.5,highway,good,100,4,No
+236,Akaki Kaliti,Injibara,343.66,highway,good,100,4,No
+237,Fiche,Gulele,113.46,national,fair,80,2,No
+238,Ambo,Addis Zemen,448.83,highway,fair,100,4,No
+239,Lideta,Hosaena,241.55,highway,fair,100,4,No
+240,Gewane,Butajira,407.19,highway,good,100,4,No
+241,Shambu,Addis Ababa,248.49,highway,good,100,4,No
+242,Korem,Fiche,372.38,highway,good,100,4,No
+243,Addis Zemen,Bahir Dar,95.08,national,good,80,2,No
+244,Maychew,Debre Tabor,252.35,highway,poor,100,4,No
+245,Hawassa,Buta Jira,156.67,national,fair,80,2,No
+246,Sendafa,Addis Ababa,51.47,regional,fair,80,2,No
+247,Negele Borana,Ziway,391.05,highway,good,100,4,No
+248,Konso,Sawla,162.95,national,fair,80,2,No
+249,Dire Dawa,Sendafa,412.29,highway,fair,100,4,No
+250,Sekota,Dubti,274.53,highway,good,100,4,No
+251,Jugol,Harar,1.31,regional,poor,80,2,No
+252,Dubti,Debre Sina,316.86,highway,fair,100,4,No
+253,Fiche,Buta Jira,256.49,highway,fair,100,4,No
+254,Legehare,Dubti,327.59,highway,good,100,4,No
+255,Warder,Kelafo,229.97,highway,good,100,4,No
+256,Yirgalem,Wolaita Sodo,87.02,national,fair,80,2,No
+257,Shambu,Hayk,429.98,highway,fair,100,4,No
+258,Bedele,Wolaita Sodo,282.71,highway,fair,100,4,No
+259,Yirga Chefe,Arba Minch,86.08,national,good,80,2,No
+260,Arba Minch,Ambo,395.19,highway,poor,100,4,No
+261,Semera,Wereilu,243.66,highway,good,100,4,No
+262,Mojo,Arba Minch,464.39,highway,poor,100,4,No
+263,Lalibela,Finote Selam,339.16,highway,good,100,4,No
+264,Mota,Wereilu,212.19,highway,fair,100,4,No
+265,Jimma,Butajira,239.69,highway,fair,100,4,No
+266,Lideta,Sendafa,48.7,regional,good,80,2,No
+267,Mota,Adama,393.28,highway,good,100,4,No
+268,Shambu,Butajira,284.35,highway,fair,100,4,No
+269,Buta Jira,Holeta,116.7,national,good,80,2,No
+270,Yirga Chefe,Mizan Teferi,406.89,highway,fair,100,4,No
+271,Negele Borana,Wolaita Sodo,330.51,highway,good,100,4,No
+272,Korem,Sekota,74.71,regional,good,80,2,No
+273,Jigjiga,Asaita,345.77,highway,fair,100,4,No
+274,Sekota,Fiche,392.14,highway,good,100,4,No
+275,Woldia,Gebre Guracha,353.24,highway,poor,100,4,No
+276,Yeka,Ziway,169.7,national,good,80,2,No
+277,Dembi Dolo,Bedele,204.13,highway,fair,100,4,No
+278,Bonga,Buta Jira,296.6,highway,fair,100,4,No
+279,Hosaena,Shambu,281.94,highway,good,100,4,No
+280,Asaita,Debre Birhan,344.54,highway,fair,100,4,No
+281,Mota,Kombolcha,249.54,highway,good,100,4,No
+282,Gewane,Semera,255.81,highway,poor,100,4,No
+283,Alamata,Asaita,279.83,highway,poor,100,4,No
+284,Shashamane,Yabelo,353.6,highway,good,100,4,No
+285,Dessie,Shambu,368.93,highway,fair,100,4,No
+286,Gulele,Shambu,217.64,highway,fair,100,4,No
+287,Kombolcha,Dessie,16.89,regional,fair,80,2,No
+288,Arba Minch,Hosaena,195.71,national,fair,80,2,No
+289,Debre Tabor,Guba,321.95,highway,poor,100,4,No
+290,Yabelo,Sawla,282.6,highway,fair,100,4,No
+291,Sendafa,Fiche,88.51,national,good,80,2,No
+292,Konso,Bonga,327.27,highway,poor,100,4,No
+293,Gimbi,Ambo,301.82,highway,good,100,4,No
+294,Yirga Chefe,Kirkos,374.09,highway,fair,100,4,No
+295,Sekota,Hawzen,176.3,national,poor,80,2,No
+296,Itang,Jimma,360.83,highway,poor,100,4,No
+297,Debre Markos,Akaki Kaliti,234.41,highway,good,100,4,No
+298,Axum,Dessie,459.8,highway,poor,100,4,No
+299,Sendafa,Mille,361.46,highway,fair,100,4,No
+300,Wukro,Hawzen,35.08,regional,fair,80,2,No

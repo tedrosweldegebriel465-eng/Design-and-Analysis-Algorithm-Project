@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-03-22 20:17:34",
+  "network": {
+    "cities": 10,
+    "roads": 20,
+    "density": 0.4444444444444444,
+    "avg_degree": 4.0
+  },
+  "regions": {
+    "Addis Ababa": 3,
+    "Oromia": 3,
+    "Amhara": 1,
+    "SNNPR": 3
+  },
+  "road_stats": {
+    "avg_distance": 244.103,
+    "min_distance": 91.79,
+    "max_distance": 410.78,
+    "total_distance": 4882.06,
+    "by_type": {
+      "national": 7,
+      "highway": 13
+    }
+  },
+  "complexity": {
+    "array": {
+      "operations": 100,
+      "memory": 0.126953125
+    },
+    "pq": {
+      "operations": 99,
+      "memory": 2.3828125
+    },
+    "speedup": 1.0034333188799374
+  },
+  "source_city": {
+    "id": 3,
+    "name": "Addis Ababa",
+    "region": "Addis Ababa"
+  },
+  "source_stats": {
+    "reachable": 8,
+    "unreachable": 1,
+    "farthest": {
+      "name": "Metu",
+      "distance": 626.48
+    },
+    "closest": {
+      "name": "Asella",
+      "distance": 147.0
+    }
+  },
+  "longest_paths": [
+    {
+      "name": "Metu",
+      "region": "Oromia",
+      "distance": 626.48
+    },
+    {
+      "name": "Sawla",
+      "region": "SNNPR",
+      "distance": 411.28
+    },
+    {
+      "name": "Bole",
+      "region": "Addis Ababa",
+      "distance": 315.83000000000004
+    },
+    {
+      "name": "Wolaita Sodo",
+      "region": "SNNPR",
+      "distance": 301.99
+    },
+    {
+      "name": "Bale Robe",
+      "region": "Oromia",
+      "distance": 296.38
+    },
+    {
+      "name": "Lideta",
+      "region": "Addis Ababa",
+      "distance": 295.24
+    },
+    {
+      "name": "Hosaena",
+      "region": "SNNPR",
+      "distance": 210.2
+    },
+    {
+      "name": "Asella",
+      "region": "Oromia",
+      "distance": 147.0
+    }
+  ],
+  "metadata": {
+    "generated": "2026-03-22T20:17:34.278782",
+    "version": "1.0",
+    "system": "Ethiopian GPS Navigation System"
+  }
+}

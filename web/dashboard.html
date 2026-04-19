@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ethiopian GPS - Analytics Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Simple modern styling -->
+    <style>
+        :root {
+            --bg: #0f172a;
+            --bg-card: #020617;
+            --accent: #22c55e;
+            --accent-soft: rgba(34, 197, 94, 0.15);
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top left, #1e293b, #020617 55%);
+            color: var(--text);
+        }
+        .layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .title-group h1 {
+            font-size: 1.75rem;
+            margin: 0 0 4px;
+        }
+        .title-group p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.3);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+        .card {
+            background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(15,23,42,0.9));
+            border-radius: 16px;
+            border: 1px solid rgba(148,163,184,0.35);
+            padding: 14px 14px 12px;
+            box-shadow: 0 18px 45px rgba(15,23,42,0.85);
+        }
+        .card h2 {
+            margin: 0 0 6px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        .metric-main {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .metric-sub {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+        .badge-soft {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 0.7rem;
+        }
+        .charts-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .chart-card {
+            background: radial-gradient(circle at top, rgba(15,23,42,1), rgba(15,23,42,0.98));
+            border-radius: 18px;
+            border: 1px solid rgba(148,163,184,0.4);
+            padding: 12px 12px 4px;
+            box-shadow: 0 18px 45px rgba(15,23,42,0.85);
+        }
+        .chart-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+        .chart-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .chart-subtitle {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+        .chart-container {
+            width: 100%;
+            height: 260px;
+        }
+        footer {
+            margin-top: 12px;
+            font-size: 0.75rem;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr);
+            gap: 16px;
+            margin-top: 10px;
+        }
+        .panel {
+            background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(15,23,42,0.95));
+            border-radius: 16px;
+            border: 1px solid rgba(148,163,184,0.35);
+            padding: 12px 14px 10px;
+            box-shadow: 0 18px 45px rgba(15,23,42,0.85);
+        }
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .panel-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .panel-subtitle {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+        .panel-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+        }
+        .field label {
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+        .field input,
+        .field select {
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.5);
+            padding: 4px 10px;
+            background: rgba(15,23,42,0.9);
+            color: var(--text);
+            font-size: 0.8rem;
+            outline: none;
+        }
+        .field input::placeholder {
+            color: rgba(148,163,184,0.7);
+        }
+        .btn {
+            border-radius: 999px;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #020617;
+            box-shadow: 0 10px 30px rgba(34,197,94,0.35);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-secondary {
+            background: rgba(15,23,42,1);
+            color: var(--muted);
+            border: 1px solid rgba(148,163,184,0.5);
+            box-shadow: none;
+        }
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+        .routes-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.78rem;
+        }
+        .routes-table thead {
+            color: var(--muted);
+        }
+        .routes-table th,
+        .routes-table td {
+            padding: 4px 4px;
+            border-bottom: 1px solid rgba(30,64,175,0.5);
+            text-align: left;
+            white-space: nowrap;
+        }
+        .routes-table th:last-child,
+        .routes-table td:last-child {
+            white-space: normal;
+        }
+        .routes-table tbody tr:hover {
+            background: rgba(15,23,42,0.85);
+        }
+        .tag {
+            display: inline-flex;
+            padding: 1px 6px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.4);
+            font-size: 0.7rem;
+            color: var(--muted);
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .charts-grid { grid-template-columns: minmax(0, 1fr); }
+            header { flex-direction: column; align-items: flex-start; }
+            .two-column { grid-template-columns: minmax(0, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: minmax(0, 1fr); }
+        }
+    </style>
+    <!-- Plotly via CDN -->
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+</head>
+<body>
+    <div class="layout">
+        <header>
+            <div class="title-group">
+                <h1>Ethiopian GPS – Analytics</h1>
+                <p>Live overview of cities, roads, and network structure.</p>
+            </div>
+            <div class="pill">
+                <span class="pill-dot"></span>
+                <span id="health-text">Backend: checking…</span>
+            </div>
+        </header>
+
+        <section class="grid">
+            <div class="card">
+                <h2>Total Cities</h2>
+                <div class="metric-main" id="metric-cities">–</div>
+                <div class="metric-sub">Unique Ethiopian cities in the network</div>
+            </div>
+            <div class="card">
+                <h2>Total Roads</h2>
+                <div class="metric-main" id="metric-roads">–</div>
+                <div class="metric-sub">Road segments connecting cities</div>
+            </div>
+            <div class="card">
+                <h2>Network Density</h2>
+                <div class="metric-main" id="metric-density">–</div>
+                <div class="metric-sub">How close the network is to fully connected</div>
+            </div>
+            <div class="card">
+                <h2>Avg Connections / City</h2>
+                <div class="metric-main" id="metric-degree">–</div>
+                <div class="metric-sub">Mean number of neighboring roads</div>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div>
+                        <div class="chart-title">Cities by Region</div>
+                        <div class="chart-subtitle">Distribution of cities across Ethiopian regions</div>
+                    </div>
+                    <span class="badge-soft">
+                        Regions
+                    </span>
+                </div>
+                <div id="chart-regions" class="chart-container"></div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div>
+                        <div class="chart-title">Road Conditions</div>
+                        <div class="chart-subtitle">Share of roads by condition</div>
+                    </div>
+                    <span class="badge-soft">
+                        Quality
+                    </span>
+                </div>
+                <div id="chart-conditions" class="chart-container"></div>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <div>
+                        <div class="chart-title">Most Connected Cities</div>
+                        <div class="chart-subtitle">Top cities by number of neighboring roads</div>
+                    </div>
+                    <span class="badge-soft">
+                        Centrality
+                    </span>
+                </div>
+                <div id="chart-top-cities" class="chart-container"></div>
+            </div>
+        </section>
+
+        <section class="two-column">
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title">User &amp; Route Preferences</div>
+                        <div class="panel-subtitle">Log in and configure how routes are saved.</div>
+                    </div>
+                </div>
+                <div class="panel-controls">
+                    <div class="field">
+                        <label for="input-username">Username</label>
+                        <input id="input-username" type="text" placeholder="e.g. alice" />
+                    </div>
+                    <div class="field">
+                        <label for="input-password">Password</label>
+                        <input id="input-password" type="password" placeholder="••••••••" />
+                    </div>
+                    <div class="field">
+                        <label>&nbsp;</label>
+                        <button id="btn-register" class="btn-secondary" type="button">Register</button>
+                    </div>
+                    <div class="field">
+                        <label>&nbsp;</label>
+                        <button id="btn-login" class="btn" type="button">Login</button>
+                    </div>
+                </div>
+                <div class="panel-subtitle" id="auth-status">
+                    Not logged in.
+                </div>
+
+                <hr style="border-color: rgba(30,64,175,0.4); border-style: solid; border-width: 0 0 1px; margin: 10px 0;" />
+
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title">Save Route</div>
+                        <div class="panel-subtitle">Define a route and store it as a favorite.</div>
+                    </div>
+                </div>
+
+                <div class="panel-controls">
+                    <div class="field">
+                        <label for="select-from">From</label>
+                        <select id="select-from">
+                            <option value="">Select origin...</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="select-to">To</label>
+                        <select id="select-to">
+                            <option value="">Select destination...</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="select-mode">Mode</label>
+                        <select id="select-mode">
+                            <option value="shortest">Shortest</option>
+                            <option value="fastest">Fastest</option>
+                            <option value="safest">Safest</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="panel-controls">
+                    <div class="field">
+                        <label for="input-avoid">Avoid conditions</label>
+                        <input id="input-avoid" type="text" placeholder="poor,seasonal" />
+                    </div>
+                    <div class="field">
+                        <label for="input-allowed-regions">Allowed regions</label>
+                        <input id="input-allowed-regions" type="text" placeholder="Amhara,Oromia" />
+                    </div>
+                    <div class="field">
+                        <label for="input-avoid-regions">Avoid regions</label>
+                        <input id="input-avoid-regions" type="text" placeholder="Somali" />
+                    </div>
+                </div>
+                <div class="panel-controls">
+                    <button id="btn-show-map" class="btn" type="button">Show on Map</button>
+                    <button id="btn-save-route" class="btn-secondary" type="button">Save Route</button>
+                    <button id="btn-refresh-routes" class="btn-secondary" type="button">Refresh Saved Routes</button>
+                </div>
+                <div class="panel-subtitle" id="route-status">
+                    Select route details above.
+                </div>
+                
+                <hr style="border-color: rgba(30,64,175,0.4); border-style: solid; border-width: 0 0 1px; margin: 10px 0;" />
+                
+                <div style="width: 100%; height: 400px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(148,163,184,0.35);">
+                    <iframe id="map-frame" src="about:blank" style="width: 100%; height: 100%; border: none; background: rgba(0,0,0,0.2);"></iframe>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title">My Saved Routes</div>
+                        <div class="panel-subtitle">Recently saved routes for the logged-in user.</div>
+                    </div>
+                </div>
+                <div style="max-height: 260px; overflow: auto; border-radius: 10px; border: 1px solid rgba(30,64,175,0.6);">
+                    <table class="routes-table">
+                        <thead>
+                            <tr>
+                                <th>From → To</th>
+                                <th>Mode</th>
+                                <th>Distance</th>
+                                <th>Time</th>
+                                <th>Options</th>
+                                <th>Map</th>
+                            </tr>
+                        </thead>
+                        <tbody id="routes-body">
+                            <tr>
+                                <td colspan="6" style="text-align:center; padding:6px 4px; color: var(--muted);">
+                                    No routes yet. Log in and save a route.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="status">
+                <span class="status-dot"></span>
+                <span id="footer-status">Waiting for data…</span>
+            </div>
+            <div>
+                Data loaded via <code>/stats/*</code> endpoints · Map &amp; routing available via <code>/map</code> and <code>/route</code>.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let currentUser = null;
+        let authToken = null;
+
+        function authHeaders(extra = {}) {
+            const headers = { ...extra };
+            if (authToken) {
+                headers.Authorization = `Bearer ${authToken}`;
+            }
+            return headers;
+        }
+
+        async function fetchJson(path, options = {}) {
+            const res = await fetch(path, options);
+            if (!res.ok) {
+                let details = "";
+                try {
+                    const errBody = await res.json();
+                    if (errBody && errBody.description) details = ` - ${errBody.description}`;
+                } catch (_) {
+                    // Ignore JSON parse failures for non-JSON error bodies.
+                }
+                throw new Error(`Request failed: ${path} (${res.status})${details}`);
+            }
+            return res.json();
+        }
+
+        async function loadHealth() {
+            try {
+                const data = await fetchJson("/health");
+                const text = document.getElementById("health-text");
+                text.textContent = `Backend: ${data.status} · ${data.app} v${data.version}`;
+            } catch (e) {
+                document.getElementById("health-text").textContent = "Backend: unreachable";
+            }
+        }
+
+        async function loadSummary() {
+            const data = await fetchJson("/stats/summary");
+            document.getElementById("metric-cities").textContent = data.total_cities;
+            document.getElementById("metric-roads").textContent = data.total_roads;
+            document.getElementById("metric-density").textContent = data.density.toFixed(4);
+            document.getElementById("metric-degree").textContent = data.average_degree.toFixed(2);
+        }
+
+        async function loadRegionChart() {
+            const data = await fetchJson("/stats/regions");
+            const regions = Object.keys(data);
+            const counts = Object.values(data);
+
+            const trace = {
+                x: regions,
+                y: counts,
+                type: "bar",
+                marker: {
+                    color: "#22c55e"
+                }
+            };
+            const layout = {
+                margin: { l: 40, r: 10, t: 10, b: 80 },
+                paper_bgcolor: "rgba(0,0,0,0)",
+                plot_bgcolor: "rgba(0,0,0,0)",
+                xaxis: { tickangle: -30, tickfont: { color: "#9ca3af" } },
+                yaxis: { gridcolor: "rgba(148,163,184,0.2)", tickfont: { color: "#9ca3af" } },
+            };
+            Plotly.newPlot("chart-regions", [trace], layout, {displayModeBar: false});
+        }
+
+        async function loadConditionsChart() {
+            const data = await fetchJson("/stats/conditions");
+            const labels = Object.keys(data);
+            const values = Object.values(data);
+
+            const trace = {
+                labels,
+                values,
+                type: "pie",
+                hole: 0.45,
+            };
+            const layout = {
+                margin: { l: 10, r: 10, t: 10, b: 10 },
+                paper_bgcolor: "rgba(0,0,0,0)",
+                plot_bgcolor: "rgba(0,0,0,0)",
+                legend: { font: { color: "#e5e7eb" } }
+            };
+            Plotly.newPlot("chart-conditions", [trace], layout, {displayModeBar: false});
+        }
+
+        async function loadTopCitiesChart() {
+            const data = await fetchJson("/stats/top-cities?limit=10");
+            const cities = data.cities;
+            const degrees = data.degrees;
+
+            const trace = {
+                x: degrees,
+                y: cities,
+                type: "bar",
+                orientation: "h",
+                marker: {
+                    color: "#38bdf8"
+                }
+            };
+            const layout = {
+                margin: { l: 100, r: 10, t: 10, b: 30 },
+                paper_bgcolor: "rgba(0,0,0,0)",
+                plot_bgcolor: "rgba(0,0,0,0)",
+                xaxis: { gridcolor: "rgba(148,163,184,0.2)", tickfont: { color: "#9ca3af" } },
+                yaxis: { tickfont: { color: "#9ca3af" } },
+            };
+            Plotly.newPlot("chart-top-cities", [trace], layout, {displayModeBar: false});
+        }
+
+        function setAuthStatus(text) {
+            document.getElementById("auth-status").textContent = text;
+        }
+
+        function setRouteStatus(text) {
+            document.getElementById("route-status").textContent = text;
+        }
+
+        async function loadCities() {
+            try {
+                const data = await fetchJson("/api/cities");
+                const fromSelect = document.getElementById("select-from");
+                const toSelect = document.getElementById("select-to");
+                
+                const optionsHTML = data.cities.map(city => `<option value="${city}">${city}</option>`).join("");
+                fromSelect.innerHTML += optionsHTML;
+                toSelect.innerHTML += optionsHTML;
+            } catch (e) {
+                console.error("Failed to load cities", e);
+            }
+        }
+
+        async function handleRegister() {
+            const username = document.getElementById("input-username").value.trim();
+            const password = document.getElementById("input-password").value;
+            if (!username || !password) {
+                setAuthStatus("Please enter a username and password.");
+                return;
+            }
+            try {
+                const data = await fetchJson("/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username, password })
+                });
+                currentUser = data.user;
+                authToken = data.token || null;
+                setAuthStatus(`Registered and logged in as ${currentUser.username}.`);
+                await loadMyRoutes();
+            } catch (e) {
+                console.error(e);
+                setAuthStatus("Registration failed: " + e.message);
+            }
+        }
+
+        async function handleLogin() {
+            const username = document.getElementById("input-username").value.trim();
+            const password = document.getElementById("input-password").value;
+            if (!username || !password) {
+                setAuthStatus("Please enter a username and password.");
+                return;
+            }
+            try {
+                const data = await fetchJson("/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username, password })
+                });
+                currentUser = data.user;
+                authToken = data.token || null;
+                setAuthStatus(`Logged in as ${currentUser.username}.`);
+                await loadMyRoutes();
+            } catch (e) {
+                console.error(e);
+                setAuthStatus("Login failed: " + e.message);
+            }
+        }
+
+        async function handleSaveRoute() {
+            if (!currentUser) {
+                setRouteStatus("Please log in before saving a route.");
+                return;
+            }
+            const source = document.getElementById("select-from").value;
+            const dest = document.getElementById("select-to").value;
+            const mode = document.getElementById("select-mode").value;
+            const avoid = document.getElementById("input-avoid").value.trim();
+            const allowedRegions = document.getElementById("input-allowed-regions").value.trim();
+            const avoidRegions = document.getElementById("input-avoid-regions").value.trim();
+
+            if (!source || !dest) {
+                setRouteStatus("Please enter both 'From' and 'To' cities.");
+                return;
+            }
+
+            setRouteStatus("Saving route…");
+
+            try {
+                await fetchJson("/routes/save", {
+                    method: "POST",
+                    headers: authHeaders({ "Content-Type": "application/json" }),
+                    body: JSON.stringify({
+                        from: source,
+                        to: dest,
+                        mode,
+                        avoid,
+                        allowed_regions: allowedRegions,
+                        avoid_regions: avoidRegions
+                    })
+                });
+                setRouteStatus("Route saved successfully.");
+                await loadMyRoutes();
+            } catch (e) {
+                console.error(e);
+                setRouteStatus("Failed to save route: " + e.message);
+            }
+        }
+
+        function handleShowMap() {
+            const source = document.getElementById("select-from").value;
+            const dest = document.getElementById("select-to").value;
+            const mode = document.getElementById("select-mode").value;
+            const avoid = document.getElementById("input-avoid").value.trim();
+            const allowedRegions = document.getElementById("input-allowed-regions").value.trim();
+            const avoidRegions = document.getElementById("input-avoid-regions").value.trim();
+
+            if (!source || !dest) {
+                setRouteStatus("Please select both 'From' and 'To' cities.");
+                return;
+            }
+
+            setRouteStatus("Generating and loading interactive map...");
+            
+            const params = new URLSearchParams();
+            params.set("from", source);
+            params.set("to", dest);
+            params.set("mode", mode);
+            if (avoid) params.set("avoid", avoid);
+            if (allowedRegions) params.set("allowed_regions", allowedRegions);
+            if (avoidRegions) params.set("avoid_regions", avoidRegions);
+            
+            const iframe = document.getElementById("map-frame");
+            iframe.src = `/map?${params.toString()}`;
+            
+            iframe.onload = () => {
+                setRouteStatus("Interactive Map loaded successfully.");
+            };
+        }
+
+        async function loadMyRoutes() {
+            const body = document.getElementById("routes-body");
+            if (!currentUser) {
+                body.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align:center; padding:6px 4px; color: var(--muted);">
+                            Not logged in.
+                        </td>
+                    </tr>`;
+                return;
+            }
+            try {
+                const data = await fetchJson("/routes/mine", {
+                    headers: authHeaders()
+                });
+                const routes = data.routes || [];
+                if (!routes.length) {
+                    body.innerHTML = `
+                        <tr>
+                            <td colspan="6" style="text-align:center; padding:6px 4px; color: var(--muted);">
+                                No routes yet. Save a route to see it here.
+                            </td>
+                        </tr>`;
+                    return;
+                }
+                body.innerHTML = routes.map(r => {
+                    const distance = r.distance_km != null ? `${r.distance_km.toFixed(1)} km` : "–";
+                    const time = r.travel_time_hours != null ? `${r.travel_time_hours.toFixed(1)} h` : "–";
+                    const opts = [];
+                    if (r.options && r.options.avoid && r.options.avoid.length) {
+                        opts.push(`avoid: ${r.options.avoid.join(", ")}`);
+                    }
+                    if (r.options && r.options.allowed_regions && r.options.allowed_regions.length) {
+                        opts.push(`allowed: ${r.options.allowed_regions.join(", ")}`);
+                    }
+                    if (r.options && r.options.avoid_regions && r.options.avoid_regions.length) {
+                        opts.push(`avoid regions: ${r.options.avoid_regions.join(", ")}`);
+                    }
+                    const optsText = opts.length ? opts.join(" | ") : "–";
+                    const params = new URLSearchParams();
+                    params.set("from", r.source_city);
+                    params.set("to", r.dest_city);
+                    params.set("mode", r.mode);
+                    if (r.options && r.options.avoid && r.options.avoid.length) {
+                        params.set("avoid", r.options.avoid.join(","));
+                    }
+                    if (r.options && r.options.allowed_regions && r.options.allowed_regions.length) {
+                        params.set("allowed_regions", r.options.allowed_regions.join(","));
+                    }
+                    if (r.options && r.options.avoid_regions && r.options.avoid_regions.length) {
+                        params.set("avoid_regions", r.options.avoid_regions.join(","));
+                    }
+                    const mapUrl = `/map?${params.toString()}`;
+                    return `
+                        <tr>
+                            <td>${r.source_city} → ${r.dest_city}</td>
+                            <td><span class="tag">${r.mode}</span></td>
+                            <td>${distance}</td>
+                            <td>${time}</td>
+                            <td>${optsText}</td>
+                            <td><a href="${mapUrl}" target="_blank" class="tag">Open</a></td>
+                        </tr>`;
+                }).join("");
+            } catch (e) {
+                console.error(e);
+                body.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align:center; padding:6px 4px; color: var(--muted);">
+                            Failed to load routes: ${e.message}
+                        </td>
+                    </tr>`;
+            }
+        }
+
+        async function bootstrap() {
+            const footerStatus = document.getElementById("footer-status");
+            try {
+                await loadHealth();
+                await Promise.all([
+                    loadCities(),
+                    loadSummary(),
+                    loadRegionChart(),
+                    loadConditionsChart(),
+                    loadTopCitiesChart()
+                ]);
+                footerStatus.textContent = "Dashboard loaded from current network data.";
+                document.getElementById("btn-register").addEventListener("click", handleRegister);
+                document.getElementById("btn-login").addEventListener("click", handleLogin);
+                document.getElementById("btn-show-map").addEventListener("click", handleShowMap);
+                document.getElementById("btn-save-route").addEventListener("click", handleSaveRoute);
+                document.getElementById("btn-refresh-routes").addEventListener("click", loadMyRoutes);
+            } catch (e) {
+                console.error(e);
+                footerStatus.textContent = "Failed to load some analytics data. Check backend logs.";
+            }
+        }
+
+        window.addEventListener("load", bootstrap);
+    </script>
+</body>
+</html>
+

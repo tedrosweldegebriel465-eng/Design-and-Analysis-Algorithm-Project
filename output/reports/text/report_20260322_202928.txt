@@ -1,0 +1,88 @@
+================================================================================
+ETHIOPIAN ROAD NETWORK ANALYSIS REPORT
+================================================================================
+Generated: 2026-03-22 20:29:28
+
+📊 NETWORK SUMMARY
+----------------------------------------
+Total Cities: 100
+Total Roads: 300
+Network Density: 0.0606
+Average Connections per City: 6.00
+
+📍 CITIES BY REGION
+----------------------------------------
+  Oromia: 25 cities (25.0%)
+  Amhara: 18 cities (18.0%)
+  SNNPR: 14 cities (14.0%)
+  Tigray: 9 cities (9.0%)
+  Addis Ababa: 8 cities (8.0%)
+  Somali: 8 cities (8.0%)
+  Afar: 6 cities (6.0%)
+  Gambella: 4 cities (4.0%)
+  Dire Dawa: 3 cities (3.0%)
+  Benshangul: 3 cities (3.0%)
+  Harari: 2 cities (2.0%)
+
+🛣️  ROAD STATISTICS
+----------------------------------------
+  Average Road Length: 261.56 km
+  Shortest Road: 1.31 km
+  Longest Road: 470.26 km
+  Total Road Network Length: 78468.86 km
+
+  Road Types:
+    • highway: 211
+    • national: 60
+    • regional: 29
+
+📍 SOURCE CITY: Addis Ababa (Addis Ababa)
+----------------------------------------
+  Reachable Cities: 95
+  Unreachable Cities: 4
+  Farthest City: Kebri Dahar (1459.80 km)
+  Closest City: Yeka (11.07 km)
+
+  TOP 10 LONGEST PATHS:
+    • Kebri Dahar: 1459.80 km
+    • Warder: 1326.72 km
+    • Kelafo: 1096.75 km
+    • Gode: 1016.72 km
+    • Moyale: 897.17 km
+    • Adwa: 794.00 km
+    • Axum: 751.36 km
+    • Shire: 744.42 km
+    • Degehabur: 726.34 km
+    • Guba: 717.80 km
+
+⏱️  COMPLEXITY ANALYSIS
+----------------------------------------
+  Array Implementation: O(V²) = 10,000 operations
+  Priority Queue: O((V+E) log V) = 2,657 ops
+  Theoretical Speedup: 3.76x
+
+  EMPIRICAL PERFORMANCE (3 runs):
+    Array: 3.60 ms
+    Priority Queue: 17.52 ms
+    Empirical Speedup: 0.21x
+
+🔍 SAMPLE SHORTEST PATHS
+----------------------------------------
+  To Semera: 496.91 km
+    Path: Addis Ababa → Yeka → Kolfe Keranio → Wereilu → Semera
+
+  To Wereilu: 253.25 km
+    Path: Addis Ababa → Yeka → Kolfe Keranio → Wereilu
+
+  To Bedele: 447.05 km
+    Path: Addis Ababa → Sendafa → Bedele
+
+  To Gewane: 576.82 km
+    Path: Addis Ababa → Yeka → Gulele → Butajira → Gewane
+
+  To Logia: 598.76 km
+    Path: Addis Ababa → Yeka → Bole → Debre Sina → Debre Birhan → Logia
+
+================================================================================
+END OF REPORT
+================================================================================

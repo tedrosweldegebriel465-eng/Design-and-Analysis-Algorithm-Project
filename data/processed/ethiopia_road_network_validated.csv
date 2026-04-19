@@ -1,0 +1,107 @@
+source_id,source_name,target_id,target_name,distance_km,travel_time_hours,road_type
+1,Addis Ababa,2,Adama,85.00,1.06,highway
+1,Addis Ababa,5,Mekelle,783.00,13.05,highway
+1,Addis Ababa,7,Jimma,350.00,5.00,highway
+1,Addis Ababa,8,Harar,525.00,8.75,highway
+1,Addis Ababa,11,Dessie,400.00,6.67,highway
+1,Addis Ababa,12,Debre Zeit,50.00,0.62,highway
+1,Addis Ababa,14,Hawassa,275.00,3.93,highway
+1,Addis Ababa,15,Sodo,315.00,4.50,highway
+1,Addis Ababa,17,Gambella,770.00,15.40,highway
+1,Addis Ababa,18,Assosa,685.00,13.70,highway
+1,Addis Ababa,19,Semera,575.00,11.50,highway
+1,Addis Ababa,25,Debre Birhan,130.00,1.86,highway
+1,Addis Ababa,26,Kombolcha,375.00,5.36,highway
+1,Addis Ababa,39,Ambo,125.00,1.79,highway
+1,Addis Ababa,42,Worabe,165.00,2.36,regional
+1,Addis Ababa,45,Mizan Teferi,570.00,11.40,highway
+1,Addis Ababa,47,Gode,960.00,19.20,highway
+1,Addis Ababa,50,Fiche,110.00,1.57,regional
+1,Addis Ababa,54,Sululta,30.00,0.43,regional
+1,Addis Ababa,55,Sebeta,25.00,0.31,highway
+1,Addis Ababa,56,Holeta,40.00,0.57,regional
+1,Addis Ababa,57,Ginchi,85.00,1.21,regional
+2,Adama,3,Bahir Dar,380.00,5.43,highway
+2,Adama,33,Metu,255.00,4.25,regional
+2,Adama,34,Agaro,160.00,2.29,regional
+2,Adama,37,Asella,140.00,2.00,regional
+2,Adama,59,Adet,320.00,4.57,regional
+3,Bahir Dar,4,Gondar,180.00,2.57,highway
+3,Bahir Dar,21,Lalibela,320.00,5.33,regional
+3,Bahir Dar,61,Finote Selam,100.00,1.43,regional
+3,Bahir Dar,86,Debre Tabor,45.00,0.64,regional
+3,Bahir Dar,88,Wereta,40.00,0.57,regional
+4,Gondar,5,Mekelle,380.00,6.33,highway
+4,Gondar,91,Azezo,30.00,0.43,regional
+4,Gondar,92,Debarke,75.00,1.07,regional
+5,Mekelle,20,Axum,240.00,4.00,regional
+5,Mekelle,28,Adigrat,120.00,1.71,regional
+5,Mekelle,30,Maychew,110.00,1.57,regional
+5,Mekelle,30,Maychew,110.00,1.57,regional
+5,Mekelle,72,Alamata,180.00,3.00,regional
+5,Mekelle,77,Atsbi,55.00,0.79,regional
+7,Jimma,33,Metu,120.00,2.00,regional
+8,Harar,6,Dire Dawa,50.00,0.71,regional
+8,Harar,9,Jijiga,135.00,2.25,regional
+11,Dessie,12,Debre Zeit,100.00,1.43,regional
+11,Dessie,25,Debre Birhan,120.00,1.71,regional
+14,Hawassa,13,Arba Minch,130.00,1.86,regional
+14,Hawassa,22,Dilla,60.00,0.86,regional
+14,Hawassa,41,Butajira,70.00,1.00,regional
+14,Hawassa,42,Worabe,110.00,1.57,regional
+15,Sodo,43,Durame,55.00,0.79,regional
+16,Nekemte,7,Jimma,120.00,2.00,regional
+16,Nekemte,36,Gimbi,85.00,1.21,regional
+17,Gambella,95,Metti,65.00,1.30,regional
+17,Gambella,96,Itang,35.00,0.70,regional
+17,Gambella,98,Gog,85.00,1.70,regional
+18,Assosa,67,Metekel,45.00,0.90,regional
+19,Semera,68,Kemise,115.00,1.64,regional
+20,Axum,21,Lalibela,150.00,2.50,regional
+20,Axum,31,Adwa,40.00,0.57,regional
+20,Axum,80,Rama,45.00,0.64,regional
+21,Lalibela,3,Bahir Dar,320.00,5.33,regional
+28,Adigrat,29,Shire,80.00,1.14,regional
+29,Shire,32,Endaselassie,25.00,0.36,regional
+29,Shire,81,Humera,160.00,3.20,regional
+29,Shire,83,Indasilase,30.00,0.43,regional
+30,Maychew,31,Adwa,45.00,0.64,regional
+33,Metu,7,Jimma,120.00,2.00,regional
+34,Agaro,35,Bedele,40.00,0.80,regional
+35,Bedele,36,Gimbi,65.00,1.30,regional
+36,Gimbi,16,Nekemte,85.00,1.21,regional
+37,Asella,14,Hawassa,220.00,3.14,regional
+39,Ambo,40,Woliso,60.00,0.86,regional
+40,Woliso,39,Ambo,60.00,0.86,regional
+41,Butajira,42,Worabe,35.00,0.50,regional
+42,Worabe,41,Butajira,35.00,0.50,regional
+43,Durame,44,Bonga,110.00,2.20,regional
+44,Bonga,45,Mizan Teferi,85.00,1.70,regional
+45,Mizan Teferi,46,Tepi,40.00,0.80,regional
+46,Tepi,45,Mizan Teferi,40.00,0.80,regional
+47,Gode,48,Kebri Dahar,120.00,2.40,regional
+48,Kebri Dahar,49,Degehabur,85.00,1.70,regional
+50,Fiche,51,Gebre Guracha,30.00,0.43,regional
+51,Gebre Guracha,50,Fiche,30.00,0.43,regional
+55,Sebeta,1,Addis Ababa,25.00,0.31,highway
+56,Holeta,1,Addis Ababa,40.00,0.57,regional
+57,Ginchi,1,Addis Ababa,85.00,1.21,regional
+59,Adet,60,Merawi,35.00,0.50,regional
+60,Merawi,59,Adet,35.00,0.50,regional
+61,Finote Selam,62,Bure,40.00,0.57,regional
+62,Bure,63,Dangila,55.00,0.79,regional
+63,Dangila,64,Injibara,35.00,0.50,regional
+64,Injibara,65,Chagni,45.00,0.64,regional
+65,Chagni,66,Pawi,60.00,1.20,regional
+68,Kemise,11,Dessie,25.00,0.36,regional
+70,Mersa,71,Kobo,45.00,0.64,regional
+71,Kobo,72,Alamata,35.00,0.50,regional
+72,Alamata,73,Korem,45.00,0.64,regional
+73,Korem,74,Abiy Addi,85.00,1.70,regional
+77,Atsbi,78,Wukro,30.00,0.43,regional
+78,Wukro,79,Edaga Hamus,20.00,0.29,regional
+81,Humera,82,Sheraro,45.00,0.90,regional
+86,Debre Tabor,4,Gondar,95.00,1.36,regional
+88,Wereta,89,Hamusit,20.00,0.29,regional
+89,Hamusit,87,Adis Zemen,25.00,0.36,regional
+91,Azezo,90,Gorgora,40.00,0.80,regional

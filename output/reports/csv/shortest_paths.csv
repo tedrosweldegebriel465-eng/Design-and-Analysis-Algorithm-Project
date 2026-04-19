@@ -1,0 +1,96 @@
+Destination,Region,Distance (km),Path
+Yabelo,Oromia,625.43,Addis Ababa → Yeka → Wolaita Sodo → Yabelo
+Semera,Afar,496.91,Addis Ababa → Yeka → Kolfe Keranio → Wereilu → Semera
+Wereilu,Amhara,253.25,Addis Ababa → Yeka → Kolfe Keranio → Wereilu
+Bedele,Oromia,447.05,Addis Ababa → Sendafa → Bedele
+Gewane,Afar,576.82,Addis Ababa → Yeka → Gulele → Butajira → Gewane
+Logia,Afar,598.76,Addis Ababa → Yeka → Bole → Debre Sina → Debre Birhan → Logia
+Asella,Oromia,159.72,Addis Ababa → Asella
+Itang,Gambella,693.12,Addis Ababa → Yeka → Gulele → Shambu → Itang
+Ziway,Oromia,172.66,Addis Ababa → Yeka → Lideta → Ziway
+Haramaya,Oromia,432.80,Addis Ababa → Sendafa → Haramaya
+Gulele,Addis Ababa,21.02,Addis Ababa → Yeka → Gulele
+Moyale,Oromia,897.17,Addis Ababa → Yeka → Lideta → Hosaena → Arba Minch → Moyale
+Bonga,SNNPR,445.83,Addis Ababa → Yeka → Bole → Buta Jira → Bonga
+Bahir Dar,Amhara,385.76,Addis Ababa → Yeka → Bole → Bahir Dar
+Adwa,Tigray,794.00,Addis Ababa → Yeka → Kolfe Keranio → Wereilu → Hayk → Wukro → Adwa
+Shambu,Oromia,238.66,Addis Ababa → Yeka → Gulele → Shambu
+Kolfe Keranio,Addis Ababa,28.17,Addis Ababa → Yeka → Kolfe Keranio
+Holeta,Oromia,194.15,Addis Ababa → Sendafa → Bishoftu → Holeta
+Gog,Gambella,617.95,Addis Ababa → Gimbi → Gog
+Sendafa,Oromia,51.47,Addis Ababa → Sendafa
+Nekemte,Oromia,314.67,Addis Ababa → Yeka → Bole → Nekemte
+Dubti,Afar,493.44,Addis Ababa → Yeka → Bole → Debre Sina → Dubti
+Ambo,Oromia,514.90,Addis Ababa → Yeka → Bole → Nekemte → Ambo
+Jugol,Harari,455.72,Addis Ababa → Sendafa → Haramaya → Harar → Jugol
+Tog Wajaale,Somali,662.50,Addis Ababa → Sendafa → Haramaya → Harar → Tog Wajaale
+Wukro,Tigray,687.00,Addis Ababa → Yeka → Kolfe Keranio → Wereilu → Hayk → Wukro
+Mille,Afar,412.93,Addis Ababa → Sendafa → Mille
+Debre Markos,Amhara,253.30,Addis Ababa → Yeka → Lideta → Debre Markos
+Bole,Addis Ababa,17.99,Addis Ababa → Yeka → Bole
+Alamata,Tigray,473.36,Addis Ababa → Yeka → Kolfe Keranio → Wereilu → Alamata
+Mota,Amhara,292.94,Addis Ababa → Mota
+Metu,Oromia,598.23,Addis Ababa → Sendafa → Bishoftu → Holeta → Metu
+Fiche,Oromia,134.48,Addis Ababa → Yeka → Gulele → Fiche
+Butajira,SNNPR,169.63,Addis Ababa → Yeka → Gulele → Butajira
+Hawzen,Tigray,702.92,Addis Ababa → Yeka → Gulele → Fiche → Sekota → Hawzen
+Kebri Dahar,Somali,1459.80,Addis Ababa → Sendafa → Haramaya → Degehabur → Gode → Kelafo → Warder → Kebri Dahar
+Harar,Harari,454.41,Addis Ababa → Sendafa → Haramaya → Harar
+Wolaita Sodo,SNNPR,367.92,Addis Ababa → Yeka → Wolaita Sodo
+Kelafo,Somali,1096.75,Addis Ababa → Sendafa → Haramaya → Degehabur → Gode → Kelafo
+Hayk,Amhara,359.71,Addis Ababa → Yeka → Kolfe Keranio → Wereilu → Hayk
+Gebre Guracha,Oromia,240.80,Addis Ababa → Gebre Guracha
+Warder,Somali,1326.72,Addis Ababa → Sendafa → Haramaya → Degehabur → Gode → Kelafo → Warder
+Jigjiga,Somali,543.97,Addis Ababa → Sendafa → Haramaya → Jigjiga
+Hosaena,SNNPR,267.20,Addis Ababa → Yeka → Lideta → Hosaena
+Chiro,Oromia,393.83,Addis Ababa → Yeka → Bole → Debre Sina → Debre Birhan → Chiro
+Degehabur,Somali,726.34,Addis Ababa → Sendafa → Haramaya → Degehabur
+Lideta,Addis Ababa,25.65,Addis Ababa → Yeka → Lideta
+Jimma,Oromia,351.62,Addis Ababa → Yeka → Bole → Buta Jira → Jimma
+Jinka,SNNPR,592.75,Addis Ababa → Yeka → Bole → Buta Jira → Jinka
+Dire Dawa,Dire Dawa,463.76,Addis Ababa → Sendafa → Dire Dawa
+Debre Sina,Amhara,176.58,Addis Ababa → Yeka → Bole → Debre Sina
+Kombolcha,Amhara,308.45,Addis Ababa → Yeka → Dessie → Kombolcha
+Woldia,Amhara,379.87,Addis Ababa → Yeka → Woldia
+Addis Zemen,Amhara,480.84,Addis Ababa → Yeka → Bole → Bahir Dar → Addis Zemen
+Yeka,Addis Ababa,11.07,Addis Ababa → Yeka
+Injibara,Amhara,412.49,Addis Ababa → Sendafa → Injibara
+Negele Borana,Oromia,563.71,Addis Ababa → Yeka → Lideta → Ziway → Negele Borana
+Maychew,Tigray,659.08,Addis Ababa → Sendafa → Debre Tabor → Maychew
+Boditi,SNNPR,309.74,Addis Ababa → Yeka → Boditi
+Lalibela,Amhara,605.91,Addis Ababa → Yeka → Gulele → Fiche → Sekota → Lalibela
+Gimbi,Oromia,416.20,Addis Ababa → Gimbi
+Finote Selam,Amhara,371.16,Addis Ababa → Sendafa → Finote Selam
+Konso,SNNPR,620.69,Addis Ababa → Yeka → Gulele → Yirga Chefe → Konso
+Akaki Kaliti,Addis Ababa,108.61,Addis Ababa → Sendafa → Akaki Kaliti
+Yirga Chefe,SNNPR,445.29,Addis Ababa → Yeka → Gulele → Yirga Chefe
+Gambella,Gambella,703.58,Addis Ababa → Sendafa → Bedele → Dembi Dolo → Gambella
+Shire,Tigray,744.42,Addis Ababa → Yeka → Gulele → Fiche → Sekota → Shire
+Kobo,Amhara,448.21,Addis Ababa → Sendafa → Kobo
+Yirgalem,SNNPR,334.53,Addis Ababa → Yeka → Bole → Buta Jira → Yirgalem
+Hawassa,SNNPR,305.90,Addis Ababa → Yeka → Bole → Buta Jira → Hawassa
+Dessie,Amhara,291.56,Addis Ababa → Yeka → Dessie
+Mizan Teferi,SNNPR,549.85,Addis Ababa → Yeka → Bole → Buta Jira → Mizan Teferi
+Asaita,Afar,557.75,Addis Ababa → Yeka → Dessie → Asaita
+Sawla,SNNPR,486.49,Addis Ababa → Yeka → Boditi → Sawla
+Buta Jira,Oromia,149.23,Addis Ababa → Yeka → Bole → Buta Jira
+Adama,Oromia,325.13,Addis Ababa → Sendafa → Bishoftu → Holeta → Adama
+Shashamane,Oromia,272.56,Addis Ababa → Yeka → Lideta → Shashamane
+Gode,Somali,1016.72,Addis Ababa → Sendafa → Haramaya → Degehabur → Gode
+Bishoftu,Oromia,122.93,Addis Ababa → Sendafa → Bishoftu
+Korem,Tigray,499.65,Addis Ababa → Yeka → Dessie → Kombolcha → Korem
+Durame,SNNPR,345.29,Addis Ababa → Yeka → Boditi → Durame
+Mojo,Oromia,71.65,Addis Ababa → Mojo
+Dembi Dolo,Oromia,651.18,Addis Ababa → Sendafa → Bedele → Dembi Dolo
+Kirkos,Addis Ababa,615.30,Addis Ababa → Yeka → Boditi → Durame → Kirkos
+Debre Tabor,Amhara,406.73,Addis Ababa → Sendafa → Debre Tabor
+Sabian,Dire Dawa,441.39,Addis Ababa → Yeka → Bole → Debre Sina → Sabian
+Debre Birhan,Amhara,215.47,Addis Ababa → Yeka → Bole → Debre Sina → Debre Birhan
+Metema,Amhara,634.43,Addis Ababa → Yeka → Bole → Bahir Dar → Metema
+Goba,Oromia,301.06,Addis Ababa → Mojo → Goba
+Legehare,Dire Dawa,525.73,Addis Ababa → Yeka → Bole → Debre Sina → Debre Birhan → Legehare
+Guba,Benshangul,717.80,Addis Ababa → Yeka → Bole → Nekemte → Mandura → Guba
+Axum,Tigray,751.36,Addis Ababa → Yeka → Dessie → Axum
+Sekota,Amhara,526.62,Addis Ababa → Yeka → Gulele → Fiche → Sekota
+Arba Minch,SNNPR,462.91,Addis Ababa → Yeka → Lideta → Hosaena → Arba Minch
+Mandura,Benshangul,604.99,Addis Ababa → Yeka → Bole → Nekemte → Mandura

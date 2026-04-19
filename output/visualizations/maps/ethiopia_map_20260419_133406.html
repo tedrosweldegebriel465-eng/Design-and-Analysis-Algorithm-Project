@@ -1,0 +1,3674 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dd3573dcf0ab7005d4c62cdb1f5b72ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+</head>
+<body>
+    
+    
+            <h3 align="center" style="font-size:16px">
+                <b>Route: Axum -> Hawassa</b>
+            </h3>
+        
+    
+            <div class="folium-map" id="map_dd3573dcf0ab7005d4c62cdb1f5b72ff" ></div>
+        
+    
+            
+            <style>
+                #export {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    z-index: 999;
+                    background: white;
+                    color: black;
+                    padding: 6px;
+                    border-radius: 4px;
+                    font-family: 'Helvetica Neue';
+                    cursor: pointer;
+                    font-size: 12px;
+                    text-decoration: none;
+                    top: 90px;
+                }
+            </style>
+            <a href='#' id='export'>Export</a>
+            
+        
+</body>
+<script>
+    
+    
+            var map_dd3573dcf0ab7005d4c62cdb1f5b72ff = L.map(
+                "map_dd3573dcf0ab7005d4c62cdb1f5b72ff",
+                {
+                    center: [9.0, 38.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8a30430c5ec176690abff1bff68217bb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8a30430c5ec176690abff1bff68217bb.addTo(map_dd3573dcf0ab7005d4c62cdb1f5b72ff);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_dd3573dcf0ab7005d4c62cdb1f5b72ff);
+        
+    
+            var mouse_position_91791b55eabeaa911b6193c24b3b686d = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_91791b55eabeaa911b6193c24b3b686d.options["latFormatter"] =
+                undefined;
+            mouse_position_91791b55eabeaa911b6193c24b3b686d.options["lngFormatter"] =
+                undefined;
+            map_dd3573dcf0ab7005d4c62cdb1f5b72ff.addControl(mouse_position_91791b55eabeaa911b6193c24b3b686d);
+        
+    
+            var feature_group_543bf710adf148ee172431c176b73dcb = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_fcf7d2d51540bbb8a8fe2b621b379b4e = L.circleMarker(
+                [9.03, 38.74],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_6b06cf22fa80c1b6febcd2e93d7e1c3e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a21a330f9c4ea3507c3a4c695476ffeb = $(`<div id="html_a21a330f9c4ea3507c3a4c695476ffeb" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Addis Ababa</h4>                 <hr>                 <b>Region:</b> Addis Ababa<br>                 <b>Population:</b> 3,500,000<br>                 <b>Elevation:</b> 2355.0 m<br>                 <b>Coordinates:</b> (9.0300, 38.7400)<br>                 <b>Capital:</b> Yes<br>                 <b>ID:</b> 1             </div>             </div>`)[0];
+                popup_6b06cf22fa80c1b6febcd2e93d7e1c3e.setContent(html_a21a330f9c4ea3507c3a4c695476ffeb);
+            
+        
+
+        circle_marker_fcf7d2d51540bbb8a8fe2b621b379b4e.bindPopup(popup_6b06cf22fa80c1b6febcd2e93d7e1c3e)
+        ;
+
+        
+    
+    
+            circle_marker_fcf7d2d51540bbb8a8fe2b621b379b4e.bindTooltip(
+                `<div>
+                     Addis Ababa (Addis Ababa)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24b89ed071334f224d4605cc61a4fa6d = L.circleMarker(
+                [8.54, 39.27],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_cde344d4e48fdf3f6b3b8f82f7f0db03 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d2a5742e8844fbd32f19f620b08683b5 = $(`<div id="html_d2a5742e8844fbd32f19f620b08683b5" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Adama</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 480,000<br>                 <b>Elevation:</b> 1712.0 m<br>                 <b>Coordinates:</b> (8.5400, 39.2700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 2             </div>             </div>`)[0];
+                popup_cde344d4e48fdf3f6b3b8f82f7f0db03.setContent(html_d2a5742e8844fbd32f19f620b08683b5);
+            
+        
+
+        circle_marker_24b89ed071334f224d4605cc61a4fa6d.bindPopup(popup_cde344d4e48fdf3f6b3b8f82f7f0db03)
+        ;
+
+        
+    
+    
+            circle_marker_24b89ed071334f224d4605cc61a4fa6d.bindTooltip(
+                `<div>
+                     Adama (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_83434ba368533b6a49b22100f2d6055c = L.circleMarker(
+                [11.6, 37.38],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_d908e1194ece8e120a1ef3638af34f85 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_519a06624bc8d477bf5fc71ec03a733f = $(`<div id="html_519a06624bc8d477bf5fc71ec03a733f" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Bahir Dar</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 350,000<br>                 <b>Elevation:</b> 1800.0 m<br>                 <b>Coordinates:</b> (11.6000, 37.3800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 3             </div>             </div>`)[0];
+                popup_d908e1194ece8e120a1ef3638af34f85.setContent(html_519a06624bc8d477bf5fc71ec03a733f);
+            
+        
+
+        circle_marker_83434ba368533b6a49b22100f2d6055c.bindPopup(popup_d908e1194ece8e120a1ef3638af34f85)
+        ;
+
+        
+    
+    
+            circle_marker_83434ba368533b6a49b22100f2d6055c.bindTooltip(
+                `<div>
+                     Bahir Dar (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_27ff3119cdb85d05330f7f8d02490813 = L.circleMarker(
+                [12.6, 37.47],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_738f81fb441ff92ecee7d64f6d1e5155 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_789de5641e0e4c2afcb4ac1fa885b4e9 = $(`<div id="html_789de5641e0e4c2afcb4ac1fa885b4e9" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Gondar</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 350,000<br>                 <b>Elevation:</b> 2133.0 m<br>                 <b>Coordinates:</b> (12.6000, 37.4700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 4             </div>             </div>`)[0];
+                popup_738f81fb441ff92ecee7d64f6d1e5155.setContent(html_789de5641e0e4c2afcb4ac1fa885b4e9);
+            
+        
+
+        circle_marker_27ff3119cdb85d05330f7f8d02490813.bindPopup(popup_738f81fb441ff92ecee7d64f6d1e5155)
+        ;
+
+        
+    
+    
+            circle_marker_27ff3119cdb85d05330f7f8d02490813.bindTooltip(
+                `<div>
+                     Gondar (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13ac0f26c9b09ea3ac6c3c1c1a2dd2ce = L.circleMarker(
+                [13.5, 39.47],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_fb83fb055873859e05bb6c76a1bc770c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d870c766227e8def0ac0e1e7d9de4a4 = $(`<div id="html_6d870c766227e8def0ac0e1e7d9de4a4" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Mekelle</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 340,000<br>                 <b>Elevation:</b> 2084.0 m<br>                 <b>Coordinates:</b> (13.5000, 39.4700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 5             </div>             </div>`)[0];
+                popup_fb83fb055873859e05bb6c76a1bc770c.setContent(html_6d870c766227e8def0ac0e1e7d9de4a4);
+            
+        
+
+        circle_marker_13ac0f26c9b09ea3ac6c3c1c1a2dd2ce.bindPopup(popup_fb83fb055873859e05bb6c76a1bc770c)
+        ;
+
+        
+    
+    
+            circle_marker_13ac0f26c9b09ea3ac6c3c1c1a2dd2ce.bindTooltip(
+                `<div>
+                     Mekelle (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_632e9b94da29030a6b7bee8d4108fda4 = L.circleMarker(
+                [9.6, 41.87],
+                {"bubblingMouseEvents": true, "color": "#00FFFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FFFF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_5f42b7f4a32f1cc52f94dfa366897191 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38ccff597e5ed7db49ca711391ac9e0e = $(`<div id="html_38ccff597e5ed7db49ca711391ac9e0e" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Dire Dawa</h4>                 <hr>                 <b>Region:</b> Dire Dawa<br>                 <b>Population:</b> 300,000<br>                 <b>Elevation:</b> 1276.0 m<br>                 <b>Coordinates:</b> (9.6000, 41.8700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 6             </div>             </div>`)[0];
+                popup_5f42b7f4a32f1cc52f94dfa366897191.setContent(html_38ccff597e5ed7db49ca711391ac9e0e);
+            
+        
+
+        circle_marker_632e9b94da29030a6b7bee8d4108fda4.bindPopup(popup_5f42b7f4a32f1cc52f94dfa366897191)
+        ;
+
+        
+    
+    
+            circle_marker_632e9b94da29030a6b7bee8d4108fda4.bindTooltip(
+                `<div>
+                     Dire Dawa (Dire Dawa)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98e7b96672e6a62a6bfb5b74e227fc49 = L.circleMarker(
+                [7.68, 36.83],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_b085cc06bde014125dc15c69fb2bf560 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_790c7d4c367930c7a77bdba0654d11ec = $(`<div id="html_790c7d4c367930c7a77bdba0654d11ec" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Jimma</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 250,000<br>                 <b>Elevation:</b> 1780.0 m<br>                 <b>Coordinates:</b> (7.6800, 36.8300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 7             </div>             </div>`)[0];
+                popup_b085cc06bde014125dc15c69fb2bf560.setContent(html_790c7d4c367930c7a77bdba0654d11ec);
+            
+        
+
+        circle_marker_98e7b96672e6a62a6bfb5b74e227fc49.bindPopup(popup_b085cc06bde014125dc15c69fb2bf560)
+        ;
+
+        
+    
+    
+            circle_marker_98e7b96672e6a62a6bfb5b74e227fc49.bindTooltip(
+                `<div>
+                     Jimma (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2cc47e3610bfd56b36c7be64f70b904 = L.circleMarker(
+                [9.31, 42.13],
+                {"bubblingMouseEvents": true, "color": "#FFA500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA500", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_a7e4c8b84336652ef33c54f80cca9ca8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_db72f6a3974483879408810db9314400 = $(`<div id="html_db72f6a3974483879408810db9314400" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Harar</h4>                 <hr>                 <b>Region:</b> Harari<br>                 <b>Population:</b> 150,000<br>                 <b>Elevation:</b> 1885.0 m<br>                 <b>Coordinates:</b> (9.3100, 42.1300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 8             </div>             </div>`)[0];
+                popup_a7e4c8b84336652ef33c54f80cca9ca8.setContent(html_db72f6a3974483879408810db9314400);
+            
+        
+
+        circle_marker_d2cc47e3610bfd56b36c7be64f70b904.bindPopup(popup_a7e4c8b84336652ef33c54f80cca9ca8)
+        ;
+
+        
+    
+    
+            circle_marker_d2cc47e3610bfd56b36c7be64f70b904.bindTooltip(
+                `<div>
+                     Harar (Harari)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ee11c2a95f8a4870360d5ee05468bd7 = L.circleMarker(
+                [9.35, 42.8],
+                {"bubblingMouseEvents": true, "color": "#800080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800080", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_9074e248ceb92cfef59776ae8e247288 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ad078281b6734fa3fd1569a3d6c8b09 = $(`<div id="html_0ad078281b6734fa3fd1569a3d6c8b09" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Jijiga</h4>                 <hr>                 <b>Region:</b> Somali<br>                 <b>Population:</b> 160,000<br>                 <b>Elevation:</b> 1648.0 m<br>                 <b>Coordinates:</b> (9.3500, 42.8000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 9             </div>             </div>`)[0];
+                popup_9074e248ceb92cfef59776ae8e247288.setContent(html_0ad078281b6734fa3fd1569a3d6c8b09);
+            
+        
+
+        circle_marker_5ee11c2a95f8a4870360d5ee05468bd7.bindPopup(popup_9074e248ceb92cfef59776ae8e247288)
+        ;
+
+        
+    
+    
+            circle_marker_5ee11c2a95f8a4870360d5ee05468bd7.bindTooltip(
+                `<div>
+                     Jijiga (Somali)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6e1be7b6513d582411ac09dd298f021 = L.circleMarker(
+                [7.2, 38.6],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_7868f28d846ccda3b3e8b9ec3a75b12e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a7741bc41da575afc2944e3d55b846f9 = $(`<div id="html_a7741bc41da575afc2944e3d55b846f9" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Shashamane</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 150,000<br>                 <b>Elevation:</b> 2008.0 m<br>                 <b>Coordinates:</b> (7.2000, 38.6000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 10             </div>             </div>`)[0];
+                popup_7868f28d846ccda3b3e8b9ec3a75b12e.setContent(html_a7741bc41da575afc2944e3d55b846f9);
+            
+        
+
+        circle_marker_d6e1be7b6513d582411ac09dd298f021.bindPopup(popup_7868f28d846ccda3b3e8b9ec3a75b12e)
+        ;
+
+        
+    
+    
+            circle_marker_d6e1be7b6513d582411ac09dd298f021.bindTooltip(
+                `<div>
+                     Shashamane (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38d4b64a7b4187f9433443320329aac7 = L.circleMarker(
+                [11.13, 39.63],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_9d6e2d118e95b8c661b116df4aab2177 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d7e6d9eaac37c42403c142d7a370392c = $(`<div id="html_d7e6d9eaac37c42403c142d7a370392c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Dessie</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 180,000<br>                 <b>Elevation:</b> 2470.0 m<br>                 <b>Coordinates:</b> (11.1300, 39.6300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 11             </div>             </div>`)[0];
+                popup_9d6e2d118e95b8c661b116df4aab2177.setContent(html_d7e6d9eaac37c42403c142d7a370392c);
+            
+        
+
+        circle_marker_38d4b64a7b4187f9433443320329aac7.bindPopup(popup_9d6e2d118e95b8c661b116df4aab2177)
+        ;
+
+        
+    
+    
+            circle_marker_38d4b64a7b4187f9433443320329aac7.bindTooltip(
+                `<div>
+                     Dessie (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc3b28ee10932b8c4656a87b121b0ebf = L.circleMarker(
+                [8.75, 38.98],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_5c376d47a91b2677d5f33ab6e156fe81 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5ca9e7bd98a9b3580402acc8a1cea4fd = $(`<div id="html_5ca9e7bd98a9b3580402acc8a1cea4fd" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Debre Zeit</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 140,000<br>                 <b>Elevation:</b> 1920.0 m<br>                 <b>Coordinates:</b> (8.7500, 38.9800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 12             </div>             </div>`)[0];
+                popup_5c376d47a91b2677d5f33ab6e156fe81.setContent(html_5ca9e7bd98a9b3580402acc8a1cea4fd);
+            
+        
+
+        circle_marker_fc3b28ee10932b8c4656a87b121b0ebf.bindPopup(popup_5c376d47a91b2677d5f33ab6e156fe81)
+        ;
+
+        
+    
+    
+            circle_marker_fc3b28ee10932b8c4656a87b121b0ebf.bindTooltip(
+                `<div>
+                     Debre Zeit (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75b818b6dce8e8ddd022b8c3066e189b = L.circleMarker(
+                [6.03, 37.55],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_4dab217fc1a5f2153cf4ac09ad4a5f0a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_706575129aa2607b5067b0bed1effaee = $(`<div id="html_706575129aa2607b5067b0bed1effaee" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Arba Minch</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 120,000<br>                 <b>Elevation:</b> 1285.0 m<br>                 <b>Coordinates:</b> (6.0300, 37.5500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 13             </div>             </div>`)[0];
+                popup_4dab217fc1a5f2153cf4ac09ad4a5f0a.setContent(html_706575129aa2607b5067b0bed1effaee);
+            
+        
+
+        circle_marker_75b818b6dce8e8ddd022b8c3066e189b.bindPopup(popup_4dab217fc1a5f2153cf4ac09ad4a5f0a)
+        ;
+
+        
+    
+    
+            circle_marker_75b818b6dce8e8ddd022b8c3066e189b.bindTooltip(
+                `<div>
+                     Arba Minch (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b68aa23c73de404229ce24942e1d682 = L.circleMarker(
+                [7.05, 38.47],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_fd37e2017708c8d7b49efb0386436f3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b2845e80dfc823a1949b05ec961a3ef1 = $(`<div id="html_b2845e80dfc823a1949b05ec961a3ef1" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Hawassa</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 350,000<br>                 <b>Elevation:</b> 1708.0 m<br>                 <b>Coordinates:</b> (7.0500, 38.4700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 14             </div>             </div>`)[0];
+                popup_fd37e2017708c8d7b49efb0386436f3f.setContent(html_b2845e80dfc823a1949b05ec961a3ef1);
+            
+        
+
+        circle_marker_4b68aa23c73de404229ce24942e1d682.bindPopup(popup_fd37e2017708c8d7b49efb0386436f3f)
+        ;
+
+        
+    
+    
+            circle_marker_4b68aa23c73de404229ce24942e1d682.bindTooltip(
+                `<div>
+                     Hawassa (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76f6fe92adc6568c1d3c18afecdcc441 = L.circleMarker(
+                [6.9, 37.75],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_557d6da9e68b9980724485f8611917f8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c225d028085c5b6ea620c6dd74bb1144 = $(`<div id="html_c225d028085c5b6ea620c6dd74bb1144" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Sodo</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 110,000<br>                 <b>Elevation:</b> 1600.0 m<br>                 <b>Coordinates:</b> (6.9000, 37.7500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 15             </div>             </div>`)[0];
+                popup_557d6da9e68b9980724485f8611917f8.setContent(html_c225d028085c5b6ea620c6dd74bb1144);
+            
+        
+
+        circle_marker_76f6fe92adc6568c1d3c18afecdcc441.bindPopup(popup_557d6da9e68b9980724485f8611917f8)
+        ;
+
+        
+    
+    
+            circle_marker_76f6fe92adc6568c1d3c18afecdcc441.bindTooltip(
+                `<div>
+                     Sodo (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_413b2c51f34ca908832784fd6b95fa90 = L.circleMarker(
+                [9.08, 36.55],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_fd45cf62967baa150949f0a7db300c68 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6932829e87b1617bff1c14bef6fd35fa = $(`<div id="html_6932829e87b1617bff1c14bef6fd35fa" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Nekemte</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 110,000<br>                 <b>Elevation:</b> 2088.0 m<br>                 <b>Coordinates:</b> (9.0800, 36.5500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 16             </div>             </div>`)[0];
+                popup_fd45cf62967baa150949f0a7db300c68.setContent(html_6932829e87b1617bff1c14bef6fd35fa);
+            
+        
+
+        circle_marker_413b2c51f34ca908832784fd6b95fa90.bindPopup(popup_fd45cf62967baa150949f0a7db300c68)
+        ;
+
+        
+    
+    
+            circle_marker_413b2c51f34ca908832784fd6b95fa90.bindTooltip(
+                `<div>
+                     Nekemte (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_449692989de5eeb9803ca8148c0328c7 = L.circleMarker(
+                [8.25, 34.58],
+                {"bubblingMouseEvents": true, "color": "#A52A2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A52A2A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_6dedbd6c88aa299c1001eec4022de1a1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d55ac7fdc7cfe477b5d6f3a2727fec8 = $(`<div id="html_5d55ac7fdc7cfe477b5d6f3a2727fec8" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Gambella</h4>                 <hr>                 <b>Region:</b> Gambella<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 526.0 m<br>                 <b>Coordinates:</b> (8.2500, 34.5800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 17             </div>             </div>`)[0];
+                popup_6dedbd6c88aa299c1001eec4022de1a1.setContent(html_5d55ac7fdc7cfe477b5d6f3a2727fec8);
+            
+        
+
+        circle_marker_449692989de5eeb9803ca8148c0328c7.bindPopup(popup_6dedbd6c88aa299c1001eec4022de1a1)
+        ;
+
+        
+    
+    
+            circle_marker_449692989de5eeb9803ca8148c0328c7.bindTooltip(
+                `<div>
+                     Gambella (Gambella)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_879b2049ce10318795ce01bee4562c95 = L.circleMarker(
+                [10.07, 34.52],
+                {"bubblingMouseEvents": true, "color": "#808000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_30e7ff5351e24d44d29c41f65ee75d35 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ae1f1d3cef70c41c5be898768da8c53d = $(`<div id="html_ae1f1d3cef70c41c5be898768da8c53d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Assosa</h4>                 <hr>                 <b>Region:</b> Benshangul<br>                 <b>Population:</b> 25,000<br>                 <b>Elevation:</b> 1570.0 m<br>                 <b>Coordinates:</b> (10.0700, 34.5200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 18             </div>             </div>`)[0];
+                popup_30e7ff5351e24d44d29c41f65ee75d35.setContent(html_ae1f1d3cef70c41c5be898768da8c53d);
+            
+        
+
+        circle_marker_879b2049ce10318795ce01bee4562c95.bindPopup(popup_30e7ff5351e24d44d29c41f65ee75d35)
+        ;
+
+        
+    
+    
+            circle_marker_879b2049ce10318795ce01bee4562c95.bindTooltip(
+                `<div>
+                     Assosa (Benshangul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0a5d955f782c75334716a03437bd5fb = L.circleMarker(
+                [11.8, 41.01],
+                {"bubblingMouseEvents": true, "color": "#FFC0CB", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFC0CB", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_43cb3337367b27e1a3897f9bc62b08ae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_faa17f338d9ccc55a1c2cff563abe8a5 = $(`<div id="html_faa17f338d9ccc55a1c2cff563abe8a5" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Semera</h4>                 <hr>                 <b>Region:</b> Afar<br>                 <b>Population:</b> 30,000<br>                 <b>Elevation:</b> 433.0 m<br>                 <b>Coordinates:</b> (11.8000, 41.0100)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 19             </div>             </div>`)[0];
+                popup_43cb3337367b27e1a3897f9bc62b08ae.setContent(html_faa17f338d9ccc55a1c2cff563abe8a5);
+            
+        
+
+        circle_marker_f0a5d955f782c75334716a03437bd5fb.bindPopup(popup_43cb3337367b27e1a3897f9bc62b08ae)
+        ;
+
+        
+    
+    
+            circle_marker_f0a5d955f782c75334716a03437bd5fb.bindTooltip(
+                `<div>
+                     Semera (Afar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_748ff906d75e69e8c77ac9fd27caca32 = L.circleMarker(
+                [14.12, 38.73],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_85259b3ea98691ffb96f987234452bc8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2bd2b18dbf8a90368700291c64a65d83 = $(`<div id="html_2bd2b18dbf8a90368700291c64a65d83" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Axum</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 60,000<br>                 <b>Elevation:</b> 2131.0 m<br>                 <b>Coordinates:</b> (14.1200, 38.7300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 20             </div>             </div>`)[0];
+                popup_85259b3ea98691ffb96f987234452bc8.setContent(html_2bd2b18dbf8a90368700291c64a65d83);
+            
+        
+
+        circle_marker_748ff906d75e69e8c77ac9fd27caca32.bindPopup(popup_85259b3ea98691ffb96f987234452bc8)
+        ;
+
+        
+    
+    
+            circle_marker_748ff906d75e69e8c77ac9fd27caca32.bindTooltip(
+                `<div>
+                     Axum (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecc06178499dc4d7a45ea3b2a66c414a = L.circleMarker(
+                [12.03, 39.04],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_c57f3ecd47070023255f4c199a4793e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8bf3a341e37c1e50d8f958dc30f52069 = $(`<div id="html_8bf3a341e37c1e50d8f958dc30f52069" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Lalibela</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 50,000<br>                 <b>Elevation:</b> 2500.0 m<br>                 <b>Coordinates:</b> (12.0300, 39.0400)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 21             </div>             </div>`)[0];
+                popup_c57f3ecd47070023255f4c199a4793e2.setContent(html_8bf3a341e37c1e50d8f958dc30f52069);
+            
+        
+
+        circle_marker_ecc06178499dc4d7a45ea3b2a66c414a.bindPopup(popup_c57f3ecd47070023255f4c199a4793e2)
+        ;
+
+        
+    
+    
+            circle_marker_ecc06178499dc4d7a45ea3b2a66c414a.bindTooltip(
+                `<div>
+                     Lalibela (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_886b4aa0eb9a2418baac2e34abd49c1a = L.circleMarker(
+                [6.41, 38.31],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_2297a95bf15ecd9e3f66d41a8f222d76 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aca424841083e4ad566d27893af4d363 = $(`<div id="html_aca424841083e4ad566d27893af4d363" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Dilla</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 100,000<br>                 <b>Elevation:</b> 1570.0 m<br>                 <b>Coordinates:</b> (6.4100, 38.3100)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 22             </div>             </div>`)[0];
+                popup_2297a95bf15ecd9e3f66d41a8f222d76.setContent(html_aca424841083e4ad566d27893af4d363);
+            
+        
+
+        circle_marker_886b4aa0eb9a2418baac2e34abd49c1a.bindPopup(popup_2297a95bf15ecd9e3f66d41a8f222d76)
+        ;
+
+        
+    
+    
+            circle_marker_886b4aa0eb9a2418baac2e34abd49c1a.bindTooltip(
+                `<div>
+                     Dilla (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9b16b15ed20d5a23c7a6227388e8fc04 = L.circleMarker(
+                [7.55, 37.85],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_93e7b15eb17d9df82e5418ed4d96195a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_da6e7a7cacef02ddf616ef9b121efe21 = $(`<div id="html_da6e7a7cacef02ddf616ef9b121efe21" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Hosaena</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 90,000<br>                 <b>Elevation:</b> 2100.0 m<br>                 <b>Coordinates:</b> (7.5500, 37.8500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 23             </div>             </div>`)[0];
+                popup_93e7b15eb17d9df82e5418ed4d96195a.setContent(html_da6e7a7cacef02ddf616ef9b121efe21);
+            
+        
+
+        circle_marker_9b16b15ed20d5a23c7a6227388e8fc04.bindPopup(popup_93e7b15eb17d9df82e5418ed4d96195a)
+        ;
+
+        
+    
+    
+            circle_marker_9b16b15ed20d5a23c7a6227388e8fc04.bindTooltip(
+                `<div>
+                     Hosaena (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e345472a82fa5dfe79784e0371f5033e = L.circleMarker(
+                [10.33, 37.72],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_947969719c2114276e675115d813fd32 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_566a88672410029fc8d146ec99957646 = $(`<div id="html_566a88672410029fc8d146ec99957646" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Debre Markos</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 90,000<br>                 <b>Elevation:</b> 2446.0 m<br>                 <b>Coordinates:</b> (10.3300, 37.7200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 24             </div>             </div>`)[0];
+                popup_947969719c2114276e675115d813fd32.setContent(html_566a88672410029fc8d146ec99957646);
+            
+        
+
+        circle_marker_e345472a82fa5dfe79784e0371f5033e.bindPopup(popup_947969719c2114276e675115d813fd32)
+        ;
+
+        
+    
+    
+            circle_marker_e345472a82fa5dfe79784e0371f5033e.bindTooltip(
+                `<div>
+                     Debre Markos (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57d2ef0c2c462eff0ad20f6aed05e020 = L.circleMarker(
+                [9.68, 39.53],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_27d88b3abf06f70043b3a35532b0d6b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fea3b11a6e61bfde84c2d877fda2b997 = $(`<div id="html_fea3b11a6e61bfde84c2d877fda2b997" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Debre Birhan</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 85,000<br>                 <b>Elevation:</b> 2840.0 m<br>                 <b>Coordinates:</b> (9.6800, 39.5300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 25             </div>             </div>`)[0];
+                popup_27d88b3abf06f70043b3a35532b0d6b3.setContent(html_fea3b11a6e61bfde84c2d877fda2b997);
+            
+        
+
+        circle_marker_57d2ef0c2c462eff0ad20f6aed05e020.bindPopup(popup_27d88b3abf06f70043b3a35532b0d6b3)
+        ;
+
+        
+    
+    
+            circle_marker_57d2ef0c2c462eff0ad20f6aed05e020.bindTooltip(
+                `<div>
+                     Debre Birhan (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d4c7a3ef9a05b146e8c57c1c221c77f = L.circleMarker(
+                [11.08, 39.73],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_744d27a5ae9ad4d45fe93df3ee46b7c5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c3bfbeb0c210ed9eda3b5a295bfc1fd1 = $(`<div id="html_c3bfbeb0c210ed9eda3b5a295bfc1fd1" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Kombolcha</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 95,000<br>                 <b>Elevation:</b> 1867.0 m<br>                 <b>Coordinates:</b> (11.0800, 39.7300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 26             </div>             </div>`)[0];
+                popup_744d27a5ae9ad4d45fe93df3ee46b7c5.setContent(html_c3bfbeb0c210ed9eda3b5a295bfc1fd1);
+            
+        
+
+        circle_marker_7d4c7a3ef9a05b146e8c57c1c221c77f.bindPopup(popup_744d27a5ae9ad4d45fe93df3ee46b7c5)
+        ;
+
+        
+    
+    
+            circle_marker_7d4c7a3ef9a05b146e8c57c1c221c77f.bindTooltip(
+                `<div>
+                     Kombolcha (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c563a4b9499f2e707adae7066c3414e5 = L.circleMarker(
+                [11.82, 39.6],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_f68c60ed09f645a8dba06308931275cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a33b68f54fc02da5e85cb1a4ee0b2f94 = $(`<div id="html_a33b68f54fc02da5e85cb1a4ee0b2f94" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Weldiya</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 80,000<br>                 <b>Elevation:</b> 1912.0 m<br>                 <b>Coordinates:</b> (11.8200, 39.6000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 27             </div>             </div>`)[0];
+                popup_f68c60ed09f645a8dba06308931275cf.setContent(html_a33b68f54fc02da5e85cb1a4ee0b2f94);
+            
+        
+
+        circle_marker_c563a4b9499f2e707adae7066c3414e5.bindPopup(popup_f68c60ed09f645a8dba06308931275cf)
+        ;
+
+        
+    
+    
+            circle_marker_c563a4b9499f2e707adae7066c3414e5.bindTooltip(
+                `<div>
+                     Weldiya (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d5402c99661fa86dfc4f6e5752d586f = L.circleMarker(
+                [14.27, 39.47],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_87256d87c8f868a22c40817cbd5d2f11 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_95a750e6dac55687c9c9821d3a5784d9 = $(`<div id="html_95a750e6dac55687c9c9821d3a5784d9" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Adigrat</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 85,000<br>                 <b>Elevation:</b> 2457.0 m<br>                 <b>Coordinates:</b> (14.2700, 39.4700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 28             </div>             </div>`)[0];
+                popup_87256d87c8f868a22c40817cbd5d2f11.setContent(html_95a750e6dac55687c9c9821d3a5784d9);
+            
+        
+
+        circle_marker_6d5402c99661fa86dfc4f6e5752d586f.bindPopup(popup_87256d87c8f868a22c40817cbd5d2f11)
+        ;
+
+        
+    
+    
+            circle_marker_6d5402c99661fa86dfc4f6e5752d586f.bindTooltip(
+                `<div>
+                     Adigrat (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59ddd87ecbe996e484b4b9b1b8455945 = L.circleMarker(
+                [14.1, 38.28],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_5d1d364e9a8187b8ec646ff26cc56447 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c0f868b93db3c9b544403398d7a40607 = $(`<div id="html_c0f868b93db3c9b544403398d7a40607" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Shire</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 75,000<br>                 <b>Elevation:</b> 1900.0 m<br>                 <b>Coordinates:</b> (14.1000, 38.2800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 29             </div>             </div>`)[0];
+                popup_5d1d364e9a8187b8ec646ff26cc56447.setContent(html_c0f868b93db3c9b544403398d7a40607);
+            
+        
+
+        circle_marker_59ddd87ecbe996e484b4b9b1b8455945.bindPopup(popup_5d1d364e9a8187b8ec646ff26cc56447)
+        ;
+
+        
+    
+    
+            circle_marker_59ddd87ecbe996e484b4b9b1b8455945.bindTooltip(
+                `<div>
+                     Shire (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0784f7e15d9309c4fce9a3c1a5b9ecf0 = L.circleMarker(
+                [12.78, 39.54],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_22d8e6f639ce9a76c096fb523491a5c2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5e25f9e9277fe7e82566816ffd1abca8 = $(`<div id="html_5e25f9e9277fe7e82566816ffd1abca8" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Maychew</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 50,000<br>                 <b>Elevation:</b> 2479.0 m<br>                 <b>Coordinates:</b> (12.7800, 39.5400)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 30             </div>             </div>`)[0];
+                popup_22d8e6f639ce9a76c096fb523491a5c2.setContent(html_5e25f9e9277fe7e82566816ffd1abca8);
+            
+        
+
+        circle_marker_0784f7e15d9309c4fce9a3c1a5b9ecf0.bindPopup(popup_22d8e6f639ce9a76c096fb523491a5c2)
+        ;
+
+        
+    
+    
+            circle_marker_0784f7e15d9309c4fce9a3c1a5b9ecf0.bindTooltip(
+                `<div>
+                     Maychew (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_403c3fc70ffa5cd5a0feb23e10c0cc11 = L.circleMarker(
+                [14.17, 38.9],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_dd4465f7d4ede272c6b3f922f85aa0b8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3a397b7604c4089624f2657be6e67356 = $(`<div id="html_3a397b7604c4089624f2657be6e67356" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Adwa</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 55,000<br>                 <b>Elevation:</b> 1907.0 m<br>                 <b>Coordinates:</b> (14.1700, 38.9000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 31             </div>             </div>`)[0];
+                popup_dd4465f7d4ede272c6b3f922f85aa0b8.setContent(html_3a397b7604c4089624f2657be6e67356);
+            
+        
+
+        circle_marker_403c3fc70ffa5cd5a0feb23e10c0cc11.bindPopup(popup_dd4465f7d4ede272c6b3f922f85aa0b8)
+        ;
+
+        
+    
+    
+            circle_marker_403c3fc70ffa5cd5a0feb23e10c0cc11.bindTooltip(
+                `<div>
+                     Adwa (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ea432da9a0694e2e9b066f5cd5ab381 = L.circleMarker(
+                [14.07, 38.28],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_fa8208147a5cf0c927c275a6e49bc045 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fa825551a7a59b3dd78dff83727ffe92 = $(`<div id="html_fa825551a7a59b3dd78dff83727ffe92" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Endaselassie</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 45,000<br>                 <b>Elevation:</b> 1925.0 m<br>                 <b>Coordinates:</b> (14.0700, 38.2800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 32             </div>             </div>`)[0];
+                popup_fa8208147a5cf0c927c275a6e49bc045.setContent(html_fa825551a7a59b3dd78dff83727ffe92);
+            
+        
+
+        circle_marker_6ea432da9a0694e2e9b066f5cd5ab381.bindPopup(popup_fa8208147a5cf0c927c275a6e49bc045)
+        ;
+
+        
+    
+    
+            circle_marker_6ea432da9a0694e2e9b066f5cd5ab381.bindTooltip(
+                `<div>
+                     Endaselassie (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cfc0d809fa70827099040e2d3ce85d2b = L.circleMarker(
+                [8.3, 35.58],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_0075285b009d2a6fb83c646bb8559fbf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_668c86370f22f68c99390df938f925ee = $(`<div id="html_668c86370f22f68c99390df938f925ee" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Metu</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 1620.0 m<br>                 <b>Coordinates:</b> (8.3000, 35.5800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 33             </div>             </div>`)[0];
+                popup_0075285b009d2a6fb83c646bb8559fbf.setContent(html_668c86370f22f68c99390df938f925ee);
+            
+        
+
+        circle_marker_cfc0d809fa70827099040e2d3ce85d2b.bindPopup(popup_0075285b009d2a6fb83c646bb8559fbf)
+        ;
+
+        
+    
+    
+            circle_marker_cfc0d809fa70827099040e2d3ce85d2b.bindTooltip(
+                `<div>
+                     Metu (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1636a0d50fce18047d56e1fc31f1c030 = L.circleMarker(
+                [7.85, 36.58],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_46baf87bda343b2318ecfb38be2c0fc0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f3af1984edc919c93ff6b472308d89f1 = $(`<div id="html_f3af1984edc919c93ff6b472308d89f1" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Agaro</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1560.0 m<br>                 <b>Coordinates:</b> (7.8500, 36.5800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 34             </div>             </div>`)[0];
+                popup_46baf87bda343b2318ecfb38be2c0fc0.setContent(html_f3af1984edc919c93ff6b472308d89f1);
+            
+        
+
+        circle_marker_1636a0d50fce18047d56e1fc31f1c030.bindPopup(popup_46baf87bda343b2318ecfb38be2c0fc0)
+        ;
+
+        
+    
+    
+            circle_marker_1636a0d50fce18047d56e1fc31f1c030.bindTooltip(
+                `<div>
+                     Agaro (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b7af50d2b7920334639291fda1bb564 = L.circleMarker(
+                [8.45, 36.35],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_0f8f8b1245f132d5ec2131152175c0ca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0359e0c1a979b744610b9332637e14bf = $(`<div id="html_0359e0c1a979b744610b9332637e14bf" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Bedele</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 30,000<br>                 <b>Elevation:</b> 2012.0 m<br>                 <b>Coordinates:</b> (8.4500, 36.3500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 35             </div>             </div>`)[0];
+                popup_0f8f8b1245f132d5ec2131152175c0ca.setContent(html_0359e0c1a979b744610b9332637e14bf);
+            
+        
+
+        circle_marker_0b7af50d2b7920334639291fda1bb564.bindPopup(popup_0f8f8b1245f132d5ec2131152175c0ca)
+        ;
+
+        
+    
+    
+            circle_marker_0b7af50d2b7920334639291fda1bb564.bindTooltip(
+                `<div>
+                     Bedele (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d04c406b1cbda134a260813f91c6466c = L.circleMarker(
+                [9.17, 35.83],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_9c24a0c2c28e398f220906a92e4d8c2a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e9c2024ae08349512892710188f144a = $(`<div id="html_2e9c2024ae08349512892710188f144a" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Gimbi</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1850.0 m<br>                 <b>Coordinates:</b> (9.1700, 35.8300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 36             </div>             </div>`)[0];
+                popup_9c24a0c2c28e398f220906a92e4d8c2a.setContent(html_2e9c2024ae08349512892710188f144a);
+            
+        
+
+        circle_marker_d04c406b1cbda134a260813f91c6466c.bindPopup(popup_9c24a0c2c28e398f220906a92e4d8c2a)
+        ;
+
+        
+    
+    
+            circle_marker_d04c406b1cbda134a260813f91c6466c.bindTooltip(
+                `<div>
+                     Gimbi (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3cf8310c93583e5bb62216cf973177da = L.circleMarker(
+                [7.95, 39.12],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_b21ccdd4e4fcc975b1f2335c6c94f1e8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ee0fdac6e32e51598316a928491e0e9e = $(`<div id="html_ee0fdac6e32e51598316a928491e0e9e" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Asella</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 100,000<br>                 <b>Elevation:</b> 2430.0 m<br>                 <b>Coordinates:</b> (7.9500, 39.1200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 37             </div>             </div>`)[0];
+                popup_b21ccdd4e4fcc975b1f2335c6c94f1e8.setContent(html_ee0fdac6e32e51598316a928491e0e9e);
+            
+        
+
+        circle_marker_3cf8310c93583e5bb62216cf973177da.bindPopup(popup_b21ccdd4e4fcc975b1f2335c6c94f1e8)
+        ;
+
+        
+    
+    
+            circle_marker_3cf8310c93583e5bb62216cf973177da.bindTooltip(
+                `<div>
+                     Asella (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68163cb6daf3c1db28ad601cc4e6d3ae = L.circleMarker(
+                [7.95, 38.72],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_c3b55bb6e897a7b742e7f4519fc4089f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1008254f2b0a66a1468be6404c70fb81 = $(`<div id="html_1008254f2b0a66a1468be6404c70fb81" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Batu</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 80,000<br>                 <b>Elevation:</b> 1650.0 m<br>                 <b>Coordinates:</b> (7.9500, 38.7200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 38             </div>             </div>`)[0];
+                popup_c3b55bb6e897a7b742e7f4519fc4089f.setContent(html_1008254f2b0a66a1468be6404c70fb81);
+            
+        
+
+        circle_marker_68163cb6daf3c1db28ad601cc4e6d3ae.bindPopup(popup_c3b55bb6e897a7b742e7f4519fc4089f)
+        ;
+
+        
+    
+    
+            circle_marker_68163cb6daf3c1db28ad601cc4e6d3ae.bindTooltip(
+                `<div>
+                     Batu (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1799b2a834d86868213c68cfd82be2aa = L.circleMarker(
+                [8.98, 37.85],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_de64240f5332b43a7f0184f9d611aff6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5b39a7a7ea9a5b61639fb9f135dc2564 = $(`<div id="html_5b39a7a7ea9a5b61639fb9f135dc2564" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Ambo</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 90,000<br>                 <b>Elevation:</b> 2101.0 m<br>                 <b>Coordinates:</b> (8.9800, 37.8500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 39             </div>             </div>`)[0];
+                popup_de64240f5332b43a7f0184f9d611aff6.setContent(html_5b39a7a7ea9a5b61639fb9f135dc2564);
+            
+        
+
+        circle_marker_1799b2a834d86868213c68cfd82be2aa.bindPopup(popup_de64240f5332b43a7f0184f9d611aff6)
+        ;
+
+        
+    
+    
+            circle_marker_1799b2a834d86868213c68cfd82be2aa.bindTooltip(
+                `<div>
+                     Ambo (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c8b142e439ca8e158a02a310fba3624 = L.circleMarker(
+                [8.53, 37.97],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_d5925ab0f8e39bbaad7973a25690a452 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f3c6a7523a49deee1b96458be782d9f = $(`<div id="html_6f3c6a7523a49deee1b96458be782d9f" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Woliso</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 60,000<br>                 <b>Elevation:</b> 2063.0 m<br>                 <b>Coordinates:</b> (8.5300, 37.9700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 40             </div>             </div>`)[0];
+                popup_d5925ab0f8e39bbaad7973a25690a452.setContent(html_6f3c6a7523a49deee1b96458be782d9f);
+            
+        
+
+        circle_marker_3c8b142e439ca8e158a02a310fba3624.bindPopup(popup_d5925ab0f8e39bbaad7973a25690a452)
+        ;
+
+        
+    
+    
+            circle_marker_3c8b142e439ca8e158a02a310fba3624.bindTooltip(
+                `<div>
+                     Woliso (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cdcc84825eef1d4f68d21fff24e256dd = L.circleMarker(
+                [8.12, 38.37],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_726716e19e3e7a68800ef3dfbcc1c8ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c9fc03e0163427ff02ce8893b944aea9 = $(`<div id="html_c9fc03e0163427ff02ce8893b944aea9" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Butajira</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 55,000<br>                 <b>Elevation:</b> 1991.0 m<br>                 <b>Coordinates:</b> (8.1200, 38.3700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 41             </div>             </div>`)[0];
+                popup_726716e19e3e7a68800ef3dfbcc1c8ed.setContent(html_c9fc03e0163427ff02ce8893b944aea9);
+            
+        
+
+        circle_marker_cdcc84825eef1d4f68d21fff24e256dd.bindPopup(popup_726716e19e3e7a68800ef3dfbcc1c8ed)
+        ;
+
+        
+    
+    
+            circle_marker_cdcc84825eef1d4f68d21fff24e256dd.bindTooltip(
+                `<div>
+                     Butajira (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7ca4df6d5ecac47f8439e9c81dccf355 = L.circleMarker(
+                [7.87, 37.95],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_b8484336cd83234f89dd2aabc3daad9c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_525b0805facf996d7638efa3a861d703 = $(`<div id="html_525b0805facf996d7638efa3a861d703" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Worabe</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 1710.0 m<br>                 <b>Coordinates:</b> (7.8700, 37.9500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 42             </div>             </div>`)[0];
+                popup_b8484336cd83234f89dd2aabc3daad9c.setContent(html_525b0805facf996d7638efa3a861d703);
+            
+        
+
+        circle_marker_7ca4df6d5ecac47f8439e9c81dccf355.bindPopup(popup_b8484336cd83234f89dd2aabc3daad9c)
+        ;
+
+        
+    
+    
+            circle_marker_7ca4df6d5ecac47f8439e9c81dccf355.bindTooltip(
+                `<div>
+                     Worabe (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2475da754da2efc7b3454bf2a217d94e = L.circleMarker(
+                [7.23, 37.88],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_66605c3595b54b754914aeb947321a73 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_88f73a620439a1b13775e44cae89d9d6 = $(`<div id="html_88f73a620439a1b13775e44cae89d9d6" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Durame</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 45,000<br>                 <b>Elevation:</b> 2010.0 m<br>                 <b>Coordinates:</b> (7.2300, 37.8800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 43             </div>             </div>`)[0];
+                popup_66605c3595b54b754914aeb947321a73.setContent(html_88f73a620439a1b13775e44cae89d9d6);
+            
+        
+
+        circle_marker_2475da754da2efc7b3454bf2a217d94e.bindPopup(popup_66605c3595b54b754914aeb947321a73)
+        ;
+
+        
+    
+    
+            circle_marker_2475da754da2efc7b3454bf2a217d94e.bindTooltip(
+                `<div>
+                     Durame (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f67a7ac0fcd121f24ea5139e19cbc4c3 = L.circleMarker(
+                [7.27, 36.23],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_365f4758d53b4f2ae1d0954871d468f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_03629039f42eca694f82aa40cb012e45 = $(`<div id="html_03629039f42eca694f82aa40cb012e45" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Bonga</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1714.0 m<br>                 <b>Coordinates:</b> (7.2700, 36.2300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 44             </div>             </div>`)[0];
+                popup_365f4758d53b4f2ae1d0954871d468f1.setContent(html_03629039f42eca694f82aa40cb012e45);
+            
+        
+
+        circle_marker_f67a7ac0fcd121f24ea5139e19cbc4c3.bindPopup(popup_365f4758d53b4f2ae1d0954871d468f1)
+        ;
+
+        
+    
+    
+            circle_marker_f67a7ac0fcd121f24ea5139e19cbc4c3.bindTooltip(
+                `<div>
+                     Bonga (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a4552d460dbbef7d116e00fca8e6e65 = L.circleMarker(
+                [6.98, 35.58],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_bd9185205c50ddb7ca88be3eb646485f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0c01ee85b481b621886832d424f4a866 = $(`<div id="html_0c01ee85b481b621886832d424f4a866" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Mizan Teferi</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 1211.0 m<br>                 <b>Coordinates:</b> (6.9800, 35.5800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 45             </div>             </div>`)[0];
+                popup_bd9185205c50ddb7ca88be3eb646485f.setContent(html_0c01ee85b481b621886832d424f4a866);
+            
+        
+
+        circle_marker_9a4552d460dbbef7d116e00fca8e6e65.bindPopup(popup_bd9185205c50ddb7ca88be3eb646485f)
+        ;
+
+        
+    
+    
+            circle_marker_9a4552d460dbbef7d116e00fca8e6e65.bindTooltip(
+                `<div>
+                     Mizan Teferi (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff2b44747299ea0d4d38a7159e038e03 = L.circleMarker(
+                [7.2, 35.45],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF00FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_16e09343f13260058f5cbf1f2387dd16 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7c255e828218e0624928bccc54c19067 = $(`<div id="html_7c255e828218e0624928bccc54c19067" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Tepi</h4>                 <hr>                 <b>Region:</b> SNNPR<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1097.0 m<br>                 <b>Coordinates:</b> (7.2000, 35.4500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 46             </div>             </div>`)[0];
+                popup_16e09343f13260058f5cbf1f2387dd16.setContent(html_7c255e828218e0624928bccc54c19067);
+            
+        
+
+        circle_marker_ff2b44747299ea0d4d38a7159e038e03.bindPopup(popup_16e09343f13260058f5cbf1f2387dd16)
+        ;
+
+        
+    
+    
+            circle_marker_ff2b44747299ea0d4d38a7159e038e03.bindTooltip(
+                `<div>
+                     Tepi (SNNPR)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1dc6cd812837be1079d412b29c3e5da = L.circleMarker(
+                [5.95, 43.45],
+                {"bubblingMouseEvents": true, "color": "#800080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800080", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_b44a8c5e6665883c568b76993a8e1fd5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d9490b8d40eb2180da8d2b7cd7206406 = $(`<div id="html_d9490b8d40eb2180da8d2b7cd7206406" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Gode</h4>                 <hr>                 <b>Region:</b> Somali<br>                 <b>Population:</b> 45,000<br>                 <b>Elevation:</b> 260.0 m<br>                 <b>Coordinates:</b> (5.9500, 43.4500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 47             </div>             </div>`)[0];
+                popup_b44a8c5e6665883c568b76993a8e1fd5.setContent(html_d9490b8d40eb2180da8d2b7cd7206406);
+            
+        
+
+        circle_marker_a1dc6cd812837be1079d412b29c3e5da.bindPopup(popup_b44a8c5e6665883c568b76993a8e1fd5)
+        ;
+
+        
+    
+    
+            circle_marker_a1dc6cd812837be1079d412b29c3e5da.bindTooltip(
+                `<div>
+                     Gode (Somali)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4b126a9285c3a397a5021447d8f8d5d = L.circleMarker(
+                [6.73, 44.28],
+                {"bubblingMouseEvents": true, "color": "#800080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800080", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_d5103840e545799f2a5b01025b29d31e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_23460bc2e0270d28e7e9fd9322fa51b1 = $(`<div id="html_23460bc2e0270d28e7e9fd9322fa51b1" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Kebri Dahar</h4>                 <hr>                 <b>Region:</b> Somali<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 550.0 m<br>                 <b>Coordinates:</b> (6.7300, 44.2800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 48             </div>             </div>`)[0];
+                popup_d5103840e545799f2a5b01025b29d31e.setContent(html_23460bc2e0270d28e7e9fd9322fa51b1);
+            
+        
+
+        circle_marker_e4b126a9285c3a397a5021447d8f8d5d.bindPopup(popup_d5103840e545799f2a5b01025b29d31e)
+        ;
+
+        
+    
+    
+            circle_marker_e4b126a9285c3a397a5021447d8f8d5d.bindTooltip(
+                `<div>
+                     Kebri Dahar (Somali)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_659e36e03796f176bd442bb390f8d930 = L.circleMarker(
+                [8.22, 43.57],
+                {"bubblingMouseEvents": true, "color": "#800080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800080", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_bacddc0670a9051d3fe3a6b1181a107c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_63f3bc52a21d72617cab0e87a9904c4d = $(`<div id="html_63f3bc52a21d72617cab0e87a9904c4d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Degehabur</h4>                 <hr>                 <b>Region:</b> Somali<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1044.0 m<br>                 <b>Coordinates:</b> (8.2200, 43.5700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 49             </div>             </div>`)[0];
+                popup_bacddc0670a9051d3fe3a6b1181a107c.setContent(html_63f3bc52a21d72617cab0e87a9904c4d);
+            
+        
+
+        circle_marker_659e36e03796f176bd442bb390f8d930.bindPopup(popup_bacddc0670a9051d3fe3a6b1181a107c)
+        ;
+
+        
+    
+    
+            circle_marker_659e36e03796f176bd442bb390f8d930.bindTooltip(
+                `<div>
+                     Degehabur (Somali)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a76de3240efd46a2db77958842bc9c1 = L.circleMarker(
+                [9.8, 38.73],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_0db38bbe5909dc0955c0b33a3f1c5011 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_210e0280f1e89b64b4966aa9b194281d = $(`<div id="html_210e0280f1e89b64b4966aa9b194281d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Fiche</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 2738.0 m<br>                 <b>Coordinates:</b> (9.8000, 38.7300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 50             </div>             </div>`)[0];
+                popup_0db38bbe5909dc0955c0b33a3f1c5011.setContent(html_210e0280f1e89b64b4966aa9b194281d);
+            
+        
+
+        circle_marker_3a76de3240efd46a2db77958842bc9c1.bindPopup(popup_0db38bbe5909dc0955c0b33a3f1c5011)
+        ;
+
+        
+    
+    
+            circle_marker_3a76de3240efd46a2db77958842bc9c1.bindTooltip(
+                `<div>
+                     Fiche (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6a0bc6ad5b9704e7db491b33d912ab1 = L.circleMarker(
+                [9.8, 38.43],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_65360fb48066ab54d3a5e12eeb3b57e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ac34ddda8d3245403b15046248758d23 = $(`<div id="html_ac34ddda8d3245403b15046248758d23" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Gebre Guracha</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 2620.0 m<br>                 <b>Coordinates:</b> (9.8000, 38.4300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 51             </div>             </div>`)[0];
+                popup_65360fb48066ab54d3a5e12eeb3b57e5.setContent(html_ac34ddda8d3245403b15046248758d23);
+            
+        
+
+        circle_marker_a6a0bc6ad5b9704e7db491b33d912ab1.bindPopup(popup_65360fb48066ab54d3a5e12eeb3b57e5)
+        ;
+
+        
+    
+    
+            circle_marker_a6a0bc6ad5b9704e7db491b33d912ab1.bindTooltip(
+                `<div>
+                     Gebre Guracha (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_421fb1cc487d11882d649237701b3d44 = L.circleMarker(
+                [9.08, 38.78],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_ae83b736ab910ede798c727eb63c824e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cd50cd8d571bb19867f9edd4ed252bd4 = $(`<div id="html_cd50cd8d571bb19867f9edd4ed252bd4" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Muketuri</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 30,000<br>                 <b>Elevation:</b> 2660.0 m<br>                 <b>Coordinates:</b> (9.0800, 38.7800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 52             </div>             </div>`)[0];
+                popup_ae83b736ab910ede798c727eb63c824e.setContent(html_cd50cd8d571bb19867f9edd4ed252bd4);
+            
+        
+
+        circle_marker_421fb1cc487d11882d649237701b3d44.bindPopup(popup_ae83b736ab910ede798c727eb63c824e)
+        ;
+
+        
+    
+    
+            circle_marker_421fb1cc487d11882d649237701b3d44.bindTooltip(
+                `<div>
+                     Muketuri (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c2d01e81414fb5cfd35a7a4dd512e18 = L.circleMarker(
+                [9.3, 38.75],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_30aaed702c2d58b28800b24cca32a3f7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2240796cb1b892af7ae5e8a51913dddc = $(`<div id="html_2240796cb1b892af7ae5e8a51913dddc" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Chancho</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 25,000<br>                 <b>Elevation:</b> 2500.0 m<br>                 <b>Coordinates:</b> (9.3000, 38.7500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 53             </div>             </div>`)[0];
+                popup_30aaed702c2d58b28800b24cca32a3f7.setContent(html_2240796cb1b892af7ae5e8a51913dddc);
+            
+        
+
+        circle_marker_7c2d01e81414fb5cfd35a7a4dd512e18.bindPopup(popup_30aaed702c2d58b28800b24cca32a3f7)
+        ;
+
+        
+    
+    
+            circle_marker_7c2d01e81414fb5cfd35a7a4dd512e18.bindTooltip(
+                `<div>
+                     Chancho (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_139a7d8c6c87497a35e4fbf3469ac779 = L.circleMarker(
+                [9.2, 38.75],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_143686cd06e48e9c82f8b12c7fd6ae39 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ee31d1aec6538dcd0905b8679ae411b = $(`<div id="html_4ee31d1aec6538dcd0905b8679ae411b" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Sululta</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 45,000<br>                 <b>Elevation:</b> 2500.0 m<br>                 <b>Coordinates:</b> (9.2000, 38.7500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 54             </div>             </div>`)[0];
+                popup_143686cd06e48e9c82f8b12c7fd6ae39.setContent(html_4ee31d1aec6538dcd0905b8679ae411b);
+            
+        
+
+        circle_marker_139a7d8c6c87497a35e4fbf3469ac779.bindPopup(popup_143686cd06e48e9c82f8b12c7fd6ae39)
+        ;
+
+        
+    
+    
+            circle_marker_139a7d8c6c87497a35e4fbf3469ac779.bindTooltip(
+                `<div>
+                     Sululta (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e752583c589d385a48798fa6036e2ca = L.circleMarker(
+                [8.92, 38.62],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_09c8c3e20ed2461940bb74ec06b2e04b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b9a09bfbaafe63e8b812cab160284eb = $(`<div id="html_1b9a09bfbaafe63e8b812cab160284eb" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Sebeta</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 70,000<br>                 <b>Elevation:</b> 2350.0 m<br>                 <b>Coordinates:</b> (8.9200, 38.6200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 55             </div>             </div>`)[0];
+                popup_09c8c3e20ed2461940bb74ec06b2e04b.setContent(html_1b9a09bfbaafe63e8b812cab160284eb);
+            
+        
+
+        circle_marker_9e752583c589d385a48798fa6036e2ca.bindPopup(popup_09c8c3e20ed2461940bb74ec06b2e04b)
+        ;
+
+        
+    
+    
+            circle_marker_9e752583c589d385a48798fa6036e2ca.bindTooltip(
+                `<div>
+                     Sebeta (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c60ce932e6fce8b26ed053287e62694 = L.circleMarker(
+                [9.05, 38.5],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_2989e31db05517b8e68e3bc2fe13cd76 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a478658a5646bd1b08828c51ad7f37d7 = $(`<div id="html_a478658a5646bd1b08828c51ad7f37d7" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Holeta</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 2390.0 m<br>                 <b>Coordinates:</b> (9.0500, 38.5000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 56             </div>             </div>`)[0];
+                popup_2989e31db05517b8e68e3bc2fe13cd76.setContent(html_a478658a5646bd1b08828c51ad7f37d7);
+            
+        
+
+        circle_marker_2c60ce932e6fce8b26ed053287e62694.bindPopup(popup_2989e31db05517b8e68e3bc2fe13cd76)
+        ;
+
+        
+    
+    
+            circle_marker_2c60ce932e6fce8b26ed053287e62694.bindTooltip(
+                `<div>
+                     Holeta (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62eb13fea2793e48db21b66e2f90bbdc = L.circleMarker(
+                [9.02, 38.15],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_26f53e3166e22df8a16c8998080d7abf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_834ae632dffcea3b018e18816189a219 = $(`<div id="html_834ae632dffcea3b018e18816189a219" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Ginchi</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 45,000<br>                 <b>Elevation:</b> 2200.0 m<br>                 <b>Coordinates:</b> (9.0200, 38.1500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 57             </div>             </div>`)[0];
+                popup_26f53e3166e22df8a16c8998080d7abf.setContent(html_834ae632dffcea3b018e18816189a219);
+            
+        
+
+        circle_marker_62eb13fea2793e48db21b66e2f90bbdc.bindPopup(popup_26f53e3166e22df8a16c8998080d7abf)
+        ;
+
+        
+    
+    
+            circle_marker_62eb13fea2793e48db21b66e2f90bbdc.bindTooltip(
+                `<div>
+                     Ginchi (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88b754510a95c87866aaa47eb83852d5 = L.circleMarker(
+                [8.97, 37.77],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_ba292e706b8a8f84f1c6842a306d2678 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_24bafd325ef724419c8275583f1edc2c = $(`<div id="html_24bafd325ef724419c8275583f1edc2c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Guder</h4>                 <hr>                 <b>Region:</b> Oromia<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 2000.0 m<br>                 <b>Coordinates:</b> (8.9700, 37.7700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 58             </div>             </div>`)[0];
+                popup_ba292e706b8a8f84f1c6842a306d2678.setContent(html_24bafd325ef724419c8275583f1edc2c);
+            
+        
+
+        circle_marker_88b754510a95c87866aaa47eb83852d5.bindPopup(popup_ba292e706b8a8f84f1c6842a306d2678)
+        ;
+
+        
+    
+    
+            circle_marker_88b754510a95c87866aaa47eb83852d5.bindTooltip(
+                `<div>
+                     Guder (Oromia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2849fb6eb69ba84ab29c2d327b74cdb = L.circleMarker(
+                [11.27, 37.48],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_4cc13fdf9761857b83c4b81032ddd9f2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1bddf5afefadce8352e53dd9c0eb7ba6 = $(`<div id="html_1bddf5afefadce8352e53dd9c0eb7ba6" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Adet</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 2150.0 m<br>                 <b>Coordinates:</b> (11.2700, 37.4800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 59             </div>             </div>`)[0];
+                popup_4cc13fdf9761857b83c4b81032ddd9f2.setContent(html_1bddf5afefadce8352e53dd9c0eb7ba6);
+            
+        
+
+        circle_marker_c2849fb6eb69ba84ab29c2d327b74cdb.bindPopup(popup_4cc13fdf9761857b83c4b81032ddd9f2)
+        ;
+
+        
+    
+    
+            circle_marker_c2849fb6eb69ba84ab29c2d327b74cdb.bindTooltip(
+                `<div>
+                     Adet (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92a29854d90412701f803cd52f37c606 = L.circleMarker(
+                [11.4, 37.17],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_f75cf679426950b2168cb6b1e5ced89c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_697d38fb101b4e5a54f2e6b0c60d5a7c = $(`<div id="html_697d38fb101b4e5a54f2e6b0c60d5a7c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Merawi</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1960.0 m<br>                 <b>Coordinates:</b> (11.4000, 37.1700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 60             </div>             </div>`)[0];
+                popup_f75cf679426950b2168cb6b1e5ced89c.setContent(html_697d38fb101b4e5a54f2e6b0c60d5a7c);
+            
+        
+
+        circle_marker_92a29854d90412701f803cd52f37c606.bindPopup(popup_f75cf679426950b2168cb6b1e5ced89c)
+        ;
+
+        
+    
+    
+            circle_marker_92a29854d90412701f803cd52f37c606.bindTooltip(
+                `<div>
+                     Merawi (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1311bc5d8df746fa501596e8c3f272d3 = L.circleMarker(
+                [10.7, 37.27],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_2666a513cbc773bd2c922bebb65d62e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_457a63bd67887e0f64a1ccc8ccc37daf = $(`<div id="html_457a63bd67887e0f64a1ccc8ccc37daf" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Finote Selam</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 45,000<br>                 <b>Elevation:</b> 1880.0 m<br>                 <b>Coordinates:</b> (10.7000, 37.2700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 61             </div>             </div>`)[0];
+                popup_2666a513cbc773bd2c922bebb65d62e7.setContent(html_457a63bd67887e0f64a1ccc8ccc37daf);
+            
+        
+
+        circle_marker_1311bc5d8df746fa501596e8c3f272d3.bindPopup(popup_2666a513cbc773bd2c922bebb65d62e7)
+        ;
+
+        
+    
+    
+            circle_marker_1311bc5d8df746fa501596e8c3f272d3.bindTooltip(
+                `<div>
+                     Finote Selam (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7ce03e6238e0c97b2b869c7c145c6f7 = L.circleMarker(
+                [10.7, 37.07],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_3add97b9b90099ae58c59282c33aeb8d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3c4ad58dd0cf47f7804d827b1c688350 = $(`<div id="html_3c4ad58dd0cf47f7804d827b1c688350" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Bure</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 2025.0 m<br>                 <b>Coordinates:</b> (10.7000, 37.0700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 62             </div>             </div>`)[0];
+                popup_3add97b9b90099ae58c59282c33aeb8d.setContent(html_3c4ad58dd0cf47f7804d827b1c688350);
+            
+        
+
+        circle_marker_d7ce03e6238e0c97b2b869c7c145c6f7.bindPopup(popup_3add97b9b90099ae58c59282c33aeb8d)
+        ;
+
+        
+    
+    
+            circle_marker_d7ce03e6238e0c97b2b869c7c145c6f7.bindTooltip(
+                `<div>
+                     Bure (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4fdc80e4f8906e0a96da0c3513b739f = L.circleMarker(
+                [11.25, 36.83],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_2a4e4bcfd6da869daabdd8765e975b3c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aa861156d7b708ce2ab06773e17614ea = $(`<div id="html_aa861156d7b708ce2ab06773e17614ea" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Dangila</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 2122.0 m<br>                 <b>Coordinates:</b> (11.2500, 36.8300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 63             </div>             </div>`)[0];
+                popup_2a4e4bcfd6da869daabdd8765e975b3c.setContent(html_aa861156d7b708ce2ab06773e17614ea);
+            
+        
+
+        circle_marker_e4fdc80e4f8906e0a96da0c3513b739f.bindPopup(popup_2a4e4bcfd6da869daabdd8765e975b3c)
+        ;
+
+        
+    
+    
+            circle_marker_e4fdc80e4f8906e0a96da0c3513b739f.bindTooltip(
+                `<div>
+                     Dangila (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_636ced4393189c87a4a20caf0fd33e79 = L.circleMarker(
+                [10.95, 36.93],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_752b26330060d937d21e9464f9d952a1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0984b366d326dad30efd2a4a58636e50 = $(`<div id="html_0984b366d326dad30efd2a4a58636e50" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Injibara</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 30,000<br>                 <b>Elevation:</b> 2560.0 m<br>                 <b>Coordinates:</b> (10.9500, 36.9300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 64             </div>             </div>`)[0];
+                popup_752b26330060d937d21e9464f9d952a1.setContent(html_0984b366d326dad30efd2a4a58636e50);
+            
+        
+
+        circle_marker_636ced4393189c87a4a20caf0fd33e79.bindPopup(popup_752b26330060d937d21e9464f9d952a1)
+        ;
+
+        
+    
+    
+            circle_marker_636ced4393189c87a4a20caf0fd33e79.bindTooltip(
+                `<div>
+                     Injibara (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66a506eb7ba160fdc48ee49ed0095f53 = L.circleMarker(
+                [10.95, 36.5],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_e81c57f3a2cbdb9b7f63d747b3ded708 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_697847fcc238397526e57f9a3ae2b21c = $(`<div id="html_697847fcc238397526e57f9a3ae2b21c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Chagni</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1583.0 m<br>                 <b>Coordinates:</b> (10.9500, 36.5000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 65             </div>             </div>`)[0];
+                popup_e81c57f3a2cbdb9b7f63d747b3ded708.setContent(html_697847fcc238397526e57f9a3ae2b21c);
+            
+        
+
+        circle_marker_66a506eb7ba160fdc48ee49ed0095f53.bindPopup(popup_e81c57f3a2cbdb9b7f63d747b3ded708)
+        ;
+
+        
+    
+    
+            circle_marker_66a506eb7ba160fdc48ee49ed0095f53.bindTooltip(
+                `<div>
+                     Chagni (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a63e344a4db3efb47c9735cf159dc138 = L.circleMarker(
+                [11.2, 36.4],
+                {"bubblingMouseEvents": true, "color": "#808000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_5a7f960300eb6f0fa54259fdf1788b02 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a721d4845eb9e7157d3cd567f0cce47b = $(`<div id="html_a721d4845eb9e7157d3cd567f0cce47b" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Pawi</h4>                 <hr>                 <b>Region:</b> Benshangul<br>                 <b>Population:</b> 25,000<br>                 <b>Elevation:</b> 1150.0 m<br>                 <b>Coordinates:</b> (11.2000, 36.4000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 66             </div>             </div>`)[0];
+                popup_5a7f960300eb6f0fa54259fdf1788b02.setContent(html_a721d4845eb9e7157d3cd567f0cce47b);
+            
+        
+
+        circle_marker_a63e344a4db3efb47c9735cf159dc138.bindPopup(popup_5a7f960300eb6f0fa54259fdf1788b02)
+        ;
+
+        
+    
+    
+            circle_marker_a63e344a4db3efb47c9735cf159dc138.bindTooltip(
+                `<div>
+                     Pawi (Benshangul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b1ee3ff240c46a1f6282abf27ab2aab = L.circleMarker(
+                [11.2, 36.1],
+                {"bubblingMouseEvents": true, "color": "#808000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808000", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_bdb82aad365abad7d67b0438ddd5b314 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c59c45ef5b501bc695ab7d08712e4905 = $(`<div id="html_c59c45ef5b501bc695ab7d08712e4905" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Metekel</h4>                 <hr>                 <b>Region:</b> Benshangul<br>                 <b>Population:</b> 20,000<br>                 <b>Elevation:</b> 1200.0 m<br>                 <b>Coordinates:</b> (11.2000, 36.1000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 67             </div>             </div>`)[0];
+                popup_bdb82aad365abad7d67b0438ddd5b314.setContent(html_c59c45ef5b501bc695ab7d08712e4905);
+            
+        
+
+        circle_marker_4b1ee3ff240c46a1f6282abf27ab2aab.bindPopup(popup_bdb82aad365abad7d67b0438ddd5b314)
+        ;
+
+        
+    
+    
+            circle_marker_4b1ee3ff240c46a1f6282abf27ab2aab.bindTooltip(
+                `<div>
+                     Metekel (Benshangul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2dbd3f2116e6dddfa078cc5b54624c2 = L.circleMarker(
+                [10.72, 39.87],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_00c58f9659e12cb6d03b07e33933e0dc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ac3ef78e4d0e3282e07986a5f79e137 = $(`<div id="html_8ac3ef78e4d0e3282e07986a5f79e137" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Kemise</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1424.0 m<br>                 <b>Coordinates:</b> (10.7200, 39.8700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 68             </div>             </div>`)[0];
+                popup_00c58f9659e12cb6d03b07e33933e0dc.setContent(html_8ac3ef78e4d0e3282e07986a5f79e137);
+            
+        
+
+        circle_marker_e2dbd3f2116e6dddfa078cc5b54624c2.bindPopup(popup_00c58f9659e12cb6d03b07e33933e0dc)
+        ;
+
+        
+    
+    
+            circle_marker_e2dbd3f2116e6dddfa078cc5b54624c2.bindTooltip(
+                `<div>
+                     Kemise (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b91a34b0cba72da9cba7c405001e307 = L.circleMarker(
+                [11.18, 39.98],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_f4ead62846ccafb377c76eb48b160ae8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b6bdfdb8f614151a92691165adadbfce = $(`<div id="html_b6bdfdb8f614151a92691165adadbfce" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Bati</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 30,000<br>                 <b>Elevation:</b> 1502.0 m<br>                 <b>Coordinates:</b> (11.1800, 39.9800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 69             </div>             </div>`)[0];
+                popup_f4ead62846ccafb377c76eb48b160ae8.setContent(html_b6bdfdb8f614151a92691165adadbfce);
+            
+        
+
+        circle_marker_3b91a34b0cba72da9cba7c405001e307.bindPopup(popup_f4ead62846ccafb377c76eb48b160ae8)
+        ;
+
+        
+    
+    
+            circle_marker_3b91a34b0cba72da9cba7c405001e307.bindTooltip(
+                `<div>
+                     Bati (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_698f69024116f2e66889d81145813061 = L.circleMarker(
+                [11.67, 39.65],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_bac2411daa194cd816e0ecf99301ffac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c1f585cfb8d0a9aa7d038c7271a54f08 = $(`<div id="html_c1f585cfb8d0a9aa7d038c7271a54f08" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Mersa</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1567.0 m<br>                 <b>Coordinates:</b> (11.6700, 39.6500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 70             </div>             </div>`)[0];
+                popup_bac2411daa194cd816e0ecf99301ffac.setContent(html_c1f585cfb8d0a9aa7d038c7271a54f08);
+            
+        
+
+        circle_marker_698f69024116f2e66889d81145813061.bindPopup(popup_bac2411daa194cd816e0ecf99301ffac)
+        ;
+
+        
+    
+    
+            circle_marker_698f69024116f2e66889d81145813061.bindTooltip(
+                `<div>
+                     Mersa (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d8b052bded17e745b293192b3a73ca2 = L.circleMarker(
+                [12.15, 39.63],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_4c0d237a9964e8ce726b7fdcc4e3576f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_97dbbe6756eb23cbd71588f612fe2b31 = $(`<div id="html_97dbbe6756eb23cbd71588f612fe2b31" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Kobo</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 1468.0 m<br>                 <b>Coordinates:</b> (12.1500, 39.6300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 71             </div>             </div>`)[0];
+                popup_4c0d237a9964e8ce726b7fdcc4e3576f.setContent(html_97dbbe6756eb23cbd71588f612fe2b31);
+            
+        
+
+        circle_marker_9d8b052bded17e745b293192b3a73ca2.bindPopup(popup_4c0d237a9964e8ce726b7fdcc4e3576f)
+        ;
+
+        
+    
+    
+            circle_marker_9d8b052bded17e745b293192b3a73ca2.bindTooltip(
+                `<div>
+                     Kobo (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12729b6fee4d61b040c55c835ba87b88 = L.circleMarker(
+                [12.42, 39.55],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_89e7b86e0505fc71e706db5f04e3e7c6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f264b8d857491fe73e4e49abfd46ec92 = $(`<div id="html_f264b8d857491fe73e4e49abfd46ec92" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Alamata</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 1520.0 m<br>                 <b>Coordinates:</b> (12.4200, 39.5500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 72             </div>             </div>`)[0];
+                popup_89e7b86e0505fc71e706db5f04e3e7c6.setContent(html_f264b8d857491fe73e4e49abfd46ec92);
+            
+        
+
+        circle_marker_12729b6fee4d61b040c55c835ba87b88.bindPopup(popup_89e7b86e0505fc71e706db5f04e3e7c6)
+        ;
+
+        
+    
+    
+            circle_marker_12729b6fee4d61b040c55c835ba87b88.bindTooltip(
+                `<div>
+                     Alamata (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a7836390a3667c8faa8d1233a94cea8 = L.circleMarker(
+                [12.5, 39.52],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_3b00b23d33ae4151bbacc260833af06c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a7ee94375580ad8d9d3f497dd89f910 = $(`<div id="html_7a7ee94375580ad8d9d3f497dd89f910" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Korem</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 2139.0 m<br>                 <b>Coordinates:</b> (12.5000, 39.5200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 73             </div>             </div>`)[0];
+                popup_3b00b23d33ae4151bbacc260833af06c.setContent(html_7a7ee94375580ad8d9d3f497dd89f910);
+            
+        
+
+        circle_marker_9a7836390a3667c8faa8d1233a94cea8.bindPopup(popup_3b00b23d33ae4151bbacc260833af06c)
+        ;
+
+        
+    
+    
+            circle_marker_9a7836390a3667c8faa8d1233a94cea8.bindTooltip(
+                `<div>
+                     Korem (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d54dc5aff6e2018c45c701023e78782 = L.circleMarker(
+                [13.62, 39.0],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_75383a0881a68c0dc2de25a0e2f79435 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc68d1881ed449831f5e97f00863bb73 = $(`<div id="html_cc68d1881ed449831f5e97f00863bb73" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Abiy Addi</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 30,000<br>                 <b>Elevation:</b> 1968.0 m<br>                 <b>Coordinates:</b> (13.6200, 39.0000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 74             </div>             </div>`)[0];
+                popup_75383a0881a68c0dc2de25a0e2f79435.setContent(html_cc68d1881ed449831f5e97f00863bb73);
+            
+        
+
+        circle_marker_6d54dc5aff6e2018c45c701023e78782.bindPopup(popup_75383a0881a68c0dc2de25a0e2f79435)
+        ;
+
+        
+    
+    
+            circle_marker_6d54dc5aff6e2018c45c701023e78782.bindTooltip(
+                `<div>
+                     Abiy Addi (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77de307f5f0590d9c4cacb93bdf46338 = L.circleMarker(
+                [13.97, 39.43],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_f5b0a4624ce8aa7e8d8dca9070b2c390 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d5cb7fe7b6d1b4c342e887ae53f07c80 = $(`<div id="html_d5cb7fe7b6d1b4c342e887ae53f07c80" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Hawzen</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 25,000<br>                 <b>Elevation:</b> 2250.0 m<br>                 <b>Coordinates:</b> (13.9700, 39.4300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 75             </div>             </div>`)[0];
+                popup_f5b0a4624ce8aa7e8d8dca9070b2c390.setContent(html_d5cb7fe7b6d1b4c342e887ae53f07c80);
+            
+        
+
+        circle_marker_77de307f5f0590d9c4cacb93bdf46338.bindPopup(popup_f5b0a4624ce8aa7e8d8dca9070b2c390)
+        ;
+
+        
+    
+    
+            circle_marker_77de307f5f0590d9c4cacb93bdf46338.bindTooltip(
+                `<div>
+                     Hawzen (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_21c3937fa8ad4a7220c96bc10476a2ed = L.circleMarker(
+                [13.93, 39.88],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_eeaa51c3a835a0cb0cf6e4a2b4bf5933 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ff6d5b24482bb8aee8441a6b63da99f1 = $(`<div id="html_ff6d5b24482bb8aee8441a6b63da99f1" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Freweyni</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 20,000<br>                 <b>Elevation:</b> 2420.0 m<br>                 <b>Coordinates:</b> (13.9300, 39.8800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 76             </div>             </div>`)[0];
+                popup_eeaa51c3a835a0cb0cf6e4a2b4bf5933.setContent(html_ff6d5b24482bb8aee8441a6b63da99f1);
+            
+        
+
+        circle_marker_21c3937fa8ad4a7220c96bc10476a2ed.bindPopup(popup_eeaa51c3a835a0cb0cf6e4a2b4bf5933)
+        ;
+
+        
+    
+    
+            circle_marker_21c3937fa8ad4a7220c96bc10476a2ed.bindTooltip(
+                `<div>
+                     Freweyni (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1082652a5bb3de13a1b4c9c3b3ae812f = L.circleMarker(
+                [13.87, 39.73],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_bd0ce975d2c6d9327d62ebb4b0750359 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4892a29cc49c896b2009b7d30628c415 = $(`<div id="html_4892a29cc49c896b2009b7d30628c415" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Atsbi</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 22,000<br>                 <b>Elevation:</b> 2630.0 m<br>                 <b>Coordinates:</b> (13.8700, 39.7300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 77             </div>             </div>`)[0];
+                popup_bd0ce975d2c6d9327d62ebb4b0750359.setContent(html_4892a29cc49c896b2009b7d30628c415);
+            
+        
+
+        circle_marker_1082652a5bb3de13a1b4c9c3b3ae812f.bindPopup(popup_bd0ce975d2c6d9327d62ebb4b0750359)
+        ;
+
+        
+    
+    
+            circle_marker_1082652a5bb3de13a1b4c9c3b3ae812f.bindTooltip(
+                `<div>
+                     Atsbi (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa125130efc10cbd1d6fca8b04a35f44 = L.circleMarker(
+                [13.8, 39.6],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_7ffd042a8510b3484bd99f3931f5bbae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_27f4b85d2603cde8104cdf317c667c1c = $(`<div id="html_27f4b85d2603cde8104cdf317c667c1c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Wukro</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1972.0 m<br>                 <b>Coordinates:</b> (13.8000, 39.6000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 78             </div>             </div>`)[0];
+                popup_7ffd042a8510b3484bd99f3931f5bbae.setContent(html_27f4b85d2603cde8104cdf317c667c1c);
+            
+        
+
+        circle_marker_fa125130efc10cbd1d6fca8b04a35f44.bindPopup(popup_7ffd042a8510b3484bd99f3931f5bbae)
+        ;
+
+        
+    
+    
+            circle_marker_fa125130efc10cbd1d6fca8b04a35f44.bindTooltip(
+                `<div>
+                     Wukro (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70c3d89558d575ec86b96f2289eae7de = L.circleMarker(
+                [13.65, 39.45],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_297fe531cd3af6fb474826849883affb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_57bf72543fd2c3f4e4e8f507befc73a5 = $(`<div id="html_57bf72543fd2c3f4e4e8f507befc73a5" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Edaga Hamus</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 15,000<br>                 <b>Elevation:</b> 2500.0 m<br>                 <b>Coordinates:</b> (13.6500, 39.4500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 79             </div>             </div>`)[0];
+                popup_297fe531cd3af6fb474826849883affb.setContent(html_57bf72543fd2c3f4e4e8f507befc73a5);
+            
+        
+
+        circle_marker_70c3d89558d575ec86b96f2289eae7de.bindPopup(popup_297fe531cd3af6fb474826849883affb)
+        ;
+
+        
+    
+    
+            circle_marker_70c3d89558d575ec86b96f2289eae7de.bindTooltip(
+                `<div>
+                     Edaga Hamus (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a700bebbba72604d70f8cf10a360f5f = L.circleMarker(
+                [14.4, 38.78],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_e9674f98ca950f22bb2a03699c2a79dd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61aeaeaf179b36a791260595309d1f0c = $(`<div id="html_61aeaeaf179b36a791260595309d1f0c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Rama</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 12,000<br>                 <b>Elevation:</b> 1385.0 m<br>                 <b>Coordinates:</b> (14.4000, 38.7800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 80             </div>             </div>`)[0];
+                popup_e9674f98ca950f22bb2a03699c2a79dd.setContent(html_61aeaeaf179b36a791260595309d1f0c);
+            
+        
+
+        circle_marker_1a700bebbba72604d70f8cf10a360f5f.bindPopup(popup_e9674f98ca950f22bb2a03699c2a79dd)
+        ;
+
+        
+    
+    
+            circle_marker_1a700bebbba72604d70f8cf10a360f5f.bindTooltip(
+                `<div>
+                     Rama (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_815c6550782bb6898751ec9307c868a4 = L.circleMarker(
+                [14.28, 36.62],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_561f707b3baa33d2acf715a71b1e6854 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6cadb1087697f5abce6cdac2be82a97a = $(`<div id="html_6cadb1087697f5abce6cdac2be82a97a" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Humera</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 25,000<br>                 <b>Elevation:</b> 585.0 m<br>                 <b>Coordinates:</b> (14.2800, 36.6200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 81             </div>             </div>`)[0];
+                popup_561f707b3baa33d2acf715a71b1e6854.setContent(html_6cadb1087697f5abce6cdac2be82a97a);
+            
+        
+
+        circle_marker_815c6550782bb6898751ec9307c868a4.bindPopup(popup_561f707b3baa33d2acf715a71b1e6854)
+        ;
+
+        
+    
+    
+            circle_marker_815c6550782bb6898751ec9307c868a4.bindTooltip(
+                `<div>
+                     Humera (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbc30bef39207fe0152ba7de2270e9b2 = L.circleMarker(
+                [14.4, 37.77],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_685588e36ca095b859a6b8af33f50f12 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5cb03aeacd24b3e50d6522ca2436596a = $(`<div id="html_5cb03aeacd24b3e50d6522ca2436596a" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Sheraro</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 20,000<br>                 <b>Elevation:</b> 1100.0 m<br>                 <b>Coordinates:</b> (14.4000, 37.7700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 82             </div>             </div>`)[0];
+                popup_685588e36ca095b859a6b8af33f50f12.setContent(html_5cb03aeacd24b3e50d6522ca2436596a);
+            
+        
+
+        circle_marker_cbc30bef39207fe0152ba7de2270e9b2.bindPopup(popup_685588e36ca095b859a6b8af33f50f12)
+        ;
+
+        
+    
+    
+            circle_marker_cbc30bef39207fe0152ba7de2270e9b2.bindTooltip(
+                `<div>
+                     Sheraro (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1fbcda290e598af664df40b74ccb418 = L.circleMarker(
+                [14.1, 38.28],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_ab080f97ac2ace7d9a7c3510385ea5d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a6abed5c7dd4b351a15f56404e9a1d03 = $(`<div id="html_a6abed5c7dd4b351a15f56404e9a1d03" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Indasilase</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 45,000<br>                 <b>Elevation:</b> 1925.0 m<br>                 <b>Coordinates:</b> (14.1000, 38.2800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 83             </div>             </div>`)[0];
+                popup_ab080f97ac2ace7d9a7c3510385ea5d0.setContent(html_a6abed5c7dd4b351a15f56404e9a1d03);
+            
+        
+
+        circle_marker_b1fbcda290e598af664df40b74ccb418.bindPopup(popup_ab080f97ac2ace7d9a7c3510385ea5d0)
+        ;
+
+        
+    
+    
+            circle_marker_b1fbcda290e598af664df40b74ccb418.bindTooltip(
+                `<div>
+                     Indasilase (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_17689a8284544c334131cc3adc906721 = L.circleMarker(
+                [14.35, 39.55],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_8700f405a9255f10266b313bd5c61675 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2c43c30d948e94e2e2e962c42822f7ce = $(`<div id="html_2c43c30d948e94e2e2e962c42822f7ce" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Zalambessa</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 10,000<br>                 <b>Elevation:</b> 2300.0 m<br>                 <b>Coordinates:</b> (14.3500, 39.5500)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 85             </div>             </div>`)[0];
+                popup_8700f405a9255f10266b313bd5c61675.setContent(html_2c43c30d948e94e2e2e962c42822f7ce);
+            
+        
+
+        circle_marker_17689a8284544c334131cc3adc906721.bindPopup(popup_8700f405a9255f10266b313bd5c61675)
+        ;
+
+        
+    
+    
+            circle_marker_17689a8284544c334131cc3adc906721.bindTooltip(
+                `<div>
+                     Zalambessa (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c70b0eef54b676540c105763b0cc4b6 = L.circleMarker(
+                [11.85, 38.02],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_ae7a40e18dcf958db7f11f9d7422e0e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ce5fccd584940a63bdfc9b348bdf9059 = $(`<div id="html_ce5fccd584940a63bdfc9b348bdf9059" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Debre Tabor</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 60,000<br>                 <b>Elevation:</b> 2600.0 m<br>                 <b>Coordinates:</b> (11.8500, 38.0200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 86             </div>             </div>`)[0];
+                popup_ae7a40e18dcf958db7f11f9d7422e0e9.setContent(html_ce5fccd584940a63bdfc9b348bdf9059);
+            
+        
+
+        circle_marker_4c70b0eef54b676540c105763b0cc4b6.bindPopup(popup_ae7a40e18dcf958db7f11f9d7422e0e9)
+        ;
+
+        
+    
+    
+            circle_marker_4c70b0eef54b676540c105763b0cc4b6.bindTooltip(
+                `<div>
+                     Debre Tabor (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1964a726ac0a70886f1fe968250c6930 = L.circleMarker(
+                [12.12, 37.78],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_a424a96b4435514f48c3aad9d2715099 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ff4f25c390b4c01327a1c78acf31e6b2 = $(`<div id="html_ff4f25c390b4c01327a1c78acf31e6b2" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Adis Zemen</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 1950.0 m<br>                 <b>Coordinates:</b> (12.1200, 37.7800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 87             </div>             </div>`)[0];
+                popup_a424a96b4435514f48c3aad9d2715099.setContent(html_ff4f25c390b4c01327a1c78acf31e6b2);
+            
+        
+
+        circle_marker_1964a726ac0a70886f1fe968250c6930.bindPopup(popup_a424a96b4435514f48c3aad9d2715099)
+        ;
+
+        
+    
+    
+            circle_marker_1964a726ac0a70886f1fe968250c6930.bindTooltip(
+                `<div>
+                     Adis Zemen (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5359679b8d28fc3c274458dfbda83dab = L.circleMarker(
+                [11.92, 37.7],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_499b4406cf1f38d90f7f14a2baa4bf5f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_67f92e2b025e4f94ba19b0e50daf7653 = $(`<div id="html_67f92e2b025e4f94ba19b0e50daf7653" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Wereta</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 40,000<br>                 <b>Elevation:</b> 1800.0 m<br>                 <b>Coordinates:</b> (11.9200, 37.7000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 88             </div>             </div>`)[0];
+                popup_499b4406cf1f38d90f7f14a2baa4bf5f.setContent(html_67f92e2b025e4f94ba19b0e50daf7653);
+            
+        
+
+        circle_marker_5359679b8d28fc3c274458dfbda83dab.bindPopup(popup_499b4406cf1f38d90f7f14a2baa4bf5f)
+        ;
+
+        
+    
+    
+            circle_marker_5359679b8d28fc3c274458dfbda83dab.bindTooltip(
+                `<div>
+                     Wereta (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec0431d100daf7cb509448208267a0e3 = L.circleMarker(
+                [11.88, 37.48],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_452a6ad08697e4d701cc6e084dbdb9d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_666c98535de483bf21461308581ef329 = $(`<div id="html_666c98535de483bf21461308581ef329" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Hamusit</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 25,000<br>                 <b>Elevation:</b> 1860.0 m<br>                 <b>Coordinates:</b> (11.8800, 37.4800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 89             </div>             </div>`)[0];
+                popup_452a6ad08697e4d701cc6e084dbdb9d8.setContent(html_666c98535de483bf21461308581ef329);
+            
+        
+
+        circle_marker_ec0431d100daf7cb509448208267a0e3.bindPopup(popup_452a6ad08697e4d701cc6e084dbdb9d8)
+        ;
+
+        
+    
+    
+            circle_marker_ec0431d100daf7cb509448208267a0e3.bindTooltip(
+                `<div>
+                     Hamusit (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e1d18954ebe74924dec335589a2a7747 = L.circleMarker(
+                [12.23, 37.3],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_9959bd1e486e82912fb0deb4e6d1b5f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_83dd660b5082c31d75218d3e6193db57 = $(`<div id="html_83dd660b5082c31d75218d3e6193db57" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Gorgora</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 15,000<br>                 <b>Elevation:</b> 1800.0 m<br>                 <b>Coordinates:</b> (12.2300, 37.3000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 90             </div>             </div>`)[0];
+                popup_9959bd1e486e82912fb0deb4e6d1b5f5.setContent(html_83dd660b5082c31d75218d3e6193db57);
+            
+        
+
+        circle_marker_e1d18954ebe74924dec335589a2a7747.bindPopup(popup_9959bd1e486e82912fb0deb4e6d1b5f5)
+        ;
+
+        
+    
+    
+            circle_marker_e1d18954ebe74924dec335589a2a7747.bindTooltip(
+                `<div>
+                     Gorgora (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6794ac5278ef91213496f503fe4e0058 = L.circleMarker(
+                [12.55, 37.42],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_863b632c72f9e161ebab29d7a967203c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b56aed93900aa4be339a74ddea2a228d = $(`<div id="html_b56aed93900aa4be339a74ddea2a228d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Azezo</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 35,000<br>                 <b>Elevation:</b> 2000.0 m<br>                 <b>Coordinates:</b> (12.5500, 37.4200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 91             </div>             </div>`)[0];
+                popup_863b632c72f9e161ebab29d7a967203c.setContent(html_b56aed93900aa4be339a74ddea2a228d);
+            
+        
+
+        circle_marker_6794ac5278ef91213496f503fe4e0058.bindPopup(popup_863b632c72f9e161ebab29d7a967203c)
+        ;
+
+        
+    
+    
+            circle_marker_6794ac5278ef91213496f503fe4e0058.bindTooltip(
+                `<div>
+                     Azezo (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf110f43f4912942215154b2eb656f01 = L.circleMarker(
+                [13.13, 37.9],
+                {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0000FF", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_e3ded01a288f11dfad25fbfe82f322b7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3a759209e79ba99f5856929d2b39451 = $(`<div id="html_a3a759209e79ba99f5856929d2b39451" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Debarke</h4>                 <hr>                 <b>Region:</b> Amhara<br>                 <b>Population:</b> 25,000<br>                 <b>Elevation:</b> 2850.0 m<br>                 <b>Coordinates:</b> (13.1300, 37.9000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 92             </div>             </div>`)[0];
+                popup_e3ded01a288f11dfad25fbfe82f322b7.setContent(html_a3a759209e79ba99f5856929d2b39451);
+            
+        
+
+        circle_marker_bf110f43f4912942215154b2eb656f01.bindPopup(popup_e3ded01a288f11dfad25fbfe82f322b7)
+        ;
+
+        
+    
+    
+            circle_marker_bf110f43f4912942215154b2eb656f01.bindTooltip(
+                `<div>
+                     Debarke (Amhara)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2833c02d94db657764a48688388b98eb = L.circleMarker(
+                [13.25, 37.9],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_b11c756234d39297740b4c10061ccd51 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f0594a6f80979676b5ef75c2ab7ea90f = $(`<div id="html_f0594a6f80979676b5ef75c2ab7ea90f" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Addi Arkay</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 15,000<br>                 <b>Elevation:</b> 2150.0 m<br>                 <b>Coordinates:</b> (13.2500, 37.9000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 93             </div>             </div>`)[0];
+                popup_b11c756234d39297740b4c10061ccd51.setContent(html_f0594a6f80979676b5ef75c2ab7ea90f);
+            
+        
+
+        circle_marker_2833c02d94db657764a48688388b98eb.bindPopup(popup_b11c756234d39297740b4c10061ccd51)
+        ;
+
+        
+    
+    
+            circle_marker_2833c02d94db657764a48688388b98eb.bindTooltip(
+                `<div>
+                     Addi Arkay (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1de616a426e7ed8eea9b81ecdb4519ca = L.circleMarker(
+                [14.27, 36.63],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_f10fb6e5d28eab76ea336d6f0ee1f9b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4e1c8f467e95dffb190777b8b7f44bca = $(`<div id="html_4e1c8f467e95dffb190777b8b7f44bca" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>May Kadra</h4>                 <hr>                 <b>Region:</b> Tigray<br>                 <b>Population:</b> 10,000<br>                 <b>Elevation:</b> 600.0 m<br>                 <b>Coordinates:</b> (14.2700, 36.6300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 94             </div>             </div>`)[0];
+                popup_f10fb6e5d28eab76ea336d6f0ee1f9b3.setContent(html_4e1c8f467e95dffb190777b8b7f44bca);
+            
+        
+
+        circle_marker_1de616a426e7ed8eea9b81ecdb4519ca.bindPopup(popup_f10fb6e5d28eab76ea336d6f0ee1f9b3)
+        ;
+
+        
+    
+    
+            circle_marker_1de616a426e7ed8eea9b81ecdb4519ca.bindTooltip(
+                `<div>
+                     May Kadra (Tigray)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e6b771dd61b6b166533f9b4e084f067 = L.circleMarker(
+                [8.15, 34.58],
+                {"bubblingMouseEvents": true, "color": "#A52A2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A52A2A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_e3eee86d896f8e3b13e40e0f58302f2a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d8a9ce8597371b2169bc8e3c36063902 = $(`<div id="html_d8a9ce8597371b2169bc8e3c36063902" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Metti</h4>                 <hr>                 <b>Region:</b> Gambella<br>                 <b>Population:</b> 15,000<br>                 <b>Elevation:</b> 450.0 m<br>                 <b>Coordinates:</b> (8.1500, 34.5800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 95             </div>             </div>`)[0];
+                popup_e3eee86d896f8e3b13e40e0f58302f2a.setContent(html_d8a9ce8597371b2169bc8e3c36063902);
+            
+        
+
+        circle_marker_5e6b771dd61b6b166533f9b4e084f067.bindPopup(popup_e3eee86d896f8e3b13e40e0f58302f2a)
+        ;
+
+        
+    
+    
+            circle_marker_5e6b771dd61b6b166533f9b4e084f067.bindTooltip(
+                `<div>
+                     Metti (Gambella)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_714e5c71cad9df64dfe866902495ba1b = L.circleMarker(
+                [8.2, 34.27],
+                {"bubblingMouseEvents": true, "color": "#A52A2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A52A2A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_651f44e0b670954940a0bd8b5998dc63 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ae8815a462c1b3226be86a89d2ef551 = $(`<div id="html_7ae8815a462c1b3226be86a89d2ef551" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Itang</h4>                 <hr>                 <b>Region:</b> Gambella<br>                 <b>Population:</b> 20,000<br>                 <b>Elevation:</b> 425.0 m<br>                 <b>Coordinates:</b> (8.2000, 34.2700)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 96             </div>             </div>`)[0];
+                popup_651f44e0b670954940a0bd8b5998dc63.setContent(html_7ae8815a462c1b3226be86a89d2ef551);
+            
+        
+
+        circle_marker_714e5c71cad9df64dfe866902495ba1b.bindPopup(popup_651f44e0b670954940a0bd8b5998dc63)
+        ;
+
+        
+    
+    
+            circle_marker_714e5c71cad9df64dfe866902495ba1b.bindTooltip(
+                `<div>
+                     Itang (Gambella)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f97adc663814062fa76887a6f31be92f = L.circleMarker(
+                [7.92, 34.48],
+                {"bubblingMouseEvents": true, "color": "#A52A2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A52A2A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_07803ff302f9d4586eae1434c4902275 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_95caad5fd4d110d5ea72e1a02cca3f87 = $(`<div id="html_95caad5fd4d110d5ea72e1a02cca3f87" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Abobo</h4>                 <hr>                 <b>Region:</b> Gambella<br>                 <b>Population:</b> 12,000<br>                 <b>Elevation:</b> 430.0 m<br>                 <b>Coordinates:</b> (7.9200, 34.4800)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 97             </div>             </div>`)[0];
+                popup_07803ff302f9d4586eae1434c4902275.setContent(html_95caad5fd4d110d5ea72e1a02cca3f87);
+            
+        
+
+        circle_marker_f97adc663814062fa76887a6f31be92f.bindPopup(popup_07803ff302f9d4586eae1434c4902275)
+        ;
+
+        
+    
+    
+            circle_marker_f97adc663814062fa76887a6f31be92f.bindTooltip(
+                `<div>
+                     Abobo (Gambella)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69fb4be2b73813b744868c4df7aa2d11 = L.circleMarker(
+                [7.7, 34.1],
+                {"bubblingMouseEvents": true, "color": "#A52A2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A52A2A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_5fca06460b6403791b04611337c18a99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c07f099323b30069ecaf830c9ee7639 = $(`<div id="html_9c07f099323b30069ecaf830c9ee7639" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Gog</h4>                 <hr>                 <b>Region:</b> Gambella<br>                 <b>Population:</b> 10,000<br>                 <b>Elevation:</b> 420.0 m<br>                 <b>Coordinates:</b> (7.7000, 34.1000)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 98             </div>             </div>`)[0];
+                popup_5fca06460b6403791b04611337c18a99.setContent(html_9c07f099323b30069ecaf830c9ee7639);
+            
+        
+
+        circle_marker_69fb4be2b73813b744868c4df7aa2d11.bindPopup(popup_5fca06460b6403791b04611337c18a99)
+        ;
+
+        
+    
+    
+            circle_marker_69fb4be2b73813b744868c4df7aa2d11.bindTooltip(
+                `<div>
+                     Gog (Gambella)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2975c8ab27196ad2bc278861a601954 = L.circleMarker(
+                [7.9, 34.33],
+                {"bubblingMouseEvents": true, "color": "#A52A2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A52A2A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_6164aa5b75b2729fd14e0f8d75c47318 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99a09073cc57824f50d67780b00d6a3d = $(`<div id="html_99a09073cc57824f50d67780b00d6a3d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Dima</h4>                 <hr>                 <b>Region:</b> Gambella<br>                 <b>Population:</b> 8,000<br>                 <b>Elevation:</b> 415.0 m<br>                 <b>Coordinates:</b> (7.9000, 34.3300)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 99             </div>             </div>`)[0];
+                popup_6164aa5b75b2729fd14e0f8d75c47318.setContent(html_99a09073cc57824f50d67780b00d6a3d);
+            
+        
+
+        circle_marker_b2975c8ab27196ad2bc278861a601954.bindPopup(popup_6164aa5b75b2729fd14e0f8d75c47318)
+        ;
+
+        
+    
+    
+            circle_marker_b2975c8ab27196ad2bc278861a601954.bindTooltip(
+                `<div>
+                     Dima (Gambella)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f5971f91df65527d626abc94fb9c51c0 = L.circleMarker(
+                [8.27, 34.12],
+                {"bubblingMouseEvents": true, "color": "#A52A2A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A52A2A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_543bf710adf148ee172431c176b73dcb);
+        
+    
+        var popup_c4b63473c4ae94e43abf6fa70db482a2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_15a25f722e4eea840a155914a50ad8b6 = $(`<div id="html_15a25f722e4eea840a155914a50ad8b6" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 200px;">                 <h4>Bure (Gambella)</h4>                 <hr>                 <b>Region:</b> Gambella<br>                 <b>Population:</b> 9,000<br>                 <b>Elevation:</b> 410.0 m<br>                 <b>Coordinates:</b> (8.2700, 34.1200)<br>                 <b>Capital:</b> No<br>                 <b>ID:</b> 100             </div>             </div>`)[0];
+                popup_c4b63473c4ae94e43abf6fa70db482a2.setContent(html_15a25f722e4eea840a155914a50ad8b6);
+            
+        
+
+        circle_marker_f5971f91df65527d626abc94fb9c51c0.bindPopup(popup_c4b63473c4ae94e43abf6fa70db482a2)
+        ;
+
+        
+    
+    
+            circle_marker_f5971f91df65527d626abc94fb9c51c0.bindTooltip(
+                `<div>
+                     Bure (Gambella) (Gambella)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_543bf710adf148ee172431c176b73dcb.addTo(map_dd3573dcf0ab7005d4c62cdb1f5b72ff);
+        
+    
+            var feature_group_54f724befb8750ce497c429be3acfd83 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_2c60c54013e3dbc841620dfad3325ed0 = L.polyline(
+                [[14.12, 38.73], [12.03, 39.04], [11.6, 37.38], [8.54, 39.27], [7.95, 39.12], [7.05, 38.47]],
+                {"bubblingMouseEvents": true, "color": "#FF00FF", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF00FF", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_54f724befb8750ce497c429be3acfd83);
+        
+    
+        var popup_ec3e92e436ee1bac3106c9270bf2c19f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cc3ec635b435e84e3b83f4cedb38bae = $(`<div id="html_1cc3ec635b435e84e3b83f4cedb38bae" style="width: 100.0%; height: 100.0%;">Shortest Path</div>`)[0];
+                popup_ec3e92e436ee1bac3106c9270bf2c19f.setContent(html_1cc3ec635b435e84e3b83f4cedb38bae);
+            
+        
+
+        poly_line_2c60c54013e3dbc841620dfad3325ed0.bindPopup(popup_ec3e92e436ee1bac3106c9270bf2c19f)
+        ;
+
+        
+    
+    
+            poly_line_2c60c54013e3dbc841620dfad3325ed0.bindTooltip(
+                `<div>
+                     Shortest Path
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_16ad57cc43c8caef8951ea2c70cee291 = L.marker(
+                [14.12, 38.73],
+                {
+}
+            ).addTo(feature_group_54f724befb8750ce497c429be3acfd83);
+        
+    
+            var icon_78d80ff3755781ed1cfebb84d8e067b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4a3211ae5241e73268546712378a43e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28078db26646295c0e1825ab75254053 = $(`<div id="html_28078db26646295c0e1825ab75254053" style="width: 100.0%; height: 100.0%;">Start: Axum</div>`)[0];
+                popup_e4a3211ae5241e73268546712378a43e.setContent(html_28078db26646295c0e1825ab75254053);
+            
+        
+
+        marker_16ad57cc43c8caef8951ea2c70cee291.bindPopup(popup_e4a3211ae5241e73268546712378a43e)
+        ;
+
+        
+    
+    
+                marker_16ad57cc43c8caef8951ea2c70cee291.setIcon(icon_78d80ff3755781ed1cfebb84d8e067b6);
+            
+    
+            var marker_c4ce4f31edc486b5fe85fc632e9fba91 = L.marker(
+                [7.05, 38.47],
+                {
+}
+            ).addTo(feature_group_54f724befb8750ce497c429be3acfd83);
+        
+    
+            var icon_227c02cda53474fd522b6d5ce234401a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af36d732c22fa75304239ef08db5dc73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a497f1aebdfbd125ce27bae708a0761b = $(`<div id="html_a497f1aebdfbd125ce27bae708a0761b" style="width: 100.0%; height: 100.0%;">End: Hawassa</div>`)[0];
+                popup_af36d732c22fa75304239ef08db5dc73.setContent(html_a497f1aebdfbd125ce27bae708a0761b);
+            
+        
+
+        marker_c4ce4f31edc486b5fe85fc632e9fba91.bindPopup(popup_af36d732c22fa75304239ef08db5dc73)
+        ;
+
+        
+    
+    
+                marker_c4ce4f31edc486b5fe85fc632e9fba91.setIcon(icon_227c02cda53474fd522b6d5ce234401a);
+            
+    
+            feature_group_54f724befb8750ce497c429be3acfd83.addTo(map_dd3573dcf0ab7005d4c62cdb1f5b72ff);
+        
+    
+            var layer_control_520de1dfddc21e09781e1babd74ee5c3_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_8a30430c5ec176690abff1bff68217bb,
+                },
+                overlays :  {
+                    "Cities" : feature_group_543bf710adf148ee172431c176b73dcb,
+                    "Shortest Path" : feature_group_54f724befb8750ce497c429be3acfd83,
+                },
+            };
+            let layer_control_520de1dfddc21e09781e1babd74ee5c3 = L.control.layers(
+                layer_control_520de1dfddc21e09781e1babd74ee5c3_layers.base_layers,
+                layer_control_520de1dfddc21e09781e1babd74ee5c3_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_dd3573dcf0ab7005d4c62cdb1f5b72ff);
+
+        
+    
+            var tile_layer_da5657255d1e255658907f427b34f48d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_b8b809201a2d654b7bc12d7badf551c4 = new L.Control.MiniMap(
+                tile_layer_da5657255d1e255658907f427b34f48d,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": false,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_dd3573dcf0ab7005d4c62cdb1f5b72ff.addControl(mini_map_b8b809201a2d654b7bc12d7badf551c4);
+        
+    
+            var measure_control_82eb483ac071b0f5ee716c03c01ed3b2 = new L.Control.Measure(
+                {
+  "position": "bottomleft",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "miles",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+});
+            map_dd3573dcf0ab7005d4c62cdb1f5b72ff.addControl(measure_control_82eb483ac071b0f5ee716c03c01ed3b2);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {},
+              edit: {},
+            }
+                // FeatureGroup is to store editable layers.
+                var drawnItems_draw_control_49a419b642d6d3bd7fe16f51d23985bf =
+                    new L.featureGroup().addTo(
+                        map_dd3573dcf0ab7005d4c62cdb1f5b72ff
+                    );
+
+            options.edit.featureGroup = drawnItems_draw_control_49a419b642d6d3bd7fe16f51d23985bf;
+            var draw_control_49a419b642d6d3bd7fe16f51d23985bf = new L.Control.Draw(
+                options
+            ).addTo( map_dd3573dcf0ab7005d4c62cdb1f5b72ff );
+            map_dd3573dcf0ab7005d4c62cdb1f5b72ff.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems_draw_control_49a419b642d6d3bd7fe16f51d23985bf.addLayer(layer);
+            });
+            map_dd3573dcf0ab7005d4c62cdb1f5b72ff.on('draw:created', function(e) {
+                drawnItems_draw_control_49a419b642d6d3bd7fe16f51d23985bf.addLayer(e.layer);
+            });
+
+            
+            document.getElementById('export').onclick = function(e) {
+                var data = drawnItems_draw_control_49a419b642d6d3bd7fe16f51d23985bf.toGeoJSON();
+                var convertedData = 'text/json;charset=utf-8,'
+                    + encodeURIComponent(JSON.stringify(data));
+                document.getElementById('export').setAttribute(
+                    'href', 'data:' + convertedData
+                );
+                document.getElementById('export').setAttribute(
+                    'download', "data.geojson"
+                );
+            }
+            
+        
+</script>
+</html>

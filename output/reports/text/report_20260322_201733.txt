@@ -1,0 +1,72 @@
+================================================================================
+ETHIOPIAN ROAD NETWORK ANALYSIS REPORT
+================================================================================
+Generated: 2026-03-22 20:17:33
+
+📊 NETWORK SUMMARY
+----------------------------------------
+Total Cities: 10
+Total Roads: 20
+Network Density: 0.4444
+Average Connections per City: 4.00
+
+📍 CITIES BY REGION
+----------------------------------------
+  Addis Ababa: 3 cities (30.0%)
+  Oromia: 3 cities (30.0%)
+  SNNPR: 3 cities (30.0%)
+  Amhara: 1 cities (10.0%)
+
+🛣️  ROAD STATISTICS
+----------------------------------------
+  Average Road Length: 244.10 km
+  Shortest Road: 91.79 km
+  Longest Road: 410.78 km
+  Total Road Network Length: 4882.06 km
+
+  Road Types:
+    • national: 7
+    • highway: 13
+
+📍 SOURCE CITY: Addis Ababa (Addis Ababa)
+----------------------------------------
+  Reachable Cities: 8
+  Unreachable Cities: 1
+  Farthest City: Metu (626.48 km)
+  Closest City: Asella (147.00 km)
+
+  TOP 10 LONGEST PATHS:
+    • Metu: 626.48 km
+    • Sawla: 411.28 km
+    • Bole: 315.83 km
+    • Wolaita Sodo: 301.99 km
+    • Bale Robe: 296.38 km
+    • Lideta: 295.24 km
+    • Hosaena: 210.20 km
+    • Asella: 147.00 km
+
+⏱️  COMPLEXITY ANALYSIS
+----------------------------------------
+  Array Implementation: O(V²) = 100 operations
+  Priority Queue: O((V+E) log V) = 99 ops
+  Theoretical Speedup: 1.00x
+
+  EMPIRICAL PERFORMANCE (3 runs):
+    Array: 0.11 ms
+    Priority Queue: 0.18 ms
+    Empirical Speedup: 0.61x
+
+🔍 SAMPLE SHORTEST PATHS
+----------------------------------------
+  To Bale Robe: 296.38 km
+    Path: Addis Ababa → Asella → Bale Robe
+
+  To Wolaita Sodo: 301.99 km
+    Path: Addis Ababa → Hosaena → Wolaita Sodo
+
+  To Hosaena: 210.20 km
+    Path: Addis Ababa → Hosaena
+
+================================================================================
+END OF REPORT
+================================================================================

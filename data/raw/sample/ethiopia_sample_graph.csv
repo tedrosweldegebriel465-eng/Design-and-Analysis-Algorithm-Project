@@ -1,0 +1,30 @@
+# Sample graph with 10 major Ethiopian cities for demonstration
+city_id,city_name,region,latitude,longitude
+1,Addis Ababa,Addis Ababa,9.03,38.74
+2,Adama,Oromia,8.54,39.27
+3,Bahir Dar,Amhara,11.60,37.38
+4,Gondar,Amhara,12.60,37.47
+5,Mekelle,Tigray,13.50,39.47
+6,Dire Dawa,Dire Dawa,9.60,41.87
+7,Jimma,Oromia,7.68,36.83
+8,Harar,Harari,9.31,42.13
+9,Jijiga,Somali,9.35,42.80
+10,Hawassa,SNNPR,7.05,38.47
+
+# Sample roads for demonstration (sample_roads.csv)
+road_id,city1_id,city2_id,distance_km,road_type
+1,1,2,85,highway
+2,1,10,275,highway
+3,2,3,380,highway
+4,3,4,180,highway
+5,4,5,380,highway
+6,1,7,350,highway
+7,1,8,525,highway
+8,8,6,50,regional
+9,6,9,95,regional
+10,7,10,350,highway
+11,2,8,450,highway
+12,5,3,380,highway
+13,10,7,280,regional
+14,4,3,180,highway
+15,1,5,783,highway
