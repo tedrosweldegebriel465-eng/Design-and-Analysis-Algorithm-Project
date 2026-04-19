@@ -1,0 +1,43 @@
+# ------------------------------
+# Python environments and caches
+# ------------------------------
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ------------------------------
+# IDE/editor and OS artifacts
+# ------------------------------
+.idea/
+.vscode/
+.vs/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Secrets / local environment
+# ------------------------------
+.env
+.env.local
+
+# ------------------------------
+# Local database files
+# ------------------------------
+*.sqlite
+*.db
+
+# ------------------------------
+# Generated runtime outputs
+# Keep source assets versionable by NOT ignoring
+# global file extensions like *.json/*.html/*.txt/*.png.
+# ------------------------------
+output/
+
+# Optional: uncomment if you don't want generated validated data in git
+# data/processed/
