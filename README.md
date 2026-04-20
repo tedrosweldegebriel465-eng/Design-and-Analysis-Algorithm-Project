@@ -20,9 +20,9 @@ It includes both:
 ## 🖼️ Project Preview
 
 ### 🌍 Interactive Web Dashboard
-![Dashboard1](assets/image.png)
-![Dashboard2](assets/image1.png)
-![Dashboard3](assets/image2.png)
+![Dashboard1](asset/image.png)
+![Dashboard2](asset/image1.png)
+![Dashboard3](asset/image2.png)
 
 ---
 
